@@ -1,0 +1,98 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  border: none;
+  padding: none;
+  background-image: url("imagens/fundoCadastro.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+.login {
+  position: relative;
+  top: 20%;
+  border-radius: 10px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  width: 300px;
+  height: 500px;
+  background-color:#F8F8F8;
+  transition: 1s;
+  border: 5px solid #e3e3e3;
+}
+.login h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.login input[type="submit"]:hover {
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+.login input[type="submit"] {
+  position: absolute;
+  top: 69%;
+  left: 55%;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  background-color: #2dab18;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  width: 80px;
+  height: 25px;
+}
+
+.login input[type="email"] {
+  border-radius: 20px;
+}
+
+.login input[type="password"] {
+  border-radius: 20px;
+}
+
+.login button {
+  position: absolute;
+  top: 69%;
+  left: 18%;
+  cursor: pointer;
+  background-color: #0cc0df;
+  border-radius: 20px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 auto;
+  width: 80px;
+  height: 25px;
+  color: white;
+}
+.login button:hover {
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+.mensagem {
+  font-size: 14px;
+  font-weight: bold;
+}

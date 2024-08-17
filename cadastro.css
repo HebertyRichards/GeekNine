@@ -1,0 +1,100 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  border: none;
+  padding: none;
+  background-image: url("imagens/fundoCadastro.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.cadastro {
+  position: relative;
+  top: 20%;
+  border-radius: 10px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  width: 300px;
+  height: 500px;
+  background-color:#F8F8F8;
+  transition: 1s;
+  border: 5px solid #e3e3e3;
+}
+
+.cadastro h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.cadastro input[type="submit"]:hover {
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+.cadastro input[type="submit"] {
+  cursor: pointer;
+  position: absolute;
+  top: 76%;
+  left: 55%;
+  border-radius: 20px;
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  background-color: #2dab18;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  width: 80px;
+  height: 25px;
+}
+.cadastro input[type="text"] {
+  border-radius: 20px;
+}
+.cadastro input[type="email"] {
+  border-radius: 20px;
+}
+.cadastro input[type="password"] {
+  border-radius: 20px;
+}
+.cadastro button {
+  position: absolute;
+  top: 76%;
+  left: 18%;
+  cursor: pointer;
+  background-color: #0cc0df;
+   border-radius: 20px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 auto;
+  width: 80px;
+  height: 25px;
+  color: white;
+}
+.cadastro button:hover {
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+.mensagem {
+  font-size: 14px;
+  font-weight: bold;
+}

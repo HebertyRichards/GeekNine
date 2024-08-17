@@ -1,0 +1,834 @@
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  border: none;
+  padding: none;
+  margin: 0;
+  background-image: url("imagens/fundo_sobree.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.ola {
+  position: absolute;
+  top: 15%;
+  right: 9%;
+}
+
+.menu-container {
+  position: absolute;
+  top: 5%;
+  right: 17%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 50%;
+}
+
+.menu-container button {
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px;
+  transition: 0.5s;
+}
+
+.menu-container button:hover {
+  color: #0f298f;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+button[title="Início"] {
+  background-color: transparent;
+  background-image: url("imagens/inicio.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+}
+
+button[title="Sobre"] {
+  background-color: transparent;
+  background-image: url("imagens/sobre.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 107px;
+  height: 30px;
+}
+
+button[title="Games"] {
+  background-color: transparent;
+  background-image: url("imagens/games.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 110px;
+  height: 30px;
+  font-size: 12px;
+}
+
+button[title="Tecnologia"] {
+  background-color: transparent;
+  background-image: url("imagens/tecnologia.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 130px;
+  height: 30px;
+  font-size: 12px;
+}
+
+button[title="Filmes"] {
+  background-color: transparent;
+  background-image: url("imagens/filmeicon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 110px;
+  height: 30px;
+  font-size: 12px;
+}
+
+button[title="Eventos"] {
+  background-color: transparent;
+  background-image: url("imagens/eventos.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+}
+
+button[title="Cadastro"]:hover {
+  color: #0f298f;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+button[title="Login"]:hover {
+  color: #0f298f;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+button[title="Logout"]:hover {
+  color: #0f298f;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+button[title="Usuario"] {
+  position: absolute;
+  background-color: transparent;
+  background-image: url("imagens/usuario.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  top: 12%;
+  right:9%;
+  width: 50px;
+  height: 40px;
+  margin-right: 10px;
+  border: none;
+}
+
+button[title="Cadastro"] {
+  position: absolute;
+  top: 15%;
+  right: 9%;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  width: 110px;
+  height: 20px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+button[title="Login"] {
+  position: absolute;
+  top: 11%;
+  right: 9%;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  width: 110px;
+  height: 20px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+button[title="Logout"] {
+  position: absolute;
+  top: 19%;
+  right: 9%;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  width: 110px;
+  height: 20px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "Mokoto";
+  src: url("Mokoto.otf") format("opentype");
+}
+
+.redes-sociais {
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  padding: 1px;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+.redes-sociais button {
+  border: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: transparent;
+  padding: 1px;
+  transition: 0.5s;
+}
+
+.redes-sociais button:hover {
+  color: #000000;
+  text-shadow: -1px -1px 0px #000000;
+  letter-spacing: 0.1em;
+}
+
+button[title="Facebook"] {
+  background-color: transparent;
+  background-image: url("imagens/Facebook.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  margin: 0 5px;
+  color: #ffffff;
+}
+
+button[title="Instagram"] {
+  background-color: transparent;
+  background-image: url("imagens/Instagram.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  margin: 0 5px;
+  color: #ffffff;
+}
+
+button[title="Twitter"] {
+  background-color: transparent;
+  background-image: url("imagens/twitter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  margin: 0 5px;
+  color: #ffffff;
+}
+
+.contato {
+  display: flex;
+  align-items: center;
+}
+
+.contato h1 {
+  font-size: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  font-size: 14px;
+}
+
+.contato-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+.contato-1 ul li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contato ul li img {
+   margin-right: 8px;
+}
+.contato-1 img {
+  width: 20px;
+  height: 20px;
+}
+
+.contato-1 ul h1 {
+  font-family: arial;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-a {
+  font-family: "Mokoto";
+  letter-spacing: 2px;
+  font-size: 25px;
+  word-spacing: 15px;
+  justify-content: center;
+  text-align: left;
+  align-items: flex-end;
+    max-width: 100%;
+    height: auto;
+}
+
+.container-a {
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.container-a img {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  transition: transform 0.25s ease;
+  border-radius: 8px;
+}
+
+.container-a img:hover {
+  transform: scale(1.1);
+  border: 3px ridge #000000;
+}
+
+@media (max-width: 1366px) {
+  header .img-fluid {
+    width: 75%;
+  }
+
+.ola {
+ font-size: 11px;
+}
+
+  button[title="Usuario"] {
+    width: 40px;
+    height: 30px;
+  }
+
+  button[title="Cadastro"] {
+    width: 95px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  button[title="Login"] {
+    width: 95px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  button[title="Logout"] {
+    position: absolute;
+    top: 20%;
+    width: 95px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  button[title="Início"] {
+    width: 90px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  button[title="Sobre"] {
+    font-size: 11px;
+    width: 95px;
+    height: 25px;
+  }
+
+  button[title="Games"] {
+    width: 95px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  button[title="Tecnologia"] {
+    width: 110px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  button[title="Filmes"] {
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  button[title="Eventos"] {
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
+  }
+  @media (max-width: 1024px) {
+   header .img-fluid {
+     width: 70%;
+   }
+
+    .ola {
+      position: absolute;
+      top: 16%;
+    }
+
+   button[title="Usuario"] {
+     postion: relative;
+     right: 9%;
+     top: 12%;
+     width: 40px;
+     height: 30px;
+   }
+
+   button[title="Cadastro"] {
+     width: 75px;
+     height: 17px;
+     font-size: 9px;
+   }
+
+   button[title="Login"] {
+     width: 75px;
+     height: 17px;
+     font-size: 9px;
+   }
+
+   button[title="Logout"] {
+     width: 75px;
+     height: 17px;
+     font-size: 9px;
+   }
+
+   button[title="Início"] {
+     width: 70px;
+     height: 20px;
+     font-size: 9px;
+   }
+
+   button[title="Sobre"] {
+     font-size: 9px;
+     width: 70px;
+     height: 20px;
+   }
+
+   button[title="Games"] {
+     width: 70px;
+     height: 20px;
+     font-size: 9px;
+   }
+
+   button[title="Tecnologia"] {
+     width: 85px;
+     height: 20px;
+     font-size: 9px;
+   }
+
+   button[title="Filmes"] {
+     width: 75px;
+     height: 20px;
+     font-size: 9px;
+   }
+
+   button[title="Eventos"] {
+     width: 85px;
+     height: 20px;
+     font-size: 9px;
+   }
+
+  .redes-sociais button {
+    font-size: 10px;
+  }
+
+    button[title="Facebook"] {
+      width: 120px;
+      height: 20px;
+    }
+
+    button[title="Instagram"] {
+      width: 120px;
+      height: 20px;
+    }
+
+    button[title="Twitter"] {
+      width: 120px;
+      height: 20px;
+    }
+
+  .contato h1 {
+    font-size: 16px;
+  }
+
+  .contato p {
+    font-size: 16px;
+  }
+    @media (max-width: 800px) {
+      header .img-fluid {
+        width: 70%;
+      }
+
+      .ola {
+        position: absolute;
+        top:15%;
+      }
+
+      button[title="Usuario"] {
+        postion: relative;
+        right: 8%;
+        top: 11%;
+        width: 40px;
+        height: 30px;
+      }
+
+      button[title="Cadastro"] {
+        width: 70px;
+        height: 16px;
+        font-size: 8px;
+      }
+
+      button[title="Login"] {
+        width: 70px;
+        height: 16px;
+        font-size: 8px;
+      }
+
+      button[title="Logout"] {
+        width: 70px;
+        height: 16px;
+        font-size: 8px;
+      }
+
+      button[title="Início"] {
+        width: 50px;
+        height: 15px;
+        font-size: 8px;
+      }
+
+      button[title="Sobre"] {
+        font-size: 8px;
+        width: 50px;
+        height: 15px;
+      }
+
+      button[title="Games"] {
+        width: 50px;
+        height: 15px;
+        font-size: 8px;
+      }
+
+      button[title="Tecnologia"] {
+        width: 65px;
+        height: 15px;
+        font-size: 8px;
+      }
+
+      button[title="Filmes"] {
+        width: 55px;
+        height: 15px;
+        font-size: 8px;
+      }
+
+      button[title="Eventos"] {
+        width: 65px;
+        height: 15px;
+        font-size: 8px;
+      }
+
+     .redes-sociais button {
+       font-size: 10px;
+     }
+
+     .contato h1 {
+       font-size: 12px;
+     }
+
+     .contato p {
+       font-size: 12px;
+     }
+
+      .contato-1 {
+        font-size: 12px;
+      }
+
+      .contato-1 ul li{
+        margin-bottom: 7px;
+      }
+
+      .contato ul li img {
+         margin-right: 7px;
+      }
+      @media screen and (max-width: 500px) {
+        .menu-container {
+          position: absolute;
+          top: 4%;
+          left: 10%;
+          width: 90%;
+        } 
+  
+        button[title="Cadastro"] {
+          position: absolute;
+          top: 11%;
+          right: 1%;
+          font-size: 7px;
+          width: 65px;
+          height: 10px;
+        }
+
+        button[title="Login"] {
+          position: absolute;
+          top: 9%;
+          right: 1%;
+          font-size: 7px;
+          width: 65px;
+          height: 10px;
+        }
+
+        button[title="Logout"] {
+          position: absolute;
+          top: 9%;
+          right: 1%;
+          font-size: 7px;
+          width: 65px;
+          height: 10px;
+        }
+
+        .menu-container {
+          position: absolute;
+          top: 3%;
+          left: 20%;
+          width: 70%;
+        }
+
+        .ola {
+          position: absolute;
+          top: 6%;
+          right: 1%;
+          font-size: 8px;
+        }
+
+        button[title="Usuario"] {
+          position: absolute;
+          top: 4%;
+          right: 1%;
+          width: 30px;
+          height: 20px;
+        }
+
+        .redes-sociais button {
+          font-size: 8px;
+        }
+
+          button[title="Facebook"] {
+            width: 71px;
+            height: 15px;
+            margin: 0 2px;
+          }
+
+          button[title="Instagram"] {
+            width: 71px;
+            height: 15px;
+            margin: 0 2px;
+          }
+
+          button[title="Twitter"] {
+            width: 71px;
+            height: 15px;
+            margin: 0 2px;
+          }
+
+         button[title="Início"] {
+           width: 40px;
+           height: 10px;
+           font-size: 7px;
+         }
+
+         button[title="Sobre"] {
+           font-size: 7px;
+           width: 40px;
+           height: 10px;
+         }
+
+         button[title="Games"] {
+           width: 40px;
+           height: 10px;
+           font-size: 7px;
+         }
+
+         button[title="Tecnologia"] {
+           width: 55px;
+           height: 10px;
+           font-size: 7px;
+         }
+
+         button[title="Filmes"] {
+           width: 45px;
+           height: 10px;
+           font-size: 7px;
+         }
+
+         button[title="Eventos"] {
+           width: 55px;
+           height: 10px;
+           font-size: 7px;
+         }
+
+         .novi {
+           font-size: 10px;
+         }
+
+        .contato h1 {
+          font-size: 8px;
+        }
+
+        .contato p {
+          font-size: 8px;
+        }
+
+        .contato-1 {
+          font-size: 8px;
+        }
+
+        .contato-1 img {
+          width: 15px;
+          height: 15px;
+        }
+
+        .contato-1 ul li{
+           margin-bottom: 5px;
+         }
+
+         .contato ul li img {
+            margin-right: 5px;
+         }
+
+        .logo {
+          font-size: 8px;
+        }
+
+        .redes-sociais {
+          font-size: 8px;
+        }
+
+        footer {
+          padding: 25px;
+        }
+       @media screen and (max-width: 400px) {
+         button[title="Cadastro"] {
+            font-size: 6px;
+          }
+
+          button[title="Login"] {
+            font-size: 6px;
+          }
+
+          button[title="Logout"] {
+            font-size: 6px;
+          }
+         button[title="Início"] {
+           width: 35px;
+           font-size: 6px;
+         }
+
+         button[title="Sobre"] {
+           font-size: 6px;
+           width: 35px;
+         }
+
+         button[title="Games"] {
+           width: 35px;
+           font-size: 6px;
+         }
+
+         button[title="Tecnologia"] {
+           width: 45px;
+           font-size: 6px;
+         }
+
+         button[title="Filmes"] {
+           width: 35px;
+           font-size: 6px;
+         }
+
+         button[title="Eventos"] {
+           width: 45px;
+           font-size: 6px;
+         }
+
+         .contato-1 {
+           font-size: 6px;
+         }
+
+         .contato-1 ul li{
+            margin-bottom: 3px;
+          }
+
+          .contato ul li img {
+             margin-right: 3px;
+          }
+
+         .redes-scoais {
+           font-size: 6px;
+         }
+         footer {
+           padding: 30px;
+         }
+         .ola {
+           font-size: 6px;
+         }
+       }
