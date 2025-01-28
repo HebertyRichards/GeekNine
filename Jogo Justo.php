@@ -23,15 +23,14 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo Justo</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
+    <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
   </head>
-
   <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
       <a href="index.php"><button title="Início">Início</button></a>
       <a href="sobre.php"><button title="Sobre">Sobre</button></a>
       <a href="games.php"><button title="Games">Games</button></a>
@@ -39,13 +38,27 @@ if (isset($_SESSION['nome'])) {
       <a href="filmes.php"><button title="Filmes">Filmes</button></a>
       <a href="eventos.php"><button title="Eventos">Eventos</button></a>
     </div>
-    <br><br><br><br>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Jogo.png" alt="Jogo Justo">
+    <div class="title">
     <h1>Jogo Justo</h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p> 2023 </p>
     <p> 1h, 53m </p>
       <a href="https://www.imdb.com/title/tt16304446/?ref_=fn_al_tt_1">6.4/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Jogo Justo é um suspense erótico da Netflix dirigido por Chloe Domont e estrelado por Phoebe Dynevor (Bridgerton) e Alden Ehrenreich (Han Solo: Uma História Star Wars). O filme acompanha o jovem casal Emily (Dynevor) e Luke (Ehrenreich), que trabalha em uma empresa de finanças e embarca em um romance proibido que vai contra as regras da organização. O segredo parece tornar as coisas ainda mais intensas, e tudo parece ir muito bem no relacionamento - até que Emily é promovida inesperadamente. Agora, os dois serão levados ao limite e devem enfrentar ameaças que podem afetar muito mais do que sua relação.</p>
   </div>
   </div>
+  </div>  
     <footer>
       <div class="contato">
         <div class="contato-1">

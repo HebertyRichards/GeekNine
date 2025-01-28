@@ -33,19 +33,42 @@ if (isset($_SESSION['nome'])) {
 
     <div class="menu-container">
       <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</but <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
       <a href="sobre.php"><button title="Sobre">Sobre</button></a>
       <a href="games.php"><button title="Games">Games</button></a>
       <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
       <a href="filmes.php"><button title="Filmes">Filmes</button></a>
       <a href="eventos.php"><button title="Eventos">Eventos</button></a>
     </div>
-    <br><br><br><br>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Corra.png" alt="Corra">
+      <div class="title">
     <h1>Corra</h1>
-  </div>
-      <div class = "rating"> 
+      <div class = "mdb"> 
       <p>2017</p>
       <p>1h, 44m</p>
         <a href="https://www.imdb.com/title/tt5052448/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_corra">7.8/10</a> 
@@ -64,6 +87,7 @@ if (isset($_SESSION['nome'])) {
     <p>Chris (Daniel Kaluuya) é jovem negro que está prestes a conhecer a família de sua namorada branca Rose (Allison Williams). A princípio, ele acredita que o comportamento excessivamente amoroso por parte da família dela é uma tentativa de lidar com o relacionamento de Rose com um rapaz negro, mas, com o tempo, Chris percebe que a família esconde algo muito mais perturbador - e o jeito é tentar escapar.</p>
   </div>
   </div>
+    </div>
     <footer>
       <div class="contato">
         <div class="contato-1">

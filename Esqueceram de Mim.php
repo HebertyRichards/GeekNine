@@ -23,15 +23,14 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Esqueceram de Mim</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
+  <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
       <a href="index.php"><button title="Início">Início</button></a>
       <a href="sobre.php"><button title="Sobre">Sobre</button></a>
       <a href="games.php"><button title="Games">Games</button></a>
@@ -39,13 +38,27 @@ if (isset($_SESSION['nome'])) {
       <a href="filmes.php"><button title="Filmes">Filmes</button></a>
       <a href="eventos.php"><button title="Eventos">Eventos</button></a>
     </div>
-    <br><br><br><br>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Esqueceram.png" alt="Esqueceram de Mim">
+    <div class="title">
     <h1>Esqueceram de Mim</h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p>1990</p>
     <p>1h, 43m</p>
       <a href="https://www.imdb.com/title/tt0099785/?ref_=fn_al_tt_1">7.7/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Uma família de Chicago planeja passar o Natal em Paris. Porém, em meio às confusões da viagem, um dos filhos, Kevin (Macaulay Culkin), acaba esquecido em casa. O garoto de apenas oito anos é obrigado a se virar sozinho e defender a casa de dois insistentes ladrões.</p>
   </div>
   </div>  
+  </div>
     <footer>
       <div class="contato">
         <div class="contato-1">

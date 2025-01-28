@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invocação do Mal</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Invocação do Mal 1.jpg" alt="Invocação do Mal">
+    <div class="title">
     <h1>Invocação do Mal </h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p> 2013 </p>
     <p> 1h, 52m </p>
       <a href="https://www.imdb.com/title/tt1457767/?ref_=nv_sr_srsg_1_tt_8_nm_0_q_invoca">7.5/10</a> 
@@ -62,6 +75,7 @@ if (isset($_SESSION['nome'])) {
   </div>
   <div class="texto1">
     <p>Harrisville, Estados Unidos. Um casal (Ron Livinston e Lili Taylor) muda para uma casa nova ao lado de suas cinco filhas. Inexplicavelmente, estranhos acontecimentos começam a assustar as crianças, o pai e, principalmente, a mãe. Preocupada com algumas manchas que aparecem em seu corpo e com uma sequência de sustos que levou, ela decide procurar um famoso casal de investigadores paranormais (Patrick Wilson e Vera Farmiga), mas eles não aceitam o convite, acreditando ser somente mais um engano de pessoas apavoradas com canos que fazem barulhos durante a noite ou coisas do gênero. Porém, quando eles aceitam fazer uma visita ao local, descobrem que algo muito poderoso e do mal reside ali. Agora, eles precisam descobrir o que é e o porquê daquilo tudo acontecendo com os membros daquela família. É quando o passado começa a revelar uma entidade demoníaca querendo continuar sua trajetória de maldades.</p>
+  </div>
   </div>
   </div>
     <footer>

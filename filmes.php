@@ -25,48 +25,36 @@ if (isset($_SESSION['nome'])) {
   <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" type="text/css" />
   <link href="filmes.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/png" href="imagens/file.png">
-</head>
-
-<body>
-  <style>
-    .filme-carousel {
-      padding: 0;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 10px;
-    }
-    
-    .filme-carousel a {
-      margin: 0 10px; 
-    }
-    
-    .container-a {
-     width: 80%;
-    margin: 0 auto;
-    justify-content: center;
-}
-    
-    .filme-carousel img {
-      margin-bottom: 0px;
-      max-width: 100%; 
-      height: auto;
-      max-height: 250px;
-    }
-  </style>
-  
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-  
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
+  <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+  </head>
+  <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+      <a href="games.php"><button title="Games">Games</button></a>
+      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+    </div>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
 <div class="container-a" align="center">
     <h1>FILMES</h1>
     <p> Ação </p>

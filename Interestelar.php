@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interestelar</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Interestelar.png" alt="Interestelar">
+      <divl class="title"></divl>
     <h1>Interestelar</h1>
-  </div>
-      <div class = "rating"> 
+      <div class = "mdb"> 
       <p> 2014 </p>
       <p> 2h, 49m </p>
         <a href="https://www.imdb.com/title/tt0816692/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_intereste">8.7/10</a> 
@@ -62,6 +75,7 @@ if (isset($_SESSION['nome'])) {
       </div>
   <div class="texto1">
     <p>Após ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper (Matthew McConaughey) é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguirá em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investirá numa própria jornada para também tentar salvar a população do planeta.</p>
+  </div>
   </div>
   </div>
     <footer>

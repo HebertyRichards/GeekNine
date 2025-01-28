@@ -23,31 +23,44 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logan</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Logan.png" alt="Logan">
+    <div class="title">
     <h1>Logan</h1>
-  </div>
+    <div class = "mdb"> 
     <p> 2017 </p>
     <p> 2h, 17m </p>
-    <div class = "rating"> 
       <a href="https://www.imdb.com/title/tt3315342/?ref_=fn_al_tt_1">8.1/10</a> 
       </div>
   <div class="elenco">
@@ -62,6 +75,7 @@ if (isset($_SESSION['nome'])) {
   </div>
   <div class="texto1">
     <p>Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), interessado na menina.</p>
+  </div>
   </div>
   </div>
     <footer>

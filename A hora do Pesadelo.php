@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Hora do Pesadelo</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+      <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Pesadelo.png" alt="A Hora do Pesadelo">
+      <div class="title">
     <h1>A Hora do Pesadelo</h1>
-  </div>
-  <div class="rating">
+  <div class="mdb">
     <p>1984</p>
     <p>1h, 31m</p>
       <a href="https://www.imdb.com/title/tt0087800/?ref_=fn_al_tt_1">7.4/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Um grupo de adolescentes tem pesadelos horríveis, onde são atacados por um homem deformado com garras de aço. Ele apenas aparece durante o sono e, para escapar, é preciso acordar. Os crimes vão ocorrendo seguidamente, até que se descobre que o ser misterioso é na verdade Freddy Krueger, um homem que molestou crianças na rua Elm e que foi queimado vivo pela vizinhança. Agora Krueger pode retornar para se vingar daqueles que o mataram, através do sono.</p>
   </div>
 </div>
+    </div>
     <footer>
       <div class="contato">
         <div class="contato-1">

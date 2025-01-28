@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogos Mortais 10</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Jogos Mortais X.png" alt="Jogos Mortais 10">
+    <div class="title">
     <h1>Jogos Mortais 10</h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p> 2023 </p>
     <p> 1h, 58m </p>
       <a href="https://www.imdb.com/title/tt21807222/?ref_=fn_al_tt_2">6.6/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Jogos Mortais X é o décimo capítulo da famosa franquia de terror com gore e tortura Jogos Mortais, iniciada em 2004 sob direção de James Wan (Invocação do Mal, Velozes & Furiosos 7). Nesta nova sequência, John Kramer (Tobin Bell), o impiedoso assassino Jigsaw - criador dos sádicos jogos de sobrevivência - está muito doente e em busca de uma cura milagrosa. Ele decide, então, viajar para o México após ouvir falar de um inovador procedimento médico que, além de experimental, também é muito arriscado. Disposto a tentar a sorte, Kramer parte rumo à cura. Porém, ao chegar a seu destino, se depara com um ambiente macabro, e descobre que toda a operação é uma farsa para enganar pessoas vulneráveis. Agora armado com um novo propósito, o infame serial killer usará armadilhas insanas e engenhosas para virar o jogo contra os vigaristas, relembrando o motivo de ser conhecido como o terrível vilão Jigsaw.</p>
   </div>
   </div>
+  </div>  
     <footer>
       <div class="contato">
         <div class="contato-1">

@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anatomia de Uma Queda</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+      <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Anatomia.png" alt="Anatomia de uma Queda">
+      <div class="title">
     <h1>Anatomia de Uma Queda</h1>
-  </div>
-  <div class="rating">
+  <div class="mdb">
     <p>2023</p>
     <p>2h, 31m </p>
       <a href="https://www.imdb.com/title/tt17009710/?ref_=fn_al_tt_1">7.7/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Anatomia de uma Queda é um suspense dramático dirigido por Justine Triet, que conta a história de um homem que é encontrado morto na neve do lado de fora do chalé isolado onde morava com sua esposa Sandra (Sandra Hüller), uma escritora alemã, e seu filho de 11 anos com deficiência visual. A investigação conclui se tratar de uma "morte suspeita": é impossível saber ao certo se ele tirou a própria vida ou se foi assassinado. A viúva é indiciada, tendo seu próprio filho no meio do conflito: entre o julgamento e a vida familiar, as dúvidas pesam na relação mãe-filho, pois o menino é a única testemunha do acontecido. Com estreia mundial no Festival de Cannes 2023 e Festival Varilux de Cinema Francês no Brasil, o longa venceu o prêmio Palma de Ouro.</p>
   </div>
   </div>
+    </div>
     <footer>
       <div class="contato">
         <div class="contato-1">

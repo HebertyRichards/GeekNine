@@ -53,6 +53,12 @@ $messages = array_reverse($messages);
         <a href="filmes.php"><button title="Filmes">Filmes</button></a>
         <a href="eventos.php"><button title="Eventos">Eventos</button></a>
       </div>
+      <div class="search-container">
+        <form action="" method="GET">
+          <input type="text" placeholder="Digite sua busca" name="Digite sua busca">
+          <input type="submit" value="">
+        </form>
+      </div>
       <br><br>
     <div class="chat-container">
         <div class="messages">
@@ -74,7 +80,6 @@ $messages = array_reverse($messages);
         </form>
         </div>
     </div>
-    <br></br>
     <br></br>
     <br></br>
      <footer>

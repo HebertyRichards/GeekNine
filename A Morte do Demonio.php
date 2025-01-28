@@ -23,29 +23,43 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Morte do Demônio: A Ascensão</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+      <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Demonio.png" alt="A Morte do Demonio">
+      <div class="title">
     <h1>A Morte do Demônio: A Ascensão</h1>
   </div>
-  <div class="rating">
+  <div class="mdb">
     <p>2023</p>
     <p>1h, 36m</p>
       <a href="https://www.imdb.com/title/tt13345606/?ref_=fn_al_tt_1">6.5/10</a> 
@@ -64,6 +78,7 @@ if (isset($_SESSION['nome'])) {
     <p>A Morte do Demônio: A Ascensão é um filme de terror slasher que faz parte da clássica franquia A Morte do Demônio, que teve o primeiro título lançado em 1981. No filme, Beth (Lily Sullivan) vai até Los Angeles para visitar sua irmã mais velha, Ellie (Alyssa Sutherland), que mora com os três filhos em um pequeno apartamento. Com uma relação distante, essa seria a oportunidade para uma reaproximação entre as irmãs. Porém, o reencontro toma um rumo macabro quando elas encontram um livro antigo que dá vida a demônios possuidores de carne. Agora, para sobreviverem, serão forçadas a enfrentar uma versão aterrorizante da família.</p>
   </div>
 </div>
+  </div>
     <footer>
       <div class="contato">
         <div class="contato-1">

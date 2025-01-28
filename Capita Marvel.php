@@ -23,15 +23,14 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capitã Marvel</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
+    <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
       <a href="index.php"><button title="Início">Início</button></a>
       <a href="sobre.php"><button title="Sobre">Sobre</button></a>
       <a href="games.php"><button title="Games">Games</button></a>
@@ -39,13 +38,27 @@ if (isset($_SESSION['nome'])) {
       <a href="filmes.php"><button title="Filmes">Filmes</button></a>
       <a href="eventos.php"><button title="Eventos">Eventos</button></a>
     </div>
-    <br><br><br><br>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Capita.png" alt="Capitã Marvel">
+      <div class="title">
     <h1>Capitã Marvel</h1>
-  </div>
-  <div class="rating">
+  <div class="mdb">
     <p>2019</p>
     <p>2h, 3m p</p>
       <a href="https://www.imdb.com/title/tt4154664/?ref_=fn_al_tt_1">6.8/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Em Capitã Marvel, Carol Danvers (Brie Larson) é uma ex-agente da Força Aérea norte-americana, que, sem se lembrar de sua vida na Terra, é recrutada pelos Kree para fazer parte de seu exército de elite. Inimiga declarada dos Skrull, ela acaba voltando ao seu planeta de origem para impedir uma invasão dos metaformos, e assim vai acabar descobrindo a verdade sobre si, com a ajuda do agente Nick Fury (Samuel L. Jackson) e da gata Goose.</p>
   </div>
   </div>
+    </div>
     <footer>
       <div class="contato">
         <div class="contato-1">

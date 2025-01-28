@@ -17,118 +17,43 @@ if (isset($_SESSION['nome'])) {
 
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .h1{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
-     }
-
-    .h3 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-      .chip-b{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;
-    }
-
-    .chip-c{
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      text-align: justify;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: black;
-    }
-    
-    .sub{
-      color: darkblue;
-      font-style: italic;
-      font-weight: bold;
-    }
-    
-    .news-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-    }
-
-    .news-item {
-      width: 400px;
-      height: 400px;
-      margin: 10px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 30px;
-      overflow: hidden;
-      box-sizing: border-box;
-      background-color: #fff;
-    }
-
-    .news-item img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .news-item h2 {
-      font-size: 18px;
-      margin: 0 0 10px;
-    }
-
-    .news-item p {
-      font-size: 14px;
-      color: #666;
-      margin: 0 0 10px;
-    }
-
-    .news-item a {
-      display: inline-block;
-      color: #114379;
-      text-decoration: none;
-    }
-
-    .news-item a:hover {
-      text-decoration: underline;
-    }
-  </style>
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MacBook Air de 13</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
+    <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+  </head>
+  <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+      <a href="games.php"><button title="Games">Games</button></a>
+      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+    </div>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <table>
-         <div class = "h1" align = "center">
+         <div class = "h1">
         <h1>Apple apresenta os novos notebooks MacBook Air de 13<br> e 15 polegadas com o poderoso chip M3</h1>
            </div>
            <div class="h3">
@@ -137,7 +62,7 @@ if (isset($_SESSION['nome'])) {
      <div class = "chip-b">
     <img src="imagens/mac-3.jpeg" alt="imagens/mac-3.jpeg" width="400px">
       </div>
-     <div class = "chip-c" align="center">
+     <div class = "chip-c">
  <p> A Apple anunciou hoje o novo MacBook Air com o poderoso chip M3, levando a incrível combinação de portabilidade e desempenho eficiente a outro nível. Com o chip M3, o MacBook Air ficou até 60% mais rápido do que o modelo com chip M1 e até 13 vezes mais rápido do que o melhor MacBook Air com processador Intel.1. E, graças ao Neural Engine mais rápido e mais eficiente no chip M3, o MacBook Air continua sendo o melhor notebook pessoal do mundo para inteligência artificial. Os notebooks MacBook Air de 13 e 15 polegadas têm um design incrivelmente fino e leve, bateria com até 18 horas de duração1, uma linda tela Liquid Retina e novos recursos, incluindo compatibilidade com até dois monitores externos e Wi-Fi com o dobro de velocidade da geração anterior. Com uma estrutura unibody de alumínio resistente que foi projetada para durar, o novo MacBook Air está disponível em quatro cores: meia-noite, que recebe um tratamento anodizado inovador para reduzir as impressões digitais, estelar, cinza-espacial e prateado. Em conjunto com a câmera, microfones e alto-falantes superiores, a porta MagSafe para recarga, o design silencioso sem ventoinha e o macOS, o MacBook Air oferece uma experiência inigualável, fazendo com que os modelos de 13 e 15 polegadas sejam os mais vendidos nessas categorias. Os clientes nos Estados Unidos podem reservar os novos modelos a partir de hoje, com disponibilidade a partir de 8 de março.<p>
 <em> “O MacBook Air é o nosso Mac mais popular e mais amado. A maioria dos clientes prefere esse notebook a qualquer outro. E, hoje, ele fica ainda melhor com o chip M3 e novos recursos”, afirma Greg Joswiak, senior vice president of Worldwide Marketing da Apple. “De universitários em busca do diploma a usuários corporativos atrás de produtividade, ou qualquer pessoa que simplesmente queira a combinação imbatível de desempenho, portabilidade e bateria líder do setor em um design sem ventoinha, o novo MacBook Air continua sendo o melhor notebook fino e leve do mundo.”</em></p>
 </p>
@@ -176,7 +101,7 @@ if (isset($_SESSION['nome'])) {
        <br></br> 
        <br></br>
      </div>
-    <div class="container-a" align="center">
+    <div class="container-a">
       <h2>OUTRAS NOTICÍAS:</h2>
     </div>
     <div class="news-container">

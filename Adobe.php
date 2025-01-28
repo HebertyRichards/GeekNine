@@ -17,120 +17,44 @@ if (isset($_SESSION['nome'])) {
 
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .h1{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
-     }
-
-    .h3 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-      .chip-b{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;
-    }
-
-    .chip-c{
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      text-align: justify;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: black;
-    }
-
-    .sub{
-      color: darkblue;
-      font-style: italic;
-      font-weight: bold;
-    }
-
-    .news-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-    }
-
-    .news-item {
-      width: 400px;
-      height: 400px;
-      margin: 10px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 30px;
-      overflow: hidden;
-      box-sizing: border-box;
-      background-color: #fff;
-    }
-
-    .news-item img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .news-item h2 {
-      font-size: 18px;
-      margin: 0 0 10px;
-    }
-
-    .news-item p {
-      font-size: 14px;
-      color: #666;
-      margin: 0 0 10px;
-    }
-
-    .news-item a {
-      display: inline-block;
-      color: #114379;
-      text-decoration: none;
-    }
-
-    .news-item a:hover {
-      text-decoration: underline;
-    }
-
-  </style>
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adobe Premiere Pro receberá ferramenta de geração de vídeo com IA</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
+    <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+  </head>
+  <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+      <a href="games.php"><button title="Games">Games</button></a>
+      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+    </div>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <table>
-         <div class = "h1" align = "center">
+         <div class = "h1">
         <h1> Adobe Premiere Pro receberá ferramenta<br> de geração de vídeo com IA </h1>
     </div>
            <div class="h3"
@@ -141,7 +65,7 @@ if (isset($_SESSION['nome'])) {
      <div class = "chip-b">
     <img src="imagens/adobe-t1.png" alt="imagens/adobe-t1.png" width="400px">
       </div>
-     <div class = "chip-c" align="center">
+     <div class = "chip-c">
  <p>A gigante de software Adobe está se preparando para revolucionar sua plataforma de edição de vídeo Premiere Pro com a introdução de ferramentas de vídeo com inteligência artificial generativa sob sua família Firefly. Esta adição visa permitir que os usuários manipulem conteúdo de vídeo sem esforço por meio de prompts de texto, semelhante ao recurso Preenchimento Generativo do Photoshop. As próximas ferramentas Firefly prometem permitir que os usuários gerem, adicionem ou removam objetos dentro de clipes de vídeo, bem como estendam sua duração de forma contínua. A Adobe não especificou uma data de lançamento concreta para suas novas ferramentas de geração de vídeo, declarando apenas que estão programadas para serem lançadas “este ano”. A gigante de software Adobe está se preparando para revolucionar sua plataforma de edição de vídeo Premiere Pro com a introdução de ferramentas de vídeo com inteligência artificial generativa sob sua família Firefly. Esta adição visa permitir que os usuários manipulem conteúdo de vídeo sem esforço por meio de prompts de texto, semelhante ao recurso Preenchimento Generativo do Photoshop. As próximas ferramentas Firefly prometem permitir que os usuários gerem, adicionem ou removam objetos dentro de clipes de vídeo, bem como estendam sua duração de forma contínua. A Adobe não especificou uma data de lançamento concreta para suas novas ferramentas de geração de vídeo, declarando apenas que estão programadas para serem lançadas “este ano”.
  <p>  A incorporação de integrações de IA de terceiros no Premiere Pro representa uma exploração inicial de colaborações potenciais, de acordo com a Adobe. Esta iniciativa estratégica visa oferecer aos usuários uma maior flexibilidade, permitindo-lhes aproveitar modelos como Pika para estender tomadas ou Sora e Runway AI para gerar imagens complementares. Além disso, a Adobe enfatiza a aplicação de etiquetas de Credenciais de Conteúdo para identificar os modelos de IA específicos utilizados na geração de clipes, garantindo transparência e responsabilidade no processo de edição.</p>
         <div class = "chip-b">
@@ -160,7 +84,7 @@ if (isset($_SESSION['nome'])) {
        <br></br>
        <br></br>
      </div>
-      <div class="container-a" align="center">
+      <div class="container-a">
         <h2>OUTRAS NOTICÍAS:</h2>
       </div>
       <div class="news-container">

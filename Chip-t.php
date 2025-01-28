@@ -17,104 +17,20 @@ if (isset($_SESSION['nome'])) {
 
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .h1{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
-     }
-    
-      .chip-b{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;
-    }
-
-    .chip-c{
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      text-align: justify;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: black;
-    }
-    
-    .sub{
-      color: darkblue;
-      font-style: italic;
-      font-weight: bold;
-    }
-      
-        .news-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: center;
-          text-align: center;
-        }
-
-        .news-item {
-          width: 400px;
-          height: 400px;
-          margin: 10px;
-          padding: 20px;
-          border: 1px solid #ddd;
-          border-radius: 30px;
-          overflow: hidden;
-          box-sizing: border-box;
-          background-color: #fff;
-        }
-
-        .news-item img {
-          width: 100%;
-          height: auto;
-          margin-bottom: 10px;
-        }
-
-        .news-item h2 {
-          font-size: 18px;
-          margin: 0 0 10px;
-        }
-
-        .news-item p {
-          font-size: 14px;
-          color: #666;
-          margin: 0 0 10px;
-        }
-
-        .news-item a {
-          display: inline-block;
-          color: #114379;
-          text-decoration: none;
-        }
-
-        .news-item a:hover {
-          text-decoration: underline;
-        }
-    
-  </style>
 <head>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Por que Taiwan é tão importante no mercado de chips e <br>como uma interrupção na produção poderia afetar o mundo</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
+  <script defer src="script.js"></script>
   <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-
-  <div class="menu-container">
+  </head>
+  <body>
+    <header>
+        <img src="imagens/GeekTopo2.png" class="img-fluid">
+      </header>
+    <div id="menu-container">
     <a href="index.php"><button title="Início">Início</button></a>
     <a href="sobre.php"><button title="Sobre">Sobre</button></a>
     <a href="games.php"><button title="Games">Games</button></a>
@@ -122,15 +38,30 @@ if (isset($_SESSION['nome'])) {
     <a href="filmes.php"><button title="Filmes">Filmes</button></a>
     <a href="eventos.php"><button title="Eventos">Eventos</button></a>
   </div>
+  <div id="menu-container2">
+      <div class="modo">
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+          <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
+      <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+  </div>
   <table>
     <div class= "chip">
-         <div class = "h1" align = "center">
+         <div class = "h1">
         <h1> Por que Taiwan é tão importante no mercado de chips e <br>como uma interrupção na produção poderia afetar o mundo </h1>
     </div>
      <div class = "chip-b">
     <img src="imagens/chip.jpg" alt="chip.jpg" width="400px">
       </div>
-     <div class = "chip-c" align="center">
+     <div class = "chip-c">
   <p>O país asiático foi atingido pelo terremoto mais forte registrado lá em 25 anos, e fábricas de chips chegaram a paralisar algumas operações ao longo do dia para avaliar os impactos.Os primeiros relatos são de que não houve danos graves. Mas o tremor levantou a preocupação sobre como um desastre natural poderia desestabilizar o fornecimento desses componentes e causar um baque ainda maior do que a recente "crise dos chips", que atingiu a indústria entre 2020 e 2023 e freou até a produção de carros. Afinal, o que é um chip? É um componente muito pequeno, feito de material semicondutor, principalmente o silício (encontrado na areia) O chip contém um circuito eletrônico e é considerado semicondutor porque deixa passar menos eletricidade do que o cobre, por exemplo, mas não chega a ser um isolante. Fazendo a eletricidade passar e parar de passar, os chips permitem, por exemplo, que aparelhos eletrônicos executem comandos ao apertar de um botão ou que dados sejam armazenados, entre muitas funções. Quem depende dos chips: não é só celular que tem chip... ele está no cartão do banco, nas geladeiras, nas máquinas de lavar, em lâmpadas de LED, nos aviões.
     Nos carros atuais, são usados milhares de chips em diversos sistemas, como computador de bordo, gerenciamento do motor e controle de navegação.
     <div class = "sub">
@@ -164,7 +95,7 @@ A United Microelectronics Corp (UMC), rival da TSMC no país, disse que todos os
       <br></br> 
       <br></br>
       <br></br>
-       <div class="container-a" align="center">
+       <div class="container-a">
          <h2>OUTRAS NOTICÍAS:</h2>
        </div>
        <div class="news-container">

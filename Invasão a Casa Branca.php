@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invasão a Casa Branca</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Casa Branca.png" alt="Casa Branca">
+    <div class="title">
     <h1>Invasão a Casa Branca </h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p> 2013 </p>
     <p> 1h, 59m </p>
       <a href="https://www.imdb.com/title/tt2302755/?ref_=nv_sr_srsg_0_tt_7_nm_0_q_invas%25C3%25A3o%2520a%2520casa%2520branca">6.5/10</a> 
@@ -65,7 +78,7 @@ if (isset($_SESSION['nome'])) {
     Mike Banning (Gerard Butler) é um dedicado funcionário do serviço secreto americano, que tem por função proteger o presidente Benjamin Asher (Aaron Eckhart) e sua família. Ao levá-los para uma festa de Natal, uma intensa nevasca faz com que o carro em que estão o presidente e sua esposa, Margaret (Ashley Judd), sofra um acidente. Mike consegue salvar Benjamin, mas a primeira-dama morre. A partir de então, Mike é deslocado para um serviço burocrático de escritório em Washington, que ele detesta. Dezoito meses depois, a Casa Branca é atacada por terroristas norte-coreanos. Percebendo o pânico na população e o perigo que o presidente corre, Mike segue para a Casa Branca para ajudar no que pode. Com toda a equipe de segurança local dizimada, ele se torna a única esperança dentro da Casa Branca para combater os terroristas e salvar o presidente.
 </p>
   </div>
-  
+    </div>
   </div>  
     <footer>
       <div class="contato">

@@ -17,78 +17,50 @@ if (isset($_SESSION['nome'])) {
 
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .h1{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
-     }
-    
-      .chip-b{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;
-    }
-
-    .chip-c{
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      text-align: justify;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: black;
-    }
-    
-    .sub{
-      color: darkblue;
-      font-style: italic;
-      font-weight: bold;
-    }
-  </style>
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samsung Galaxy Book4 Series</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
-  <div class="search-container">
-    <form action="" method="GET">
-      <input type="text" placeholder="Digite sua busca" name="Digite sua busca">
-      <input type="submit" value="">
-    </form>
-  </div>
- 
+  <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+      <a href="games.php"><button title="Games">Games</button></a>
+      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+    </div>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <table>
-         <div class = "h1" align = "center">
+         <div class = "h1">
         <h1> Samsung Galaxy Book4 Series: novos lançamentos da<br> linha apostam em IA</h1>
     </div>
      <div class = "chip-b">
     <img src="imagens/sansuIA.jpeg" alt="imagens/sansuIA.jpeg" width="400px">
       </div>
-     <div class = "chip-c" align="center">
+     <div class = "chip-c">
  <p>Apresentados ao mercado global em dezembro de 2023, os novos notebooks Samsung Galaxy Book4 Series chegam oficialmente em terras brasileiras no dia 18 de abril. Focada em inovação e desempenho, a marca apostou em inteligência artificial como uma das principais características da linha.
 
  Essa aposta é evidente, sobretudo nos modelos Galaxy Book4 Ultra e Galaxy Book4 Pro, que contam com processador NPU (Unidade de Processamento Neural) exclusivo para as demandas de IA.

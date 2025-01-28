@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Esposa de Mentirinha</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Esposa.png" alt="Esposa de Mentirinha">
+    <div class="title">
     <h1>Esposa de Mentirinha</h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p>2011</p>
     <p>1h, 57m</p>
       <a href="https://www.imdb.com/title/tt1564367/?ref_=fn_al_tt_1">6.4/10</a> 
@@ -62,6 +75,7 @@ if (isset($_SESSION['nome'])) {
   </div>
   <div class="texto1">
     <p>Danny Maccabee (Adam Sandler) queria um relacionamento sério, mas foi infeliz em sua tentativa de casamento. Para driblar a carência, passa a vivenciar somente namoricos e transas sem o menor compromisso. Assim, ele toca sua vida como cirurgião plástico bem sucedido, tendo sua melhor amiga Katherine (Jennifer Aniston), mãe solteira de um casal de pirralhos, como fiel escudeira. Mas um dia ele conhece a jovem Palmer (Brooklyn Decker) e a paixão toma conta de ambos. Disposto a se casar com ela, Danny pisa na bola quando, para conquistá-la, inventa que é marido da amiga, pai das crianças e que vai se separar. Começa então uma verdadeira aventura amorosa recheada de confusões de todos os tipos.</p>
+  </div>
   </div>
   </div>
     <footer>

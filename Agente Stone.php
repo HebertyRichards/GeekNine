@@ -23,29 +23,43 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agente Stone</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
+      <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
     <br><br><br><br>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/Agente Stone.png" alt="Agente Stone">
+      <div class="title">
     <h1>Agente Stone</h1>
-  </div>
-  <div class="rating">
+  <div class="mdb">
     <p>2023</p>
     <p>2h, 2m</p>
       <a href="https://www.imdb.com/title/tt13603966/?ref_=fn_al_tt_1">5.7/10</a> 
@@ -64,6 +78,7 @@ if (isset($_SESSION['nome'])) {
     <p>Agente Stone é um suspense de espionagem dirigido por Tom Harper (Peaky Blinders) para a Netflix. Na história, acompanhamos a agente de elite Rachel Stone (Gal Gadot), que esconde um grande segredo: ela é a única pessoa que pode se colocar entre uma misteriosa e ultra-poderosa organização que busca manter a paz mundial, e a possível perda do bem mais valioso - e perigoso - da instituição, conhecido como o Coração. Com Jamie Dornan (50 Tons de Cinza), Alia Bhatt (A Espiã), Sophie Okonedo (Morte no Nilo), Matthias Schweighöfer (Exército de Ladrões: Invasão da Europa), Jing Lusi, Paul Ready, Jon Kortajarena e Archie Madekwe.</p>
   </div>
   </div>
+  </div>  
     <footer>
       <div class="contato">
         <div class="contato-1">
