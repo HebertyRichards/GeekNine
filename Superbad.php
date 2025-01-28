@@ -39,13 +39,19 @@ if (isset($_SESSION['nome'])) {
       <a href="filmes.php"><button title="Filmes">Filmes</button></a>
       <a href="eventos.php"><button title="Eventos">Eventos</button></a>
     </div>
+    <div class="search-container">
+      <form action="" method="GET">
+        <input type="text" placeholder="Digite sua busca" name="Digite sua busca">
+        <input type="submit" value="">
+      </form>
+    </div>
     <br><br><br><br>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Superbad.png" alt="Superbad">
+    <div class="title">
     <h1>Superbad: É Hoje</h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p> 2007 </p>
     <p> 1h, 53m </p>
       <a href="https://www.imdb.com/title/tt0829482/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_superbad">7.6/10</a> 
@@ -62,6 +68,7 @@ if (isset($_SESSION['nome'])) {
   </div>
   <div class="texto1">
     <p>Evan (Michael Cera) e Seth (Jonah Hill) são amigos inseparáveis, que estão terminando o colegial. Eles vão para faculdades diferentes e, desta forma, são obrigados a se separar. Evan é amável, esperto e normalmente aterrorizado com o que acontece à sua volta, enquanto que Seth é desbocado, frívolo e obcecado pela sexualidade. Cada um de sua forma, eles precisarão superar suas frustrações com as mulheres no fim desta fase de suas vidas.</p>
+  </div>
   </div>
   </div>
     <footer>

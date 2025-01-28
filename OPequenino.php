@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O Pequenino</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/OPequenino.png" alt="Pequenino">
+    <div class="title">
     <h1>O Pequenino</h1>
-  </div>
-    <div class = "rating"> 
+    <div class = "mdb"> 
     <p> 2006 </p>
     <p> 1h, 38m </p>
       <a href="https://www.imdb.com/title/tt0430304/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_o%2520pequenino">4.5/10</a> 
@@ -62,6 +75,7 @@ if (isset($_SESSION['nome'])) {
   </div>
   <div class="texto1">
     <p>Calvin Sims (Marlon Wayans) é um perigoso ladrão de jóias que não tem nem um metro de altura. Recém-saído da prisão, elen decide realizar um último grande roubo antes de se aposentar. O alvo escolhido é o famoso diamante Queen, pelo qual Calvin e seu parceiro Percy (Tracy Morgan) receberão US$ 100 mil. O assalto dá errado e Calvin esconde o diamante na bolsa de Vanessa Edwards (Kerry Washington), que o leva para casa sem notar a bagagem extra. Calvin e Percy a seguem e presenciam uma discussão que Vanessa tem com seu marido, Darryl (Shawn Wayans). Ele deseja ser pai o quanto antes, mas Vanessa acha que ter um filho pode atrapalhar sua carreira de vice-presidente de uma agência de propaganda. Aproveitando a deixa, Calvin e Percy elaboram um plano: fazendo-se passar por bebê, Calvin seria deixado na porta da casa dos Edwards. Eles, encantados, o levariam para dentro de casa, onde o ladrão poderia roubar o diamante. O plano dá certo, mas Calvin não contava que sua nova vida de bebê seria bem mais complicada do que imaginava.</p>
+  </div>
   </div>
   </div>
     <footer>

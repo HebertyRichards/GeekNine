@@ -1,19 +1,23 @@
- html {
+html {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  border: none;
-  padding: 0;
-  margin: 0 auto;
   background-image: url("imagens/fundo_sobree.jpg");
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-  width: 100%;
-  height: 100%
+  margin: 0;
+  padding: 0;
+}
+.img-fluid {
+  width: 90%;
 }
 
 .ola {
@@ -22,7 +26,17 @@ body {
   right: 9%;
 }
 
-.menu-container {
+#menu-container2 {
+  display:flex;
+}
+
+#menu-container2 img{
+  display: flex;
+  width: 40%;
+  margin-top: auto;
+}
+
+#menu-container {
   position: absolute;
   top: 5%;
   right: 17%;
@@ -32,7 +46,7 @@ body {
   width: 50%;
 }
 
-.menu-container button {
+#menu-container button {
   margin: 0 auto;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -42,7 +56,7 @@ body {
   transition: 0.5s;
 }
 
-.menu-container button:hover {
+#menu-container button:hover {
   color: #0f298f;
   text-shadow: -1px -1px 0px #000000;
   letter-spacing: 0.1em;
@@ -170,6 +184,54 @@ button[title="Cadastro"] {
   justify-content: center;
 }
 
+.messages {
+  border: 2px solid black;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  background-color:  #d4d4d4;
+}
+
+.message {
+  border: 1px solid black;
+}
+
+.messages h1 {
+  text-align: center;
+}
+
+.msg2 {
+  background-color: #d4d4d4;
+  border: 2px solid black;
+}
+
+.message {
+  margin-top: 5px;
+}
+
+.msg {
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.msg form  input[type="text"] {
+  margin-top: 5px;
+  width: 93%;
+  height: 30px;
+}
+
+.msg form button[type="submit"] {
+  height: 30px;
+  color: white;
+  background-color: #404040;
+}
+
+.msg form button[type="submit"]:hover {
+  background-color: #0f298f;
+}
+
 button[title="Login"] {
   position: absolute;
   top: 11%;
@@ -281,6 +343,10 @@ button[title="Twitter"] {
   font-size: 20px;
 }
 
+.contato-1 ul h1 {
+  font-family: arial;
+}
+
 footer {
   background-color: #333;
   color: #fff;
@@ -313,12 +379,55 @@ footer {
   height: 20px;
 }
 
-.contato-1 ul h1 {
-  font-family: arial;
-}
-
 ul {
   list-style: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(11, 74, 156);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar button,
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  color: #2e2e2e;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  border: none;
 }
 
 .container-b{
@@ -329,6 +438,30 @@ ul {
   justify-content: center;
   text-align: left;
   align-items: flex-end;
+}
+
+.text1 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:  rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 15px;
+  opacity: 20;
+  margin-top: -5px;
+}
+
+.teste {
+  position: relative;
+  display: inline-block; 
+}
+
+.teste {
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
 .robo-s{
@@ -404,8 +537,92 @@ letter-spacing: 0.1em;
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  
 }
+
+.h1{
+  display:flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 200px; 
+  text-align: center;
+}
+
+  .h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .chip-b{
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+  }
+
+  .chip-c{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: black;
+    flex-wrap: wrap;
+  }
+
+  .sub{
+    color: darkblue;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-item {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+
+  .news-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .news-item h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+
+  .news-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px;
+  }
+
+  .news-item a {
+    display: inline-block;
+    color: #114379;
+    text-decoration: none;
+  }
+
+  .news-item a:hover {
+    text-decoration: underline;
+  }
 
 @keyframes fade {
   from { opacity: 0; }
@@ -415,7 +632,7 @@ letter-spacing: 0.1em;
 .dots-container {
   text-align: center;
   margin-top: 10px;
-  
+
 }
 
 .dot {
@@ -426,7 +643,7 @@ letter-spacing: 0.1em;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s ease;
-  
+
 }
 
 .dot.active {
@@ -438,8 +655,8 @@ letter-spacing: 0.1em;
   height: 400px;
   border-radius: 30px;
   align-items: center;
- 
 }
+
 .text {
   position: absolute;
   bottom: 10px;
@@ -451,8 +668,8 @@ letter-spacing: 0.1em;
   border-radius: 5px;
   font-size: 20px;
   opacity: 30;
-  
 }
+
 .news-container {
   display: flex;
   flex-wrap: wrap;
@@ -472,7 +689,6 @@ letter-spacing: 0.1em;
   overflow: hidden;
   box-sizing: border-box;
   background-color: #fff;
-
 }
 
 .news-item img {
@@ -501,30 +717,7 @@ letter-spacing: 0.1em;
 .news-item a:hover {
   text-decoration: underline;
 }
-.text1 {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color:  rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 8px;
-  border-radius: 10px;
-  font-size: 15px;
-  opacity: 20;
-  margin-top: -5px;
 
-
-}
-.teste {
-  position: relative;
-  display: inline-block; 
-}
-
-.teste {
-  animation-name: fade;
-  animation-duration: 1s;
-}
 .carousel-container {
   position: relative;
   width: 400px; 
@@ -569,495 +762,236 @@ letter-spacing: 0.1em;
 }
 
 @media (max-width: 1366px) {
-  header .img-fluid {
+  .img-fluid {
     width: 75%;
   }
 
+  .chip-c {
+    width: 60%;
+  }
+
 .ola {
- font-size: 11px;
+font-size: 11px;
 }
 
+ button[title="Usuario"],button[title="Cadastro"],  button[title="Login"] {
+   width: 40px;
+   height: 30px;
+ }
+
+ button[title="Logout"] {
+   position: absolute;
+   top: 20%;
+   width: 95px;
+   height: 20px;
+   font-size: 11px;
+ }
+
+ button[title="Início"] {
+   width: 90px;
+   height: 25px;
+   font-size: 11px;
+ }
+
+ button[title="Sobre"] {
+   font-size: 11px;
+   width: 95px;
+   height: 25px;
+ }
+
+ button[title="Games"] {
+   width: 95px;
+   height: 25px;
+   font-size: 11px;
+ }
+
+ button[title="Tecnologia"] {
+   width: 110px;
+   height: 25px;
+   font-size: 11px;
+ }
+
+ button[title="Filmes"] {
+   width: 100px;
+   height: 25px;
+   font-size: 11px;
+ }
+
+ button[title="Eventos"] {
+   width: 100px;
+   height: 25px;
+   font-size: 11px;
+ }
+}
+@media (max-width: 1024px) {
+  header .img-fluid {
+    width: 70%;
+  }
+   .ola {
+     position: absolute;
+     top: 16%;
+   }
+
   button[title="Usuario"] {
+    position: relative;
+    right: 9%;
+    top: 12%;
     width: 40px;
     height: 30px;
   }
 
-  button[title="Cadastro"] {
-    width: 95px;
-    height: 20px;
-    font-size: 11px;
-  }
-
-  button[title="Login"] {
-    width: 95px;
-    height: 20px;
-    font-size: 11px;
-  }
-
-  button[title="Logout"] {
-    position: absolute;
-    top: 20%;
-    width: 95px;
-    height: 20px;
-    font-size: 11px;
+  button[title="Cadastro"], button[title="Login"], button[title="Logout"] {
+    width: 75px;
+    height: 17px;
+    font-size: 9px;
   }
 
   button[title="Início"] {
-    width: 90px;
-    height: 25px;
-    font-size: 11px;
+    width: 70px;
+    height: 20px;
+    font-size: 9px;
   }
 
   button[title="Sobre"] {
-    font-size: 11px;
-    width: 95px;
-    height: 25px;
+    font-size: 9px;
+    width: 70px;
+    height: 20px;
   }
 
   button[title="Games"] {
-    width: 95px;
-    height: 25px;
-    font-size: 11px;
+    width: 70px;
+    height: 20px;
+    font-size: 9px;
   }
 
   button[title="Tecnologia"] {
-    width: 110px;
-    height: 25px;
-    font-size: 11px;
+    width: 85px;
+    height: 20px;
+    font-size: 9px;
   }
 
   button[title="Filmes"] {
-    width: 100px;
-    height: 25px;
-    font-size: 11px;
+    width: 75px;
+    height: 20px;
+    font-size: 9px;
   }
 
   button[title="Eventos"] {
-    width: 100px;
-    height: 25px;
-    font-size: 11px;
+    width: 85px;
+    height: 20px;
+    font-size: 9px;
   }
-  @media (max-width: 1024px) {
-   header .img-fluid {
-     width: 70%;
-   }
 
-    .ola {
-      position: absolute;
-      top: 16%;
-    }
+ .redes-sociais button {
+   font-size: 10px;
+ }
 
-   button[title="Usuario"] {
-     postion: relative;
-     right: 9%;
-     top: 12%;
-     width: 40px;
-     height: 30px;
-   }
-
-   button[title="Cadastro"] {
-     width: 75px;
-     height: 17px;
-     font-size: 9px;
-   }
-
-   button[title="Login"] {
-     width: 75px;
-     height: 17px;
-     font-size: 9px;
-   }
-
-   button[title="Logout"] {
-     width: 75px;
-     height: 17px;
-     font-size: 9px;
-   }
-
-   button[title="Início"] {
-     width: 70px;
-     height: 20px;
-     font-size: 9px;
-   }
-
-   button[title="Sobre"] {
-     font-size: 9px;
-     width: 70px;
+   button[title="Facebook"] {
+     width: 120px;
      height: 20px;
    }
 
-   button[title="Games"] {
-     width: 70px;
+   button[title="Instagram"] {
+     width: 120px;
      height: 20px;
-     font-size: 9px;
    }
 
-   button[title="Tecnologia"] {
-     width: 85px;
+   button[title="Twitter"] {
+     width: 120px;
      height: 20px;
-     font-size: 9px;
    }
 
-   button[title="Filmes"] {
-     width: 75px;
-     height: 20px;
-     font-size: 9px;
-   }
+ .contato h1 {
+   font-size: 16px;
+ }
 
-   button[title="Eventos"] {
-     width: 85px;
-     height: 20px;
-     font-size: 9px;
-   }
+ .contato p {
+   font-size: 16px;
+ }
 
-  .redes-sociais button {
+ .slide img {
+  width: 300px;
+  height: 300px;
+ }
+
+ .text {
+  font-size: 14px;
+ }
+}
+ @media (max-width: 800px) {
+  header .img-fluid {
+    display: none;
+  }
+
+  .ola {
+    position: absolute;
+    top: 15%;
+  }
+
+  button[title="Usuario"] {
+    position: relative;
+    right: 8%;
+    top: 11%;
+    width: 40px;
+    height: 30px;
+  }
+
+  button[title="Cadastro"],  button[title="Login"],  button[title="Logout"] {
+    width: 50px;
+    height: 16px;
+    font-size: 8px;
+  }
+
+  button[title="Início"],  button[title="Sobre"],  button[title="Games"], button[title="Tecnologia"], button[title="Filmes"],  button[title="Eventos"] {
+    width: 50px;
+    height: 15px;
+    font-size: 8px;
+  }
+
+ .contato h1, .contato p, .contato-1,.novi-contaianer p, .redes-sociais button {
+   font-size: 8px;
+ }
+
+  .contato-1 ul li{
+    margin-bottom: 7px;
+  }
+
+  .contato ul li img {
+     margin-right: 7px;
+  }
+
+  button[title="Instagram"],  button[title="Facebook"],  button[title="Twitter"] {
+     width: 80px;
+     height: 20px;
+  }
+
+  .redes-sociais {
+     flex-wrap: wrap;
+  }
+
+  .chip-c {
+    width: 85%;
+  }
+
+  .h1 {
+    font-size: 14px;
+  }
+
+  .teste img{
+    height: 150px;
+    width: 150px;
+  }
+
+  .text1 {
     font-size: 10px;
   }
 
-    button[title="Facebook"] {
-      width: 120px;
-      height: 20px;
-    }
-
-    button[title="Instagram"] {
-      width: 120px;
-      height: 20px;
-    }
-
-    button[title="Twitter"] {
-      width: 120px;
-      height: 20px;
-    }
-
-  .contato h1 {
-    font-size: 16px;
+  .slide img {
+    width: 200px;
+    height: 200px;
   }
 
-  .contato p {
-    font-size: 16px;
+  .text {
+    font-size: 10px;
   }
-    @media (max-width: 800px) {
-      header .img-fluid {
-        width: 70%;
-      }
-
-      .ola {
-        position: absolute;
-        top:15%;
-      }
-
-      button[title="Usuario"] {
-        postion: relative;
-        right: 8%;
-        top: 11%;
-        width: 40px;
-        height: 30px;
-      }
-
-      button[title="Cadastro"] {
-        width: 70px;
-        height: 16px;
-        font-size: 8px;
-      }
-
-      button[title="Login"] {
-        width: 70px;
-        height: 16px;
-        font-size: 8px;
-      }
-
-      button[title="Logout"] {
-        width: 70px;
-        height: 16px;
-        font-size: 8px;
-      }
-
-      button[title="Início"] {
-        width: 50px;
-        height: 15px;
-        font-size: 8px;
-      }
-
-      button[title="Sobre"] {
-        font-size: 8px;
-        width: 50px;
-        height: 15px;
-      }
-
-      button[title="Games"] {
-        width: 50px;
-        height: 15px;
-        font-size: 8px;
-      }
-
-      button[title="Tecnologia"] {
-        width: 65px;
-        height: 15px;
-        font-size: 8px;
-      }
-
-      button[title="Filmes"] {
-        width: 55px;
-        height: 15px;
-        font-size: 8px;
-      }
-
-      button[title="Eventos"] {
-        width: 65px;
-        height: 15px;
-        font-size: 8px;
-      }
-
-     .redes-sociais button {
-       font-size: 10px;
-     }
-
-     .contato h1 {
-       font-size: 12px;
-     }
-
-     .contato p {
-       font-size: 12px;
-     }
-
-      .contato-1 {
-        font-size: 12px;
-      }
-
-      .contato-1 ul li{
-        margin-bottom: 7px;
-      }
-
-      .contato ul li img {
-         margin-right: 7px;
-      }
-      @media screen and (max-width: 500px) {
-        .menu-container {
-          position: absolute;
-          top: 4%;
-          left: 10%;
-          width: 90%;
-        } 
-   
-        button[title="Cadastro"] {
-          position: absolute;
-          top: 11%;
-          right: 1%;
-          font-size: 7px;
-          width: 65px;
-          height: 10px;
-        }
-
-        button[title="Login"] {
-          position: absolute;
-          top: 9%;
-          right: 1%;
-          font-size: 7px;
-          width: 65px;
-          height: 10px;
-        }
-
-        button[title="Logout"] {
-          position: absolute;
-          top: 9%;
-          right: 1%;
-          font-size: 7px;
-          width: 65px;
-          height: 10px;
-        }
-
-        .menu-container {
-          position: absolute;
-          top: 3%;
-          left: 20%;
-          width: 70%;
-        }
-
-        .ola {
-          position: absolute;
-          top: 6%;
-          right: 1%;
-          font-size: 8px;
-        }
-
-        button[title="Usuario"] {
-          position: absolute;
-          top: 4%;
-          right: 1%;
-          width: 30px;
-          height: 20px;
-        }
-
-        .redes-sociais button {
-          font-size: 8px;
-        }
-
-          button[title="Facebook"] {
-            width: 71px;
-            height: 15px;
-            margin: 0 2px;
-          }
-
-          button[title="Instagram"] {
-            width: 71px;
-            height: 15px;
-            margin: 0 2px;
-          }
-
-          button[title="Twitter"] {
-            width: 71px;
-            height: 15px;
-            margin: 0 2px;
-          }
-
-         button[title="Início"] {
-           width: 40px;
-           height: 10px;
-           font-size: 7px;
-         }
-
-         button[title="Sobre"] {
-           font-size: 7px;
-           width: 40px;
-           height: 10px;
-         }
-
-         button[title="Games"] {
-           width: 40px;
-           height: 10px;
-           font-size: 7px;
-         }
-
-         button[title="Tecnologia"] {
-           width: 55px;
-           height: 10px;
-           font-size: 7px;
-         }
-
-         button[title="Filmes"] {
-           width: 45px;
-           height: 10px;
-           font-size: 7px;
-         }
-
-         button[title="Eventos"] {
-           width: 55px;
-           height: 10px;
-           font-size: 7px;
-         }
-
-         .novi {
-           font-size: 10px;
-         }
-
-        .contato h1 {
-          font-size: 8px;
-        }
-
-        .contato p {
-          font-size: 8px;
-        }
-
-        .contato-1 {
-          font-size: 8px;
-        }
-
-        .contato-1 img {
-          width: 15px;
-          height: 15px;
-        }
-
-        .contato-1 ul li{
-           margin-bottom: 5px;
-         }
-
-         .contato ul li img {
-            margin-right: 5px;
-         }
-
-        .logo {
-          font-size: 8px;
-        }
-
-        .redes-sociais {
-          font-size: 8px;
-        }
-
-        footer {
-          padding: 25px;
-        }
-        
-        .slideshow-container img {
-            height: 200px;
-            width: 600px;
-          }
-
-          .text {
-            width: 50%;
-            height: 50%;
-          font-size: 11px;
-          }
-       @media screen and (max-width: 400px) {
-         button[title="Cadastro"] {
-            font-size: 6px;
-          }
-
-          button[title="Login"] {
-            font-size: 6px;
-          }
-
-          button[title="Logout"] {
-            font-size: 6px;
-          }
-         button[title="Início"] {
-           width: 35px;
-           font-size: 6px;
-         }
-
-         button[title="Sobre"] {
-           font-size: 6px;
-           width: 35px;
-         }
-
-         button[title="Games"] {
-           width: 35px;
-           font-size: 6px;
-         }
-
-         button[title="Tecnologia"] {
-           width: 45px;
-           font-size: 6px;
-         }
-
-         button[title="Filmes"] {
-           width: 35px;
-           font-size: 6px;
-         }
-
-         button[title="Eventos"] {
-           width: 45px;
-           font-size: 6px;
-         }
-
-         .contato-1 {
-           font-size: 6px;
-         }
-
-         .contato-1 ul li{
-            margin-bottom: 3px;
-          }
-
-          .contato ul li img {
-             margin-right: 3px;
-          }
-
-         .redes-scoais {
-           font-size: 6px;
-         }
-         footer {
-           padding: 30px;
-         }
-         
-         .ola {
-           font-size: 6px;
-         }
-       }
+ }

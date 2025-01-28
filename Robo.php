@@ -17,70 +17,50 @@ if (isset($_SESSION['nome'])) {
 
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-        margin: 0;
-        padding: 0;
-      }
-
-      .h1{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      height: 200px; 
-       }
-    
-        .chip-b{
-        display:flex;
-        justify-content: center; 
-        align-items: center; 
-        text-align: center;
-      }
-
-      .chip-c{
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
-        text-align: justify;
-        margin-bottom: 10px;
-        font-size: 20px;
-        color: black;
-      }
-    
-      .sub{
-        color: darkblue;
-        font-style: italic;
-        font-weight: bold;
-      }
-  </style>
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robô subaquático pode mapear as profundezas do oceano e <br>ajudar em missões arriscadas</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
+  <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+      <a href="games.php"><button title="Games">Games</button></a>
+      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+    </div>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <table>
-         <div class = "titulo-a" align = "center">
+         <div class = "titulo-a">
         <h1> Robô subaquático pode mapear as profundezas do oceano <br>e ajudar em missões arriscadas </h1>
     </div>
      <div class = "chip-b">
     <img src="imagens/robo2.jpeg" alt="robo2.jpeg" width="400px">
       </div>
-     <div class = "chip-c" align="center">
+     <div class = "chip-c">
        <p>O robô subaquático uOne, da empresa belga uware Robotics, promete assumir o lugar de mergulhadores humanos na execução de tarefas arriscadas e trabalhosas. O robô, que combina características de dois tipos diferentes de bots submarinos, foi projetado principalmente para a inspeção de estruturas subaquáticas. A empresa belga uWare Robotics desenvolveu um robô híbrido capaz de realizar missões subaquáticas; O uOne conta com oito propulsores vetoriais, um sistema de câmeras integradas, unidade de medição inercial (IMU) e outras tecnologias que permitem seguir uma trajetória pré-programada de forma autônoma; Além de criar mapas tridimensionais do trajeto, o robô também coleta dados que são armazenados em uma unidade SSD integrada e podem ser baixados ao fim da missão; O uOne tem 40 cm de altura, 40 cm de largura e 50 cm de comprimento, com peso de 15 kg e capacidade para carregar até 5 kg; A velocidade máxima do robô é de 5,5 km/h, com bateria trocável que, quando carregada por duas horas, garante autonomia de até duas horas nas expedições; Ele é capaz de descer a uma profundidade máxima de 75 metros, mas a empresa está desenvolvendo uma carroceria de alumínio para substituir seu atual corpo de acrílico e aumentar esse número;
        As informações foram publicadas na revista Uncrewed Systems Technology.</p>
     <div class = "chip-b">
@@ -98,7 +78,7 @@ if (isset($_SESSION['nome'])) {
        </div>
           <p>Quanto às suas medidas, o uOne tem 40 cm de altura, 40 cm de largura e 50 cm de comprimento. Seu peso é de 15 kg com capacidade para carregar até 5 kg de sensores, luzes ou outros itens. A velocidade máxima do robô é de 3 nós (5,5 km/h), e, com uma carga estimada em duas horas de sua bateria trocável, ele possui autonomia de aproximadamente duas horas.Por enquanto, o uOne é capaz de descer a uma profundidade máxima de 75 metros, mas a empresa espera aumentar esse número com uma carroceria de alumínio que está sendo desenvolvida para substituir seu atual corpo de acrílico.</p>
         </div>
-           <div class="container-a" align="center">
+           <div class="container-a">
              <h2>OUTRAS NOTICÍAS:</h2>
            </div>
            <div class="news-container">

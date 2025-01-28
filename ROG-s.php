@@ -17,72 +17,50 @@ if (isset($_SESSION['nome'])) {
 
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .h1{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
-     }
-    
-      .chip-b{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;
-    }
-
-    .chip-c{
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      text-align: justify;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: black;
-    }
-    
-    .sub{
-      color: darkblue;
-      font-style: italic;
-      font-weight: bold;
-    }
-
-  </style>
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROG Strix Scar 18 (2024)</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
+  <script defer src="script.js"></script>
+    <link rel="website icon" type="png" href="imagens/file.png">
+    </head>
+    <body>
+      <header>
+          <img src="imagens/GeekTopo2.png" class="img-fluid">
+        </header>
+      <div id="menu-container">
+      <a href="index.php"><button title="Início">Início</button></a>
+      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+      <a href="games.php"><button title="Games">Games</button></a>
+      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+    </div>
+    <div id="menu-container2">
+        <div class="modo">
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.php"><button title="Início">Início</button></a>
+          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+          <a href="games.php"><button title="Games">Games</button></a>
+          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+        </div>
+    </div>
   <table>
-         <div class = "h1" align = "center">
+         <div class = "h1">
         <h1> ROG Strix Scar 18 (2024) é um notebook monstruoso <br>com RTX 4090 e Intel Core i9 - Review </h1>
     </div>
      <div class = "chip-b">
     <img src="imagens/rog-t1.gif" alt="imagens/rog-t1.gif" width="400px">
       </div>
-     <div class = "chip-c" align="center">
+     <div class = "chip-c">
  <p><em>Os notebooks costumam ser a pedida certa para quem busca portabilidade, enquanto os desktops (computadores de mesa) servem mais potência, porém com um visual mais “caixotão”. No entanto, com a rápida evolução do mercado de hardware, já existem soluções que combinam um design compacto com poder puro.</em> </p>
 
       <p>Esse é o caso do ROG Strix Scar 18 (2024), que chegou ao Brasil recentemente. Anunciado na CES deste ano, o modelo aprimora o design e o hardware da linha já conhecida da Asus, que combina hardware de ponta com um design gamer bastante chamativo. Após testar o produto por cerca de uma semana, posso dizer que este é, com folga, o notebook mais poderoso que já tive a oportunidade de utilizar, mas também o mais caro. A seguir, confira todos os detalhes sobre o novo lançamento da Asus e se vale a pena comprá-lo no Brasil. </p>
@@ -129,7 +107,7 @@ Quanto ao barulho, o som das ventoínhas é bastante perceptível quando o noteb
  O produto conta com alguns perfis pré-definidos para uso mais simples no software Armoury Crate, o que é uma boa pedida para garantir mais autonomia. Enquanto não tive tempo hábil para fazer muitos testes aprofundados de bateria, consegui cerca de seis horas de autonomia com uso muito leve.
          </p>
        </div>
-       <div class="container-a" align="center">
+       <div class="container-a">
          <h2>OUTRAS NOTICÍAS:</h2>
        </div>
        <div class="news-container">

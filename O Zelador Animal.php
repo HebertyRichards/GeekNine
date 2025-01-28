@@ -23,29 +23,42 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O Zelador Animal</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/png" href="imagens/file.png">
-  </head>
-
-  <body>
-    <header>
-      <img src="imagens/GeekTopo2.png" class="img-fluid">
-    </header>
-
-    <div class="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-    </div>
-    <br><br><br><br>
+    <script defer src="script.js"></script>
+      <link rel="website icon" type="png" href="imagens/file.png">
+      </head>
+      <body>
+        <header>
+            <img src="imagens/GeekTopo2.png" class="img-fluid">
+          </header>
+        <div id="menu-container">
+        <a href="index.php"><button title="Início">Início</button></a>
+        <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+        <a href="games.php"><button title="Games">Games</button></a>
+        <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+        <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+        <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+      </div>
+      <div id="menu-container2">
+          <div class="modo">
+              <img src="imagens/GeekTopo2.png" class="img-fluid">
+              <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.php"><button title="Início">Início</button></a>
+            <a href="sobre.php"><button title="Sobre">Sobre</button></a>
+            <a href="games.php"><button title="Games">Games</button></a>
+            <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
+            <a href="filmes.php"><button title="Filmes">Filmes</button></a>
+            <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+          </div>
+      </div>
   <div class="container-a">
     <div class="div1">
     <img src="imagens/O Zelador Animal.png" alt="O Zelador Animal">
+      <div class="title">
     <h1>O Zelador Animal</h1>
-  </div>
-      <div class = "rating"> 
+      <div class = "mdb"> 
       <p> 2011 </p>
       <p> 1h, 42m </p>
         <a href="https://www.imdb.com/title/tt1222817/?ref_=nv_sr_srsg_0_tt_1_nm_0_q_zelador%2520animal">5.2/10</a> 
@@ -64,6 +77,7 @@ if (isset($_SESSION['nome'])) {
     <p>Griffin Keyes (Kevin James) trabalhava feliz como zelador de um jardim zoológico. Para ele, nada era mais normal do que conviver com leões, elefantes, girafas, ursos e gorilas. Sua história começa a mudar quando leva um fora de sua namorada Stephanie (Leslie Bibb) por ela não se conformar com a falta de ambição dele. Certos de que o boa praça deveria ter uma segunda chance com as mulheres, a bicharada resolve dar uma de conselheiros amorosos e começam a "falar" com ele, quebrando o código de silêncio que existia. Após o susto inicial, ele começa a adotar algumas dicas animais e o resultado acaba sendo positivo. A única coisa que eles não contavam era que a megera iria afastar o grande amigo do zoológico para dar vazão ao seu mundo de futlidades e falsidades. É quando chega a hora de Griffin acordar e descobrir o verdadeiro sentido das palavras amor e amizade.</p>
   </div>
   </div>
+    </div>
     <footer>
       <div class="contato">
         <div class="contato-1">
