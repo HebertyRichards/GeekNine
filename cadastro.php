@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width">
     <title>Cadastro</title>
   <link href="cadastro.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
 </head>
 <body>
   <div class="container">

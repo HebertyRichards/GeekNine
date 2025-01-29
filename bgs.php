@@ -23,7 +23,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BRasil Game Show 2023</title>
   <link href="bgs.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 

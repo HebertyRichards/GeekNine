@@ -23,8 +23,8 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Batman vs Superman: A Origem da Justiça</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
+   <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
-  <link rel="website icon" type="png" href="imagens/file.png">
   </head>
   <body>
     <header>
