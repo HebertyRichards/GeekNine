@@ -1,11 +1,10 @@
 <?php
 session_start();
 
-
 if (isset($_SESSION['nome'])) {
     $nome_usuario = $_SESSION['nome'];
     echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<button title="Usuario"></button>';
+  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
   echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
 
 } else {
@@ -16,43 +15,44 @@ if (isset($_SESSION['nome'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Norbit</title>
    <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
   <script defer src="script.js"></script>
-    <link rel="website icon" type="png" href="imagens/file.png">
-    </head>
-    <body>
-      <header>
-          <img src="imagens/GeekTopo2.png" class="img-fluid">
-        </header>
-      <div id="menu-container">
-      <a href="index.php"><button title="Início">Início</button></a>
-      <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-      <a href="games.php"><button title="Games">Games</button></a>
-      <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-      <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-      <a href="eventos.php"><button title="Eventos">Eventos</button></a>
+</head>
+
+<body>
+  <header>
+    <img src="imagens/GeekTopo2.png" class="img-fluid" alt="GeekNine">
+  </header>
+  <div id="menu-container">
+    <a id="inicio" href="index.php">Início</a>
+    <a id="sobre" href="sobre.php">Sobre</a>
+    <a id="games" href="games.php">Games</a>
+    <a id="tecnologia" href="tecnologia.php">Tecnologia</a>
+    <a id="filmes" href="filmes.php">Filmes</a>
+    <a id="eventos" href="eventos.php">Eventos</a>
+  </div>
+  <div id="menu-container2">
+    <div class="modo">
+      <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
+      <button class="openbtn" onclick="openNav()">☰</button>
     </div>
-    <div id="menu-container2">
-        <div class="modo">
-            <img src="imagens/GeekTopo2.png" class="img-fluid">
-            <button class="openbtn" onclick="openNav()">☰</button>
-        </div>
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-          <a href="index.php"><button title="Início">Início</button></a>
-          <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-          <a href="games.php"><button title="Games">Games</button></a>
-          <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-          <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-          <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-        </div>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a id="inicio2" href="index.php">Início</a>
+      <a id="sobre2" href="sobre.php">Sobre</a>
+      <a id="games2" href="games.php">Games</a>
+      <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
+      <a id="filmes2" href="filmes.php">Filmes</a>
+      <a id="eventos2" href="eventos.php">Eventos</a>
     </div>
+  </div>
   <div class="container-a">
   <div class="div1">
     <img src="imagens/Norbit.png" alt="Norbit">

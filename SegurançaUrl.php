@@ -1,127 +1,58 @@
-<?php
-session_start();
+  <?php
+  session_start();
 
+  if (isset($_SESSION['nome'])) {
+      $nome_usuario = $_SESSION['nome'];
+      echo "<p class=ola>Olá, $nome_usuario!</p>";
+    echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
+    echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
 
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<button title="Usuario"></button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
+  } else {
 
-} else {
+      echo '<a href="login.php"><button title="Login">Login</button></a>';
+      echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
+  }
+  ?>
 
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
-?>
+  <!DOCTYPE html>
+  <html lang="pt-BR">
 
-<!DOCTYPE html>
-<html>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança</title>
+    <link href="tecnologia.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+    <script defer src="script.js"></script>
+  </head>
 
-    .h1{
-    display:flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
-     }
-    
-      .chip-b{
-      display:flex;
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;
-    }
-
-    .chip-c{
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      text-align: justify;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: black;
-    }
-    
-    .sub{
-      color: darkblue;
-      font-style: italic;
-      font-weight: bold;
-    }
-    
-    .news-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-    }
-
-    .news-item {
-      width: 400px;
-      height: 400px;
-      margin: 10px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 30px;
-      overflow: hidden;
-      box-sizing: border-box;
-      background-color: #fff;
-    }
-
-    .news-item img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .news-item h2 {
-      font-size: 18px;
-      margin: 0 0 10px;
-    }
-
-    .news-item p {
-      font-size: 14px;
-      color: #666;
-      margin: 0 0 10px;
-    }
-
-    .news-item a {
-      display: inline-block;
-      color: #114379;
-      text-decoration: none;
-    }
-
-    .news-item a:hover {
-      text-decoration: underline;
-    }
-
-  </style>
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Link malicioso: 6 dicas para evitar links mal-intencionados na web </title>
-  <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="website icon" type="png" href="imagens/file.png">
-</head>
-<body>
-  <header>
-    <img src="imagens/GeekTopo2.png" class="img-fluid">
-  </header>
-
-  <div class="menu-container">
-    <a href="index.php"><button title="Início">Início</button></a>
-    <a href="sobre.php"><button title="Sobre">Sobre</button></a>
-    <a href="games.php"><button title="Games">Games</button></a>
-    <a href="tecnologia.php"><button title="Tecnologia">Tecnologia</button></a>
-    <a href="filmes.php"><button title="Filmes">Filmes</button></a>
-    <a href="eventos.php"><button title="Eventos">Eventos</button></a>
-  </div>
+  <body>
+    <header>
+      <img src="imagens/GeekTopo2.png" class="img-fluid" alt="GeekNine">
+    </header>
+    <div id="menu-container">
+      <a id="inicio" href="index.php">Início</a>
+      <a id="sobre" href="sobre.php">Sobre</a>
+      <a id="games" href="games.php">Games</a>
+      <a id="tecnologia" href="tecnologia.php">Tecnologia</a>
+      <a id="filmes" href="filmes.php">Filmes</a>
+      <a id="eventos" href="eventos.php">Eventos</a>
+    </div>
+    <div id="menu-container2">
+      <div class="modo">
+        <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a id="inicio2" href="index.php">Início</a>
+        <a id="sobre2" href="sobre.php">Sobre</a>
+        <a id="games2" href="games.php">Games</a>
+        <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
+        <a id="filmes2" href="filmes.php">Filmes</a>
+        <a id="eventos2" href="eventos.php">Eventos</a>
+      </div>
+    </div>
   <table>
          <div class = "h1" align = "center">
         <h1>Link malicioso: 6 dicas para evitar links mal-intencionados na web </h1>

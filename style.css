@@ -61,6 +61,12 @@ body {
   padding-left: 20px;
 }
 
+#menu-container a:hover {
+color: #0f298f;
+font-weight: bold;
+transition: 0.5s;
+}
+
 #inicio,
 #sobre,
 #games,
@@ -101,27 +107,22 @@ body {
 
 button[title="Cadastro"]:hover,
 button[title="Login"]:hover,
-button[title="Logout"]:hover {
-  color: #0f298f;
+button[title="Logout"]:hover,
+button[title="Chat Global"]:hover {
+  color: white;
+  background-color: #0f298f;
   text-shadow: -1px -1px 0px #000000;
-  letter-spacing: 0.1em;
+  transition: 0.4s;
 }
 
-button[title="Usuario"] {
+button[title="Chat Global"] {
   position: absolute;
-  background-color: transparent;
-  background-image: url("imagens/usuario.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: row;
   cursor: pointer;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 20px;
   top: 12%;
-  right: 9%;
-  width: 50px;
-  height: 40px;
-  margin-right: 10px;
-  border: none;
+  right: 10%;
 }
 
 button[title="Cadastro"],
@@ -148,7 +149,7 @@ button[title="Cadastro"] {
 
 button[title="Login"] {
   position: absolute;
-  top: 11%;
+  top: 10%;
   right: 9%;
 }
 
@@ -433,7 +434,7 @@ ul {
   button[title="Usuario"],
   button[title="Cadastro"],
   button[title="Login"] {
-    width: 40px;
+    width: 90px;
     height: 30px;
   }
 
@@ -492,19 +493,17 @@ ul {
     top: 16%;
   }
 
-  button[title="Usuario"] {
+  button[title="Chat Global"] {
     position: relative;
     right: 9%;
     top: 12%;
-    width: 40px;
-    height: 30px;
   }
 
   button[title="Cadastro"],
   button[title="Login"],
   button[title="Logout"] {
     width: 75px;
-    height: 17px;
+    height: 20px;
     font-size: 9px;
   }
 
@@ -574,19 +573,17 @@ ul {
     top: 15%;
   }
 
-  button[title="Usuario"] {
+  button[title="Chat Global"] {
     position: relative;
     right: 8%;
     top: 11%;
-    width: 40px;
-    height: 30px;
   }
 
   button[title="Cadastro"],
   button[title="Login"],
   button[title="Logout"] {
     width: 60px;
-    height: 16px;
+    height: 15px;
     font-size: 8px;
   }
 
