@@ -52,135 +52,137 @@
    right: 9%;
  }
 
- #menu-container2 {
-   display: flex;
- }
 
- #menu-container2 img {
-   display: flex;
-   width: 40%;
-   margin-top: auto;
- }
+#menu-container2 {
+  display: flex;
+}
 
- #menu-container {
-   position: absolute;
-   top: 5%;
-   right: 17%;
-   display: flex;
-   flex-direction: row;
-   text-align: center;
-   width: 50%;
- }
+#menu-container2 img {
+  display: flex;
+  width: 40%;
+  margin-top: auto;
+}
 
- #menu-container a {
-   margin: 0 auto;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
-   margin: 15px;
-   text-decoration: none;
-   color: black;
-   box-sizing: border-box;
-   text-align: end;
-   padding-left: 20px;
- }
+#menu-container {
+  position: absolute;
+  top: 5%;
+  right: 17%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 50%;
+}
 
- #inicio,
- #sobre,
- #games,
- #filmes,
- #eventos,
- #tecnologia {
-   background-color: transparent;
-   border: none;
-   border-radius: 5px;
-   background-repeat: no-repeat;
-   background-size: contain;
- }
+#menu-container a {
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 15px;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  text-align: end;
+  padding-left: 20px;
+}
 
- #inicio {
-   background-image: url("imagens/inicio.png");
+#menu-container a:hover {
+color: #0f298f;
+font-weight: bold;
+transition: 0.5s;
+}
 
- }
+#inicio,
+#sobre,
+#games,
+#filmes,
+#eventos,
+#tecnologia {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
- #sobre {
-   background-image: url("imagens/sobre.png");
- }
+#inicio {
+  background-image: url("imagens/inicio.png");
 
- #games {
-   background-image: url("imagens/games.png");
- }
+}
 
- #tecnologia {
-   background-image: url("imagens/tecnologia.png");
- }
+#sobre {
+  background-image: url("imagens/sobre.png");
+}
 
- #filmes {
-   background-image: url("imagens/filmeicon.png");
- }
+#games {
+  background-image: url("imagens/games.png");
+}
 
- #eventos {
-   background-image: url("imagens/eventos.png");
- }
+#tecnologia {
+  background-image: url("imagens/tecnologia.png");
+}
 
- button[title="Cadastro"]:hover,
- button[title="Login"]:hover,
- button[title="Logout"]:hover {
-   color: #0f298f;
-   text-shadow: -1px -1px 0px #000000;
-   letter-spacing: 0.1em;
- }
+#filmes {
+  background-image: url("imagens/filmeicon.png");
+}
 
- button[title="Usuario"] {
-   position: absolute;
-   background-color: transparent;
-   background-image: url("imagens/usuario.png");
-   background-size: contain;
-   background-repeat: no-repeat;
-   display: flex;
-   flex-direction: row;
-   cursor: pointer;
-   top: 12%;
-   right: 9%;
-   width: 50px;
-   height: 40px;
-   margin-right: 10px;
-   border: none;
- }
+#eventos {
+  background-image: url("imagens/eventos.png");
+}
 
- button[title="Cadastro"],
- button[title="Login"],
- button[title="Logout"] {
-   display: block;
-   background-color: transparent;
-   background-size: contain;
-   background-repeat: no-repeat;
-   cursor: pointer;
-   margin: 0 auto;
-   border: 1px solid #000000;
-   width: 110px;
-   height: 20px;
-   border-radius: 20px;
-   justify-content: center;
- }
+button[title="Cadastro"]:hover,
+button[title="Login"]:hover,
+button[title="Logout"]:hover,
+button[title="Chat Global"]:hover {
+  color: white;
+  background-color: #0f298f;
+  text-shadow: -1px -1px 0px #000000;
+  transition: 0.4s;
+}
 
- button[title="Cadastro"] {
-   position: absolute;
-   top: 15%;
-   right: 9%;
- }
+button[title="Chat Global"] {
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 20px;
+  top: 12%;
+  right: 10%;
+}
 
- button[title="Login"] {
-   position: absolute;
-   top: 11%;
-   right: 9%;
- }
+button[title="Cadastro"],
+button[title="Login"],
+button[title="Logout"] {
+  display: block;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  width: 110px;
+  height: 20px;
+  border-radius: 20px;
+  justify-content: center;
+}
 
- button[title="Logout"] {
-   position: absolute;
-   top: 19%;
-   right: 9%;
- }
+button[title="Cadastro"] {
+  position: absolute;
+  top: 15%;
+  right: 9%;
+}
+
+button[title="Login"] {
+  position: absolute;
+  top: 10%;
+  right: 9%;
+}
+
+button[title="Logout"] {
+  position: absolute;
+  top: 19%;
+  right: 9%;
+}
 
  .messages {
    border: 2px solid black;
@@ -382,11 +384,10 @@
      font-size: 11px;
    }
 
-   button[title="Usuario"],
    button[title="Cadastro"],
    button[title="Login"] {
-     width: 40px;
-     height: 30px;
+     width: 95px;
+     height: 20px;
    }
 
    button[title="Logout"] {
@@ -442,19 +443,17 @@
        top: 16%;
      }
 
-     button[title="Usuario"] {
+     button[title="Chat Global"] {
        position: relative;
        right: 9%;
        top: 12%;
-       width: 40px;
-       height: 30px;
      }
 
      button[title="Cadastro"],
      button[title="Login"],
      button[title="Logout"] {
        width: 75px;
-       height: 17px;
+       height: 20px;
        font-size: 9px;
      }
 
@@ -514,19 +513,17 @@
        top: 15%;
      }
 
-     button[title="Usuario"] {
+     button[title="Chat Global"] {
        position: relative;
        right: 8%;
        top: 11%;
-       width: 40px;
-       height: 30px;
      }
 
      button[title="Cadastro"],
      button[title="Login"],
      button[title="Logout"] {
        width: 60px;
-       height: 16px;
+       height: 15px;
        font-size: 8px;
      }
 

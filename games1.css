@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .img-fluid {
   width: 90%;
 }
@@ -26,11 +27,12 @@ body {
   right: 9%;
 }
 
+
 #menu-container2 {
-  display:flex;
+  display: flex;
 }
 
-#menu-container2 img{
+#menu-container2 img {
   display: flex;
   width: 40%;
   margin-top: auto;
@@ -46,142 +48,115 @@ body {
   width: 50%;
 }
 
-#menu-container button {
+#menu-container a {
   margin: 0 auto;
-  border: 1px solid #ddd;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 12px;
-  padding: 2px;
-  transition: 0.5s;
+  font-size: 16px;
+  margin: 15px;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  text-align: end;
+  padding-left: 20px;
 }
 
-#menu-container button:hover {
-  color: #0f298f;
-  text-shadow: -1px -1px 0px #000000;
-  letter-spacing: 0.1em;
+#menu-container a:hover {
+color: #0f298f;
+font-weight: bold;
+transition: 0.5s;
 }
 
-button[title="Início"] {
+#inicio,
+#sobre,
+#games,
+#filmes,
+#eventos,
+#tecnologia {
   background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#inicio {
   background-image: url("imagens/inicio.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 100px;
-  height: 30px;
-  font-size: 12px;
+
 }
 
-button[title="Sobre"] {
-  background-color: transparent;
+#sobre {
   background-image: url("imagens/sobre.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 107px;
-  height: 30px;
 }
 
-button[title="Games"] {
-  background-color: transparent;
+#games {
   background-image: url("imagens/games.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 110px;
-  height: 30px;
-  font-size: 12px;
 }
 
-button[title="Tecnologia"] {
-  background-color: transparent;
+#tecnologia {
   background-image: url("imagens/tecnologia.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 130px;
-  height: 30px;
-  font-size: 12px;
 }
 
-button[title="Filmes"] {
-  background-color: transparent;
+#filmes {
   background-image: url("imagens/filmeicon.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 110px;
-  height: 30px;
-  font-size: 12px;
 }
 
-button[title="Eventos"] {
-  background-color: transparent;
+#eventos {
   background-image: url("imagens/eventos.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 120px;
-  height: 30px;
 }
 
-button[title="Cadastro"]:hover {
-  color: #0f298f;
+button[title="Cadastro"]:hover,
+button[title="Login"]:hover,
+button[title="Logout"]:hover,
+button[title="Chat Global"]:hover {
+  color: white;
+  background-color: #0f298f;
   text-shadow: -1px -1px 0px #000000;
-  letter-spacing: 0.1em;
+  transition: 0.4s;
 }
 
-button[title="Login"]:hover {
-  color: #0f298f;
-  text-shadow: -1px -1px 0px #000000;
-  letter-spacing: 0.1em;
-}
-
-button[title="Logout"]:hover {
-  color: #0f298f;
-  text-shadow: -1px -1px 0px #000000;
-  letter-spacing: 0.1em;
-}
-
-button[title="Usuario"] {
+button[title="Chat Global"] {
   position: absolute;
+  cursor: pointer;
   background-color: transparent;
-  background-image: url("imagens/usuario.png");
+  padding: 5px;
+  border-radius: 20px;
+  top: 12%;
+  right: 10%;
+}
+
+button[title="Cadastro"],
+button[title="Login"],
+button[title="Logout"] {
+  display: block;
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: row;
   cursor: pointer;
-  top: 12%;
-  right:9%;
-  width: 50px;
-  height: 40px;
-  margin-right: 10px;
-  border: none;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  width: 110px;
+  height: 20px;
+  border-radius: 20px;
+  justify-content: center;
 }
 
 button[title="Cadastro"] {
   position: absolute;
   top: 15%;
   right: 9%;
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  cursor: pointer;
-  border: 1px solid #000000;
-  margin: 0 auto;
-  width: 110px;
-  height: 20px;
-  border-radius: 20px;
-  justify-content: center;
+}
+
+button[title="Login"] {
+  position: absolute;
+  top: 10%;
+  right: 9%;
+}
+
+button[title="Logout"] {
+  position: absolute;
+  top: 19%;
+  right: 9%;
 }
 
 .messages {
@@ -273,65 +248,50 @@ button[title="Logout"] {
 
 .redes-sociais {
   display: flex;
-  align-items: center; 
+  align-items: center;
   width: 100%;
-  padding: 1px;
   box-sizing: border-box;
   justify-content: flex-end;
 }
 
-.redes-sociais button {
+.redes-sociais a {
+  text-decoration: none;
   border: transparent;
   cursor: pointer;
-  font-size: 12px;
   background-color: transparent;
-  padding: 1px;
+  margin: 15px;
   transition: 0.5s;
 }
 
-.redes-sociais button:hover {
-  color: #000000;
+
+.redes-sociais a:hover {
   text-shadow: -1px -1px 0px #000000;
   letter-spacing: 0.1em;
 }
 
-button[title="Facebook"] {
+#facebook,
+#instagram,
+#twitter {
   background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+#facebook {
   background-image: url("imagens/Facebook.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 140px;
-  height: 30px;
-  margin: 0 5px;
-  color: #ffffff;
 }
 
-button[title="Instagram"] {
-  background-color: transparent;
+#instagram {
   background-image: url("imagens/Instagram.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 140px;
-  height: 30px;
-  margin: 0 5px;
-  color: #ffffff;
 }
 
-button[title="Twitter"] {
-  background-color: transparent;
+#twitter {
   background-image: url("imagens/twitter.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 5px;
-  width: 140px;
-  height: 30px;
-  margin: 0 5px;
-  color: #ffffff;
 }
 
 .contato {
@@ -339,11 +299,9 @@ button[title="Twitter"] {
   align-items: center;
 }
 
-.contato h1 {
-  font-size: 20px;
-}
-
-.contato-1 ul h1 {
+.contato #h2 {
+  font-size: 24px;
+  font-weight: bold;
   font-family: arial;
 }
 
@@ -351,7 +309,6 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  margin-top: 200px;
 }
 
 .logo {
@@ -366,15 +323,16 @@ footer {
   font-size: 14px;
 }
 
-.contato-1 ul li{
+.contato-1 ul li {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
 }
 
 .contato ul li img {
-   margin-right: 8px;
+  margin-right: 8px;
 }
+
 .contato-1 img {
   width: 20px;
   height: 20px;
@@ -481,8 +439,8 @@ margin-left: 10px;
 font-size: 11px;
 }
 
- button[title="Usuario"],button[title="Cadastro"],  button[title="Login"] {
-   width: 40px;
+button[title="Cadastro"],  button[title="Login"] {
+   width: 95px;
    height: 30px;
  }
 
@@ -490,46 +448,20 @@ font-size: 11px;
    position: absolute;
    top: 20%;
    width: 95px;
-   height: 20px;
+   height: 30px;
    font-size: 11px;
  }
-
- button[title="Início"] {
-   width: 90px;
-   height: 25px;
-   font-size: 11px;
- }
-
- button[title="Sobre"] {
-   font-size: 11px;
-   width: 95px;
-   height: 25px;
- }
-
- button[title="Games"] {
-   width: 95px;
-   height: 25px;
-   font-size: 11px;
- }
-
- button[title="Tecnologia"] {
-   width: 110px;
-   height: 25px;
-   font-size: 11px;
- }
-
- button[title="Filmes"] {
-   width: 100px;
-   height: 25px;
-   font-size: 11px;
- }
-
- button[title="Eventos"] {
-   width: 100px;
-   height: 25px;
-   font-size: 11px;
- }
-}
+  
+  #inicio,
+    #sobre,
+    #games,
+    #tecnologia,
+    #eventos,
+    #filmes {
+      font-size: 11px;
+      height: 25px;
+    }
+  }
 @media screen and (max-width: 1024px) {
   header .img-fluid {
     width: 70%;
@@ -540,12 +472,10 @@ font-size: 11px;
      top: 16%;
    }
 
-  button[title="Usuario"] {
+  button[title="Chat Global"] {
     position: relative;
     right: 9%;
     top: 12%;
-    width: 40px;
-    height: 30px;
   }
 
   button[title="Cadastro"], button[title="Login"], button[title="Logout"] {
@@ -554,65 +484,27 @@ font-size: 11px;
     font-size: 9px;
   }
 
-  button[title="Início"] {
-    width: 70px;
-    height: 20px;
-    font-size: 9px;
-  }
+  #inicio,
+       #sobre,
+       #filmes,
+       #games,
+       #eventos,
+       #tecnologia {
+         font-size: 10px;
+       }
 
-  button[title="Sobre"] {
-    font-size: 9px;
-    width: 70px;
-    height: 20px;
-  }
+       .redes-sociais a {
+         margin: 10px;
+       }
 
-  button[title="Games"] {
-    width: 70px;
-    height: 20px;
-    font-size: 9px;
-  }
+       .contato h1 {
+         font-size: 16px;
+       }
 
-  button[title="Tecnologia"] {
-    width: 85px;
-    height: 20px;
-    font-size: 9px;
-  }
-
-  button[title="Filmes"] {
-    width: 75px;
-    height: 20px;
-    font-size: 9px;
-  }
-
-  button[title="Eventos"] {
-    width: 85px;
-    height: 20px;
-    font-size: 9px;
-  }
-
- .redes-sociais button {
-   font-size: 10px;
- }
-
-   button[title="Facebook"] {
-     width: 120px;
-     height: 20px;
+       .contato p {
+         font-size: 16px;
+       }
    }
-
-   button[title="Instagram"] {
-     width: 120px;
-     height: 20px;
-   }
-
-   button[title="Twitter"] {
-     width: 120px;
-     height: 20px;
-   }
-
- .contato h1,.contato p {
-   font-size: 16px;
- }
-
  .texto1 {
   width: 80%;
 }
@@ -630,7 +522,7 @@ footer {
         top: 15%;
       }
 
-      button[title="Usuario"] {
+      button[title="Chat Global"] {
         position: relative;
         right: 8%;
         top: 11%;
@@ -644,30 +536,54 @@ footer {
         font-size: 7px;
       }
 
-      button[title="Início"],  button[title="Sobre"],  button[title="Games"], button[title="Tecnologia"], button[title="Filmes"],  button[title="Eventos"] {
-        width: 50px;
-        height: 15px;
-        font-size: 8px;
-      }
-     .contato h1, .contato p, .contato-1,.novi-contaianer p, .redes-sociais button {
-       font-size: 8px;
-     }
+      #inicio,
+       #games,
+       #tecnologia,
+       #eventos,
+       #filmes,
+       #sobre {
+         font-size: 8px;
+       }
 
-      .contato-1 ul li{
-        margin-bottom: 7px;
-      }
-
-      .contato ul li img {
-         margin-right: 7px;
-      }
-
-      button[title="Instagram"],  button[title="Facebook"],  button[title="Twitter"] {
+       .novi-container img {
          width: 80px;
-         height: 20px;
-      }
+         height: 150px;
+       }
 
-      .redes-sociais {
+       .novi {
+         font-size: 16px;
+       }
+
+       .geeksobre h1 {
+         font-size: 32px;
+       }
+
+       .geeksobre p {
+         font-size: 14px;
+       }
+
+       .contato h1,
+       .contato p,
+       .contato-1,
+       .redes-sociais button {
+         font-size: 8px;
+       }
+
+       .contato-1 ul li {
+         margin-bottom: 7px;
+       }
+
+       .contato ul li img {
+         margin-right: 7px;
+       }
+
+       .redes-sociais a {
+         margin: 5px;
+       }
+
+       .redes-sociais {
          flex-wrap: wrap;
+       }
       }
 
       .texto1 {

@@ -22,7 +22,7 @@ if (isset($_SESSION['nome'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Flash</title>
-     <link href="games1.css" rel="stylesheet" type="text/css" />
+   <link href="games1.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="imagens/file.png">
     <script defer src="script.js"></script>
   </head>

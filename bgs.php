@@ -1,17 +1,16 @@
 <?php
 session_start();
 
-
 if (isset($_SESSION['nome'])) {
     $nome_usuario = $_SESSION['nome'];
     echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '"Usuario"></button>';
-  echo '<a href="logout.php">"Logout">Logout</button></a>';
+  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
+  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
 
 } else {
 
-    echo '<a href="login.php">"Login">Login</button></a>';
-    echo '/<a href="cadastro.php">"Cadastro">Cadastre-se</button></a>';
+    echo '<a href="login.php"><button title="Login">Login</button></a>';
+    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
 }
 ?>
 
@@ -21,9 +20,9 @@ if (isset($_SESSION['nome'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BRasil Game Show 2023</title>
+  <title>Brasil Game Show 2023</title>
   <link href="bgs.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
   <script defer src="script.js"></script>
 </head>
 

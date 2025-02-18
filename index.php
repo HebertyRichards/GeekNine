@@ -24,7 +24,7 @@ session_start();
 if (isset($_SESSION['nome'])) {
     $nome_usuario = $_SESSION['nome'];
     echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Usuario"></button>';
+  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
   echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
     
 } else {
