@@ -62,9 +62,9 @@ body {
 }
 
 #menu-container a:hover {
-color: #0f298f;
-font-weight: bold;
-transition: 0.5s;
+  color: #0f298f;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 #inicio,
@@ -82,7 +82,6 @@ transition: 0.5s;
 
 #inicio {
   background-image: url("imagens/inicio.png");
-
 }
 
 #sobre {
@@ -273,7 +272,6 @@ button[title="Logout"] {
   transition: 0.5s;
 }
 
-
 .redes-sociais a:hover {
   text-shadow: -1px -1px 0px #000000;
   letter-spacing: 0.1em;
@@ -399,7 +397,7 @@ ul {
   border: none;
 }
 
-.geeksobre h1 {
+.geeksobre h2 {
   font-family: "Mokoto";
   font-size: 70px;
   text-align: center;
@@ -417,7 +415,6 @@ ul {
 }
 
 @media (max-width: 1366px) {
-
   .img-fluid,
   .img-fluid2 {
     width: 75%;
