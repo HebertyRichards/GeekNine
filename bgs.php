@@ -200,14 +200,14 @@ if (isset($_SESSION['nome'])) {
         </ul>
       </div>
       <div class="redes-sociais">
-        <a id="facebook" href="https://www.facebook.com/people/GeekNine/61557039160232/" target="_blank">Facebook</a>
-        <a id="instagram" href="https://www.instagram.com/geek_nine/?igsh=MXBqemduaHFybDFuZg%3D%3D" target="_blank">Instagram</a>
-        <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank">Twitter</a>
+        <a id="facebook" href="https://www.facebook.com/people/GeekNine/61557039160232/" target="_blank"></a>
+        <a id="instagram" href="https://www.instagram.com/geek_nine/?igsh=MXBqemduaHFybDFuZg%3D%3D" target="_blank"></a>
+        <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-    <div class="logo">
-      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-    </div>
+  <div class="logo">
+  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+  </div>
   </footer>
 </body>
 
