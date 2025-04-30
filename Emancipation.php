@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emancipation</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,42 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/Emancipation.png" alt="Emancipation">
-    <div class="title">
-    <h1>Emancipation</h1>
-    <div class = "mdb"> 
-    <p>2022</p>
-    <p>2h, 12m</p>
-      <a href="https://www.imdb.com/title/tt12530246/?ref_=nv_sr_srsg_1_tt_2_nm_6_q_eman">6.2/10</a> 
+    <div class="div1">
+      <h1 id='h1'>Emancipation</h1>
+      <div class="mdb">
+        <p>2022</p>
+        <p>2h, 12m</p>
+        <a href="https://www.imdb.com/title/tt12530246/?ref_=nv_sr_srsg_1_tt_2_nm_6_q_eman">6.2/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Will Smith.png" alt="Will Smith">
-      <span>Will Smith</span>
+        <span>Will Smith</span>
         <img src="imagens/Ben Foster.png" alt="Ben Foster">
-      <span>Ben Foster</span>
-    <img src="imagens/Charmaine Bingwa.png" alt="Charmaine Bingwa">
-      <span>Charmaine Bingwa</span>
+        <span>Ben Foster</span>
+        <img src="imagens/Charmaine Bingwa.png" alt="Charmaine Bingwa">
+        <span>Charmaine Bingwa</span>
         <img src="imagens/Steven Ogg.png" alt="Steven Ogg">
-      <span>Steven Ogg</span>
-  </div>
-  <div class="texto1">
-    <p>Emancipation – Uma História de Liberdade conta a triunfante história de um homem escravizado que foge e atravessa os pântanos da Louisiana, nos Estados Unidos, em uma jornada tortuosa para escapar dos proprietários de plantações que quase o mataram. Peter (Will Smith) é o homem em busca da sua liberdade, que escapa da escravidão confiando em sua inteligência, fé inabalável e profundo amor por sua família, fazendo o impossível para se livrar dos caçadores de sangue frio nos implacáveis pântanos da Louisiana. O filme é inspirado nas fotos reais, de 1863, de “Peter chicoteado" (Whipped Peter), tiradas durante um exame médico do Exército dos EUA, que apareceram, pela primeira vez, na revista Harper’s Weekly. Uma destas fotos, conhecida como “As Costas Açoitadas” (The Scourged Back), mostra as costas nuas de Peter mutiladas pelas chicotadas de seus escravizadores e acabou contribuindo para a crescente oposição pública à escravidão, se tornando um símbolo das atrocidades cometidas em seu tempo.</p>
-  </div>
-  </div>
+        <span>Steven Ogg</span>
+      </div>
+      <div class="texto1">
+        <p>Emancipation – Uma História de Liberdade conta a triunfante história de um homem escravizado que foge e atravessa os pântanos da Louisiana, nos Estados Unidos, em uma jornada tortuosa para escapar dos proprietários de plantações que quase o mataram. Peter (Will Smith) é o homem em busca da sua liberdade, que escapa da escravidão confiando em sua inteligência, fé inabalável e profundo amor por sua família, fazendo o impossível para se livrar dos caçadores de sangue frio nos implacáveis pântanos da Louisiana. O filme é inspirado nas fotos reais, de 1863, de “Peter chicoteado" (Whipped Peter), tiradas durante um exame médico do Exército dos EUA, que apareceram, pela primeira vez, na revista Harper’s Weekly. Uma destas fotos, conhecida como “As Costas Açoitadas” (The Scourged Back), mostra as costas nuas de Peter mutiladas pelas chicotadas de seus escravizadores e acabou contribuindo para a crescente oposição pública à escravidão, se tornando um símbolo das atrocidades cometidas em seu tempo.</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="contato">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

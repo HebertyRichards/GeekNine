@@ -1,0 +1,28 @@
+{
+  "Ação": [
+    { "titulo": "GTA 6", "img": "../imagens/gta6.webp", "link": "gta6.php" },
+    {
+      "titulo": "Red Dead Redemption 2",
+      "img": "../imagens/reddead2.png",
+      "link": "reddead2.php"
+    },
+    { "titulo": "CS:GO", "img": "../imagens/csgo.jpg", "link": "csgo.php" },
+    {
+      "titulo": "Cyberpunk 2077",
+      "img": "../imagens/cyberpunk2077.png",
+      "link": "cyberpunk2077.php"
+    },
+    { "titulo": "FIFA 24", "img": "../imagens/fifa24.jpeg", "link": "fc24.php" }
+  ],
+  "Vintage": [
+    { "titulo": "Super Mario", "img": "../imagens/mario.jpg", "link": "#" },
+    { "titulo": "Alex Kidd", "img": "../imagens/alexkidd.jpg", "link": "#" },
+    { "titulo": "Sonic", "img": "../imagens/sonic.jpg", "link": "#" },
+    {
+      "titulo": "Street Fighter",
+      "img": "../imagens/streetfighter.jpg",
+      "link": "#"
+    },
+    { "titulo": "Pac-Man", "img": "../imagens/pacmam.jpg", "link": "#" }
+  ]
+}

@@ -1,17 +1,7 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
+$dados = json_decode(file_get_contents('data/dados.json'), true);
+$slides = json_decode(file_get_contents('data/slides.json'), true);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +12,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnologia</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +28,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,148 +56,70 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
-   <div class="slideshow-container" align="center">
+  <div class="slideshow-container" align="center">
+    <?php foreach ($slides as $slide): ?>
       <div class="slide fade">
-        <a href = "JBL.php"><img src="imagens/JBL-t.jpeg" alt="imagens/JBL-t.jpeg"></a>
-      <div class="text">JBL Quantum Stream Studio é lançado no Brasil; veja o preço do microfone premium
-</div>
+        <a href="<?= htmlspecialchars($slide['link']) ?>">
+          <img src="<?= htmlspecialchars($slide['imagem']) ?>" alt="<?= htmlspecialchars($slide['alt']) ?>">
+        </a>
+        <div class="text"><?= htmlspecialchars($slide['texto']) ?></div>
       </div>
-   
-        <div class="slide fade">
-           <a href = "lançamentosIA.php"><img src="imagens/banner-t.jpeg" alt="imagens/banner-t.jpeg"></a>
-      <div class="text">Novos lançamentos da linha apostam em IA</div>
-</div>
-     
-     <div class="slide fade">
-            <a href = "Link malicioso:.php"><img src="imagens/Link malicioso.jpeg" alt="imagens/Link malicioso.jpeg"></a>
-     <div class="text" >Link malicioso: 6 dicas para evitar links mal-intencionados na web
-</div>
-         </div>
-
-      <div class="slide fade">
-     <a href = "Saindo do piloto.php"><img src="imagens/Saindo do piloto.jpeg" alt="imagens/Saindo do piloto.jpeg"></a>
-      <div class="text">Saindo do piloto automático: rumo a soluções de mobilidade sustentáveis e permanentes</div>
-      </div>
-
-      </div>
-      <div class="dots-container">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-         <span class="dot"></span>
-      </div>
-    </div>
-   <script>
-     document.addEventListener("DOMContentLoaded", function() {
-       var slideIndex = 0;
-       showSlides();
-
-       function showSlides() {
-         var slides = document.getElementsByClassName("slide");
-         var dots = document.getElementsByClassName("dot");
-         for (var i = 0; i < slides.length; i++) {
-           slides[i].style.display = "none";
-         }
-         slideIndex++;
-         if (slideIndex > slides.length) { slideIndex = 1; }
-         for (var i = 0; i < dots.length; i++) {
-           dots[i].classList.remove("active");
-         }
-         slides[slideIndex-1].style.display = "block";
-         dots[slideIndex-1].classList.add("active");
-         setTimeout(showSlides, 5000); 
-       }
-     });
-   </script>
-
-   <div class = "tec">
-    <div class="Tec-a" align="center">    
-      <h1>MUNDO TEC</h1>
-    </div>
-     <div class= "teste">
-   <a href = "Chip-t.php"><img src="imagens/chip3.jpeg" alt="imagens/imagens/chip3.jpeg" width="300px"></a>
-     <div class="text1">Por que Taiwan é tão importante no mercado de chips?
-        </div>
-     </div>
-     <div class= "teste">
-      <a href = "tecmed.php"><img src="imagens/tec-med.jpeg" alt="imagens/tec-med.jpeg" width="300px"></a>
-       <div class="text1">Cirurgia robótica: saiba tudo sobre a tecnologia
-           </div>
-        </div>
-      <div class= "teste">
-      <a href = "Robo.php"><img src="imagens/robo.jpeg" alt="imagens/imagens/robo.jpeg" width="300px"></a>
-        <div class="text1">Robô subaquático pode mapear as profundezas do oceano
-           </div>
-        </div>
-    
-   <div class="Tec-a" align="center">
-       <h1> NOVIDADES</h1>
+    <?php endforeach; ?>
+  <div class="dots-container">
+    <?php for ($i = 0; $i < count($slides); $i++): ?>
+      <span class="dot"></span>
+    <?php endfor; ?>
   </div>
-     <div class= "teste">
-     <a href = "IA-t.php"><img src="imagens/ia-t.jpeg" alt="imagens/ia-t.jpeg" width="300px"></a>
-       <div class="text1">IA: Ameaça desenvolvedores?
-       </div>
-     </div>
-     <div class= "teste">
-     <a href = "Adobe.php"><img src="imagens/adobe-t.jpg" alt="imagens/adobe-t.jpg" width="300px"></a>
-       <div class="text1">Adobe Premiere Pro
-          </div>
+  </div>
+  <?php foreach ($dados as $secao): ?>
+    <div class="tec">
+      <div class="Tec-a">
+        <h2><?= htmlspecialchars($secao['categoria']) ?></h2>
+      </div>
+      <?php foreach ($secao['itens'] as $item): ?>
+        <div class="teste">
+          <a href="<?= htmlspecialchars($item['link']) ?>">
+            <img src="<?= htmlspecialchars($item['imagem']) ?>" alt="<?= htmlspecialchars($item['titulo']) ?>">
+          </a>
+          <div class="text1"><?= htmlspecialchars($item['titulo']) ?></div>
         </div>
-     <div class= "teste">
-      <a href = "apple.php"><img src="imagens/apple-t3.jpeg" alt="imagens/apple-t2.jpeg" width="300px"></a>
-        <div class="text1">MacBook Air de 13
-   </div>
-</div>
-  
-  <div class = "tec">
-  <div class="Tec-a" align="center">
-    <h1>TEC GAMER</h1>
-  </div>
-     <div class= "teste">
-        <a href = "Monitor-s.php"><img src="imagens/monitor-s.jpeg" alt="imagens/monitor-s.jpeg" width="300px"></a>
-       <div class="text1">Novo monitor gamer ViewSonic
-         </div>
-       </div>
-
-       <div class= "teste">
-      <a href = "ROG-s.php"><img src="imagens/rog-t.jpeg" alt="imagens/rog-t.jpeg" width="300px"></a>
-         <div class="text1">ROG Strix Scar 18 (2024)
-            </div>
-          </div>
-
-          <div class= "teste">
-         <a href = "dell.php"><img src="imagens/dell-t.jpeg" alt="imagens/dell-t.jpeg" width="300px"></a>
-            <div class="text1">Dell G15 5530
-              </div>
-            </div>
-  </div>
-   </div>
-      </div>
+      <?php endforeach; ?>
     </div>
-  <br><br>
-  <br><br>
-  <footer>
-    <div class="contato">
-      <div class="contato-1">
-        <ul>
-          <li id="h2">Contato</li>
-          <li><img src="imagens/gmail.png" alt="Gmail">Geeknine@gmail.com</li>
-          <li><img src="imagens/telefone.png" alt="Telefone">Telefone:(11) 0000-0000</li>
-          <li><img src="imagens/whatsapp.png" alt="WhatsApp">Whatsapp: (11) 00000-0000</li>
-        </ul>
+  <?php endforeach; ?>
+    <footer>
+      <div class="contato">
+        <div class="contato-1">
+          <ul>
+            <li id="h2">Contato</li>
+            <li><img src="imagens/gmail.png" alt="Gmail">Geeknine@gmail.com</li>
+            <li><img src="imagens/telefone.png" alt="Telefone">Telefone:(11) 0000-0000</li>
+            <li><img src="imagens/whatsapp.png" alt="WhatsApp">Whatsapp: (11) 00000-0000</li>
+          </ul>
+        </div>
+        <div class="redes-sociais">
+          <a id="facebook" href="https://www.facebook.com/people/GeekNine/61557039160232/" target="_blank"></a>
+          <a id="instagram" href="https://www.instagram.com/geek_nine/?igsh=MXBqemduaHFybDFuZg%3D%3D" target="_blank"></a>
+          <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
+        </div>
       </div>
-      <div class="redes-sociais">
-        <a id="facebook" href="https://www.facebook.com/people/GeekNine/61557039160232/" target="_blank"></a>
-        <a id="instagram" href="https://www.instagram.com/geek_nine/?igsh=MXBqemduaHFybDFuZg%3D%3D" target="_blank"></a>
-        <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
+      <div class="logo">
+        <p>GeekNine © 2024 Todos os Direitos Reservados</p>
       </div>
-    </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
-  </footer>
+    </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

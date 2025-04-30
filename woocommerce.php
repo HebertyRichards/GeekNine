@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +10,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conheça o WooCommerce</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,55 +54,50 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
-  <table>
-     <div class= "chip">
-         <div class = "h1">
-        <h1>Conheça o WooCommerce, uma plataforma versátil<br> para criar a sua loja online </h1>
+  <div class="chip">
+    <h1 id="h1">Conheça o WooCommerce, uma plataforma versátil<br> para criar a sua loja online </h1>
+    <div class="chip-b">
+      <img src="imagens/woocommerce.jpeg" alt="WooComerce">
     </div>
-     <div class = "chip-b">
-    <img src="imagens/woocommerce.jpeg" alt="imagens/woocommerce.jpeg"width="400px">
-      </div>
-        <div class = "chip-c">
-    <p>Montar uma loja virtual não precisa ser uma tarefa complexa. Hoje, você pode criar um e-commerce facilmente usando o WooCommerce, uma solução baseada no WordPress. É necessário ter um bom servidor para isso? É. A boa notícia é que a Hostinger oferece tudo o que você precisa em uma hospedagem WooCommerce.</p>
-     <div class = "sub">
- <h4>O que é WooCommerce?<h4>
- </div>
-   <p>O WooCommerce é um plugin gratuito e de código aberto desenvolvido para que qualquer pessoa possa criar um comércio eletrônico usando o WordPress. A solução permite implementar temas personalizados, cadastrar centenas de produtos, integrar serviços de pagamento e envio de pedidos, acompanhar estatísticas de acesso e muito mais. A existência do WooCommerce causa alguma surpresa, pois existe a crença de que o WordPress serve apenas como plataforma de blogs. Mas a verdade é que esse é um sistema de gerenciamento de conteúdo (CMS) que suporta várias outras aplicações além de blogs, como sites institucionais e lojas online. O WooCommerce se destaca como solução de e-commerce para WordPress por contar com numerosos recursos e ser de fácil utilização. Não é por acaso que cerca de 4 milhões de lojas virtuais de várias partes do mundo são baseadas nessa plataforma.</p>
-    <div class = "sub">
-    <h4>Quais recursos o WooCommerce oferece para a minha loja?<h4>
+    <div class="chip-c">
+      <p>Montar uma loja virtual não precisa ser uma tarefa complexa. Hoje, você pode criar um e-commerce facilmente usando o WooCommerce, uma solução baseada no WordPress. É necessário ter um bom servidor para isso? É. A boa notícia é que a Hostinger oferece tudo o que você precisa em uma hospedagem WooCommerce.</p>
     </div>
-      <p>O WooCommerce é muito mais do que uma vitrine digital. Ao usar a plataforma, a sua loja online contará com recursos como:</p>
-      <p>Cadastro de produtos: você pode cadastrar os produtos ou serviços oferecidos informando SKU (identificação única), preço, categoria (como roupas ou calçados), galeria de fotos, entre outros;<br></br>
-      Sistemas de pagamento: o WooCommerce pode ser integrado facilmente a serviços financeiros (gateways) para que a sua loja aceite pagamento por cartão de crédito, Pix e boleto bancário, por exemplo;<br></br>
-      Acompanhamento e relatórios: você pode acompanhar o status de cada pedido a qualquer momento, bem como ter acesso a relatórios que te ajudam a criar campanhas de marketing ou a diminuir as desistências;<br></br>
-      Otimização para SEO: o WooCommerce tem recursos de SEO (Search engine optimization) para aumentar as chances de a loja aparecer nos primeiros resultados das buscas;<br></br
-      Personalização: você pode usar um tema próprio ou pré-pronto, bem como adicionar informações de contato, integração com redes sociais e com plugins de logística, como o dos Correios, e outros recursos para deixar o WooCommerce totalmente adequado ao seu negócio.<br></br>
-</p>
-      <div class = "chip-b">
-      <img src="imagens/woo1.jpg" alt="iimagens/woo1.jpg"width="400px">
-        </div>
-      <div class = "sub">
-      <h4>Vantagens de usar a Hostinger para hospedagem WooCommerce<h4>
-      </div>
-        <p>Você já sabe que o WooCommerce oferece numerosos benefícios. Mas, para usufruir deles, é importante contratar uma plataforma confiável para a sua hospedagem WooCommerce, afinal, você não vai querer que o e-commerce fique lento ou deixe de funcionar sem explicação.</p>
-        <p>É neste ponto que a Hostinger se destaca. Estamos falando de um dos mais renomados serviços de hospedagem de sites do mercado. No que diz respeito ao WooCommerce, a companhia oferece:</p>
-        <p>Ativação rápida, com apenas um clique;<br></br>
-        Otimização de desempenho com a ferramenta LiteSpeed Cache;<br></br>
-        Inteligência artificial que gera descrições de produtos;<br></br>
-        CDN gratuita que distribui o conteúdo da loja para os servidores mais próximos do seu público;<br></br>
-        Migração gratuita se a loja estiver hospedada em outro servidor;<br></br>
-        Firewall, detecção de malwares e proteção contra ataques DDoS<br.</br>.</p>
-          <p>Vale destacar que todos os planos de hospedagem WooCommerce da Hostinger são gerenciados, ou seja, contam com servidores já preparados e otimizados para operações de loja virtual baseadas nessa plataforma.</p>
-    
-          </div>
-
-      </div>
-      </div>
-    </table>
-  <br></br>
-  <br></br> 
+    <h4 id="sub">O que é WooCommerce?<h4>
+        <p>O WooCommerce é um plugin gratuito e de código aberto desenvolvido para que qualquer pessoa possa criar um comércio eletrônico usando o WordPress. A solução permite implementar temas personalizados, cadastrar centenas de produtos, integrar serviços de pagamento e envio de pedidos, acompanhar estatísticas de acesso e muito mais. A existência do WooCommerce causa alguma surpresa, pois existe a crença de que o WordPress serve apenas como plataforma de blogs. Mas a verdade é que esse é um sistema de gerenciamento de conteúdo (CMS) que suporta várias outras aplicações além de blogs, como sites institucionais e lojas online. O WooCommerce se destaca como solução de e-commerce para WordPress por contar com numerosos recursos e ser de fácil utilização. Não é por acaso que cerca de 4 milhões de lojas virtuais de várias partes do mundo são baseadas nessa plataforma.</p>
+        <h4 id="sub">Quais recursos o WooCommerce oferece para a minha loja?<h4>
+            <p>O WooCommerce é muito mais do que uma vitrine digital. Ao usar a plataforma, a sua loja online contará com recursos como:</p>
+            <p>Cadastro de produtos: você pode cadastrar os produtos ou serviços oferecidos informando SKU (identificação única), preço, categoria (como roupas ou calçados), galeria de fotos, entre outros;</p>
+            <p>Sistemas de pagamento: o WooCommerce pode ser integrado facilmente a serviços financeiros (gateways) para que a sua loja aceite pagamento por cartão de crédito, Pix e boleto bancário, por exemplo;</p>
+            <p>Acompanhamento e relatórios: você pode acompanhar o status de cada pedido a qualquer momento, bem como ter acesso a relatórios que te ajudam a criar campanhas de marketing ou a diminuir as desistências;</p>
+            <p>Otimização para SEO: o WooCommerce tem recursos de SEO (Search engine optimization) para aumentar as chances de a loja aparecer nos primeiros resultados das buscas;</p>
+            <p>Personalização: você pode usar um tema próprio ou pré-pronto, bem como adicionar informações de contato, integração com redes sociais e com plugins de logística, como o dos Correios, e outros recursos para deixar o WooCommerce totalmente adequado ao seu negócio.</p>
+            <div class="chip-b">
+              <img src="imagens/woo1.jpg" alt="WooComerce">
+            </div>
+            <h4 id="sub">Vantagens de usar a Hostinger para hospedagem WooCommerce<h4>
+                <p>Você já sabe que o WooCommerce oferece numerosos benefícios. Mas, para usufruir deles, é importante contratar uma plataforma confiável para a sua hospedagem WooCommerce, afinal, você não vai querer que o e-commerce fique lento ou deixe de funcionar sem explicação.</p>
+                <p>É neste ponto que a Hostinger se destaca. Estamos falando de um dos mais renomados serviços de hospedagem de sites do mercado. No que diz respeito ao WooCommerce, a companhia oferece:</p>
+                <p>Ativação rápida, com apenas um clique;</p>
+                <p>Otimização de desempenho com a ferramenta LiteSpeed Cache;</p>
+                <p>Inteligência artificial que gera descrições de produtos;</p>
+                <p>CDN gratuita que distribui o conteúdo da loja para os servidores mais próximos do seu público;</p>
+                <p>Migração gratuita se a loja estiver hospedada em outro servidor;</p>
+                <p>Firewall, detecção de malwares e proteção contra ataques DDoS;</p>
+                <p>Vale destacar que todos os planos de hospedagem WooCommerce da Hostinger são gerenciados, ou seja, contam com servidores já preparados e otimizados para operações de loja virtual baseadas nessa plataforma.</p>
+  </div>
   <footer>
     <div class="contato">
       <div class="contato-1">
@@ -116,10 +114,10 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
-  </body>
+</body>
 
-  </html>
+</html>

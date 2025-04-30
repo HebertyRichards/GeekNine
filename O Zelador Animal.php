@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O Zelador Animal</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,34 +54,44 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-    <div class="div1">
     <img src="imagens/O Zelador Animal.png" alt="O Zelador Animal">
-      <div class="title">
-    <h1>O Zelador Animal</h1>
-      <div class = "mdb"> 
-      <p> 2011 </p>
-      <p> 1h, 42m </p>
-        <a href="https://www.imdb.com/title/tt1222817/?ref_=nv_sr_srsg_0_tt_1_nm_0_q_zelador%2520animal">5.2/10</a> 
-        </div>
-  <div class="elenco">
+    <div class="div1">
+      <h1 id="h1">O Zelador Animal</h1>
+      <div class="mdb">
+        <p> 2011 </p>
+        <p> 1h, 42m </p>
+        <a href="https://www.imdb.com/title/tt1222817/?ref_=nv_sr_srsg_0_tt_1_nm_0_q_zelador%2520animal">5.2/10</a>
+      </div>
+      <div class="elenco">
         <img src="imagens/Kevin James.png" alt="Kevin James">
-      <span>Kevin James</span>    
+        <span>Kevin James</span>
         <img src="imagens/Rosario Dawson.png" alt="Rosario Dawson">
-      <span>Rosario Dawson</span>
+        <span>Rosario Dawson</span>
         <img src="imagens/Sylvester Stallone.png" alt="Sylvester Stallone">
-      <span>Sylvester Stallone</span>
+        <span>Sylvester Stallone</span>
         <img src="imagens/Nick Nolte.png" alt="Nick Nolte">
-      <span>Nick Nolte</span>
-  </div>
-  <div class="texto1">
-    <p>Griffin Keyes (Kevin James) trabalhava feliz como zelador de um jardim zoológico. Para ele, nada era mais normal do que conviver com leões, elefantes, girafas, ursos e gorilas. Sua história começa a mudar quando leva um fora de sua namorada Stephanie (Leslie Bibb) por ela não se conformar com a falta de ambição dele. Certos de que o boa praça deveria ter uma segunda chance com as mulheres, a bicharada resolve dar uma de conselheiros amorosos e começam a "falar" com ele, quebrando o código de silêncio que existia. Após o susto inicial, ele começa a adotar algumas dicas animais e o resultado acaba sendo positivo. A única coisa que eles não contavam era que a megera iria afastar o grande amigo do zoológico para dar vazão ao seu mundo de futlidades e falsidades. É quando chega a hora de Griffin acordar e descobrir o verdadeiro sentido das palavras amor e amizade.</p>
-  </div>
-  </div>
+        <span>Nick Nolte</span>
+      </div>
+      <div class="texto1">
+        <p>Griffin Keyes (Kevin James) trabalhava feliz como zelador de um jardim zoológico. Para ele, nada era mais normal do que conviver com leões, elefantes, girafas, ursos e gorilas. Sua história começa a mudar quando leva um fora de sua namorada Stephanie (Leslie Bibb) por ela não se conformar com a falta de ambição dele. Certos de que o boa praça deveria ter uma segunda chance com as mulheres, a bicharada resolve dar uma de conselheiros amorosos e começam a "falar" com ele, quebrando o código de silêncio que existia. Após o susto inicial, ele começa a adotar algumas dicas animais e o resultado acaba sendo positivo. A única coisa que eles não contavam era que a megera iria afastar o grande amigo do zoológico para dar vazão ao seu mundo de futlidades e falsidades. É quando chega a hora de Griffin acordar e descobrir o verdadeiro sentido das palavras amor e amizade.</p>
+      </div>
     </div>
-    <footer>
+  </div>
+  <footer>
     <div class="contato">
       <div class="contato-1">
         <ul>
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

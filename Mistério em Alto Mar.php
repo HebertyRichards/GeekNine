@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mistério em Alto Mar</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,33 +54,43 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/Misterio.png" alt="Mistério em Alto Mar">
-    <div class="title">
-    <h1>Mistério em Alto Mar</h1>
-    <div class = "mdb"> 
-    <p> 2022 </p>
-    <p> 1h, 30m </p>
-      <a href="https://www.imdb.com/title/tt15210506/?ref_=fn_al_tt_1">4.8/10</a> 
+    <div class="div1">
+      <h1 id="h1">Mistério em Alto Mar</h1>
+      <div class="mdb">
+        <p> 2022 </p>
+        <p> 1h, 30m </p>
+        <a href="https://www.imdb.com/title/tt15210506/?ref_=fn_al_tt_1">4.8/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Marco Bocci.png" alt="Marco Bocci">
-      <span>Marco Bocci</span>
+        <span>Marco Bocci</span>
         <img src="imagens/Diane Fleri.png" alt="Diane Fleri">
-      <span>Diane Fleri</span>
+        <span>Diane Fleri</span>
         <img src="imagens/Filippo Nigro.png" alt="Filippo Nigro">
-      <span>Filippo Nigro</span>
+        <span>Filippo Nigro</span>
         <img src="imagens/Marina Rocco.png" alt="Marina Rocco">
-      <span>Marina Rocco</span>
-  </div>
-  <div class="texto1">
-    <p>Depois de uma festa num iate, um grupo de amigos acorda à deriva em alto-mar. Sem mantimentos ou chance de comunicação, percebem que são parte de um plano de vingança.</p>
-  </div>
+        <span>Marina Rocco</span>
+      </div>
+      <div class="texto1">
+        <p>Depois de uma festa num iate, um grupo de amigos acorda à deriva em alto-mar. Sem mantimentos ou chance de comunicação, percebem que são parte de um plano de vingança.</p>
+      </div>
     </div>
-  </div>  
+  </div>
   <footer>
     <div class="contato">
       <div class="contato-1">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +10,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moto G24 Power </title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,51 +54,45 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
-  <table>
-         <div class = "h1">
-        <h1>Moto G24 Power chega ao Brasil custando R$ 999 </h1>
+  <div class="chip">
+    <h1 id="h1">Moto G24 Power chega ao Brasil custando R$ 999 </h1>
+    <div class="chip-b">
+      <img src="imagens/moto g24.jpeg" alt="Mto G24">
     </div>
-     <div class = "chip-b">
-    <img src="imagens/moto g24.jpeg" alt="Imagem de Exemplo 2" width="400px">
-      </div>
-     <div class = "chip-c">
- <p><em>Novo smartphone baratinho da Motorola já pode ser comprado no Brasil. Aparelho traz bateria de 6.000 mAh e carregamento rápido de até 30 W</em> </p>
-
+    <div class="chip-c">
+      <p>Novo smartphone baratinho da Motorola já pode ser comprado no Brasil. Aparelho traz bateria de 6.000 mAh e carregamento rápido de até 30 W</p>
       <p>
-      A Motorola anunciou nesta semana o celular Moto G24 Power para o mercado brasileiro. O ponto forte do smartphone é sua bateria de 6.000 mAh que, segundo a fabricante, é capaz de ficar 48 horas sem carregar. O Moto G24 Power chega no lançamento com o preço de R$ 999.
-
-      O celular é vendido com um carregador rápido de 30 W com tecnologia TurboPower. Esse acessório promete completar a capacidade da bateria em 1h25. O tempo para chegar a uma carga de 50% é de 32 minutos, segundo a Motorola. A bateria de 6.000 mAh é um upgrade do modelo Moto G24 “não Power”.</p>
-      
-       <p>
-         O Moto G24 Power é equipado com o SoC MediaTek Helio G85, que possui oito núcleos. A memória RAM é de 4 GB, mas o smartphone possui suporte para RAM Boost, que utiliza uma porção do armazenamento de 128 GB para atingir 8 GB de memória RAM.
-
-         Na parte das câmeras, a lente principal do conjunto duplo possui 50 MP. A segunda câmera é uma macro de 2 MP. O sensor para selfies tem 8 MP. O Moto G24 Power tem o recurso Night Vision, que promete melhorar a captura de fotos à noite ou em ambientes com baixa iluminação — recurso similar ao Nightography da Samsung.
-
-         O Moto G24 Power tem tela de 6,6 polegadas e suporte para resolução HD+. A taxa de atualização pode chegar até 90 Hz. Em tarefas menos exigentes, ela é reduzida automaticamente para 60 Hz.
-
-         O smartphone sai de fábrica com Android 14, a versão mais atualizada do sistema operacional mobile do Google. O Moto G24 Power é vendido em duas opções de cores (azul e azul celeste).
-       </p>
-       <div class = "sub">
-        <h4>Ficha técnica do Moto G24 Power (Motorola)<br></br>
-        Processador: MediaTek Helio G85 — oito núcleos e frequência máxima de 2,0 GHz<br></br>
-        Memória: 4 GB de memória RAM (mais 4 GB com RAM Boost ativado) e 128 GB de armazenamento<br></br>
-        Tela: 6,6 polegadas, suporte para resolução HD+, taxa de atualização de até 90 Hz<br></br>
-        Câmeras traseira: principal de 50 MP, macro de 2 MP<br></br>
-        Câmera frontal: 8 MP<br></br>
-        Rede móvel: 4G<br></br>
-        Bateria: 6.000 mAh, com suporte para recarga rápida de até 30 W<br></br>
-        Sistema operacional: Android 14<br></br></h4>
-        </div>
-            </div>
-     </div>
- 
+        A Motorola anunciou nesta semana o celular Moto G24 Power para o mercado brasileiro. O ponto forte do smartphone é sua bateria de 6.000 mAh que, segundo a fabricante, é capaz de ficar 48 horas sem carregar. O Moto G24 Power chega no lançamento com o preço de R$ 999.
+        O celular é vendido com um carregador rápido de 30 W com tecnologia TurboPower. Esse acessório promete completar a capacidade da bateria em 1h25. O tempo para chegar a uma carga de 50% é de 32 minutos, segundo a Motorola. A bateria de 6.000 mAh é um upgrade do modelo Moto G24 “não Power”.</p>
+      <p>
+        O Moto G24 Power é equipado com o SoC MediaTek Helio G85, que possui oito núcleos. A memória RAM é de 4 GB, mas o smartphone possui suporte para RAM Boost, que utiliza uma porção do armazenamento de 128 GB para atingir 8 GB de memória RAM.
+        Na parte das câmeras, a lente principal do conjunto duplo possui 50 MP. A segunda câmera é uma macro de 2 MP. O sensor para selfies tem 8 MP. O Moto G24 Power tem o recurso Night Vision, que promete melhorar a captura de fotos à noite ou em ambientes com baixa iluminação — recurso similar ao Nightography da Samsung.
+        O Moto G24 Power tem tela de 6,6 polegadas e suporte para resolução HD+. A taxa de atualização pode chegar até 90 Hz. Em tarefas menos exigentes, ela é reduzida automaticamente para 60 Hz.
+        O smartphone sai de fábrica com Android 14, a versão mais atualizada do sistema operacional mobile do Google. O Moto G24 Power é vendido em duas opções de cores (azul e azul celeste).</p>
+      <h4 id="sub">Ficha técnica do Moto G24 Power (Motorola)<br><br>
+        Processador: MediaTek Helio G85 — oito núcleos e frequência máxima de 2,0 GHz<br><br>
+        Memória: 4 GB de memória RAM (mais 4 GB com RAM Boost ativado) e 128 GB de armazenamento<br><br>
+        Tela: 6,6 polegadas, suporte para resolução HD+, taxa de atualização de até 90 Hz<br><br>
+        Câmeras traseira: principal de 50 MP, macro de 2 MP<br><br>
+        Câmera frontal: 8 MP<br><br>
+        Rede móvel: 4G<br><br>
+        Bateria: 6.000 mAh, com suporte para recarga rápida de até 30 W<br><br>
+        Sistema operacional: Android 14<br><br></h4>
     </div>
-    </div>
-    </table>
-  <br></br>
-  <br></br> 
+  </div>
   <footer>
     <div class="contato">
       <div class="contato-1">
@@ -112,10 +109,10 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
-  </body>
+</body>
 
-  </html>
+</html>

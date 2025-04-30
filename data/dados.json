@@ -1,0 +1,62 @@
+[
+  {
+    "categoria": "MUNDO TEC",
+    "itens": [
+      {
+        "titulo": "Por que Taiwan é tão importante no mercado de chips?",
+        "imagem": "imagens/chip3.jpeg",
+        "link": "Chip-t.php"
+      },
+      {
+        "titulo": "Cirurgia robótica: saiba tudo sobre a tecnologia",
+        "imagem": "imagens/tec-med.jpeg",
+        "link": "tecmed.php"
+      },
+      {
+        "titulo": "Robô subaquático pode mapear as profundezas do oceano",
+        "imagem": "imagens/robo.jpeg",
+        "link": "Robo.php"
+      }
+    ]
+  },
+  {
+    "categoria": "NOVIDADES",
+    "itens": [
+      {
+        "titulo": "IA: Ameaça desenvolvedores?",
+        "imagem": "imagens/ia-t.jpeg",
+        "link": "IA-t.php"
+      },
+      {
+        "titulo": "Adobe Premiere Pro",
+        "imagem": "imagens/adobe-t.jpg",
+        "link": "Adobe.php"
+      },
+      {
+        "titulo": "MacBook Air de 13",
+        "imagem": "imagens/apple-t3.jpeg",
+        "link": "apple.php"
+      }
+    ]
+  },
+  {
+    "categoria": "TEC GAMER",
+    "itens": [
+      {
+        "titulo": "Novo monitor gamer ViewSonic",
+        "imagem": "imagens/monitor-s.jpeg",
+        "link": "Monitor-s.php"
+      },
+      {
+        "titulo": "ROG Strix Scar 18 (2024)",
+        "imagem": "imagens/rog-t.jpeg",
+        "link": "ROG-s.php"
+      },
+      {
+        "titulo": "Dell G15 5530",
+        "imagem": "imagens/dell-t.jpeg",
+        "link": "dell.php"
+      }
+    ]
+  }
+]

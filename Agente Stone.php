@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agente Stone</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,33 +54,48 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-    <div class="div1">
     <img src="imagens/Agente Stone.png" alt="Agente Stone">
-      <div class="title">
-    <h1>Agente Stone</h1>
-  <div class="mdb">
-    <p>2023</p>
-    <p>2h, 2m</p>
-      <a href="https://www.imdb.com/title/tt13603966/?ref_=fn_al_tt_1">5.7/10</a> 
+    <div class="div1">
+      <h1 id='h1'>Agente Stone</h1>
+      <div class="mdb">
+        <p>2023</p>
+        <p>2h, 2m</p>
+        <a href="https://www.imdb.com/title/tt13603966/?ref_=fn_al_tt_1">5.7/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Gal Gadot.png" alt="Gal Gadot">
-      <span>Gal Gadot</span>
+        <span>Gal Gadot</span>
         <img src="imagens/Jing Lusi.png" alt="Jing Lusi">
-      <span>Jing Lusi</span>
+        <span>Jing Lusi</span>
         <img src="imagens/Jamie Dornan.png" alt="Jamie Dornan">
-      <span>Jamie Dornan</span>
+        <span>Jamie Dornan</span>
         <img src="imagens/Paul Ready.png" alt="Paul Ready">
-      <span>Paul Ready</span>
+        <span>Paul Ready</span>
+      </div>
+      <div class="texto1">
+        <p>Agente Stone é um suspense de espionagem dirigido por Tom Harper (Peaky Blinders) para a Netflix. Na
+          história, acompanhamos a agente de elite Rachel Stone (Gal Gadot), que esconde um grande segredo: ela é a
+          única pessoa que pode se colocar entre uma misteriosa e ultra-poderosa organização que busca manter a paz
+          mundial, e a possível perda do bem mais valioso - e perigoso - da instituição, conhecido como o Coração. Com
+          Jamie Dornan (50 Tons de Cinza), Alia Bhatt (A Espiã), Sophie Okonedo (Morte no Nilo), Matthias Schweighöfer
+          (Exército de Ladrões: Invasão da Europa), Jing Lusi, Paul Ready, Jon Kortajarena e Archie Madekwe.</p>
+      </div>
+    </div>
   </div>
-  <div class="texto1">
-    <p>Agente Stone é um suspense de espionagem dirigido por Tom Harper (Peaky Blinders) para a Netflix. Na história, acompanhamos a agente de elite Rachel Stone (Gal Gadot), que esconde um grande segredo: ela é a única pessoa que pode se colocar entre uma misteriosa e ultra-poderosa organização que busca manter a paz mundial, e a possível perda do bem mais valioso - e perigoso - da instituição, conhecido como o Coração. Com Jamie Dornan (50 Tons de Cinza), Alia Bhatt (A Espiã), Sophie Okonedo (Morte no Nilo), Matthias Schweighöfer (Exército de Ladrões: Invasão da Europa), Jing Lusi, Paul Ready, Jon Kortajarena e Archie Madekwe.</p>
-  </div>
-  </div>
-  </div>  
   <footer>
     <div class="contato">
       <div class="contato-1">
@@ -90,13 +108,14 @@ if (isset($_SESSION['nome'])) {
       </div>
       <div class="redes-sociais">
         <a id="facebook" href="https://www.facebook.com/people/GeekNine/61557039160232/" target="_blank"></a>
-        <a id="instagram" href="https://www.instagram.com/geek_nine/?igsh=MXBqemduaHFybDFuZg%3D%3D" target="_blank"></a>
+        <a id="instagram" href="https://www.instagram.com/geek_nine/?igsh=MXBqemduaHFybDFuZg%3D%3D"
+          target="_blank"></a>
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

@@ -16,11 +16,6 @@ body {
   width: 100vw;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
-}
-
 .cadastro {
   position: relative;
   top: 20%;
@@ -29,9 +24,9 @@ body {
   align-items: center;
   text-align: center;
   justify-items: center;
-  width: 300px;
+  width: 270px;
   height: 500px;
-  background-color:#F8F8F8;
+  background-color: #f8f8f8;
   transition: 1s;
   border: 5px solid #e3e3e3;
 }
@@ -64,32 +59,38 @@ body {
   width: 80px;
   height: 25px;
 }
+
 .cadastro input[type="text"] {
   border-radius: 20px;
 }
+
 .cadastro input[type="email"] {
   border-radius: 20px;
 }
+
 .cadastro input[type="password"] {
   border-radius: 20px;
 }
-.cadastro button {
+
+#btn-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   position: absolute;
   top: 76%;
   left: 18%;
   cursor: pointer;
   background-color: #0cc0df;
-   border-radius: 20px;
-  padding: 2px;
-  justify-content: center;
-  align-items: center;
+  border-radius: 20px;
+  padding: 0 2px;
   border: none;
-  margin: 0 auto;
-  width: 80px;
+  width: 70px;
   height: 25px;
   color: white;
 }
-.cadastro button:hover {
+
+#btn-inicio:hover {
   color: #ffffff;
   text-shadow: -1px -1px 0px #000000;
   letter-spacing: 0.1em;

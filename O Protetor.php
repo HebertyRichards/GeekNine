@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O Protetor: Capitulo Final</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,42 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/O Protetor.png" alt="Protetor">
-    <div class="title">
-    <h1>O Protetor: Capitulo Final</h1>
-      <div class = "mdb"> 
-      <p> 2023 </p>
-      <p> 1h, 49m </p>
-        <a href="https://www.imdb.com/title/tt17024450/?ref_=nv_sr_srsg_6_tt_8_nm_0_q_o%2520protetor">6.8/10</a> 
-        </div>
-  <div class="elenco">
+    <div class="div1">
+      <h1 id="h1">O Protetor: Capitulo Final</h1>
+      <div class="mdb">
+        <p> 2023 </p>
+        <p> 1h, 49m </p>
+        <a href="https://www.imdb.com/title/tt17024450/?ref_=nv_sr_srsg_6_tt_8_nm_0_q_o%2520protetor">6.8/10</a>
+      </div>
+      <div class="elenco">
         <img src="imagens/Denzel Washington.png" alt="Denzel Washington">
-      <span>Denzel Washington</span>    
+        <span>Denzel Washington</span>
         <img src="imagens/Dakota Fanning.png" alt="Dakota Fanning">
-      <span>Dakota Fanning</span>
+        <span>Dakota Fanning</span>
         <img src="imagens/Eugenio Mastrandrea.png" alt="Eugenio Mastrandrea">
-      <span>Eugenio Mastrandrea</span>
+        <span>Eugenio Mastrandrea</span>
         <img src="imagens/David Denman.png" alt="David Denman">
-      <span>David Denman</span>
-  </div>
-  <div class="texto1">
-    <p>O Protetor: Capítulo Final é o terceiro - e último - filme da franquia O Protetor, iniciada em 2014 e inspirada pela série homônima estrelada por Edward Woodward nos anos 80. No terceiro capítulo da saga, desde que desistiu de sua vida como assassino do governo, Robert McCall (Denzel Washington) não consegue descansar o suficiente. Ele quer ajudar as pessoas ao seu redor e tem lutado para reconciliar as coisas horríveis que fez no passado, encontrando um estranho consolo em servir à justiça em nome dos oprimidos. Agora morando no sul da Itália, ele logo descobre que seus novos amigos estão sob o controle dos chefes do crime local. À medida que os eventos se tornam mortais, McCall se torna um protetor ao enfrentar a máfia. Quando alguém é injustiçado, o ex-agente do governo reativa suas habilidades de seu passado brutal e sai como um exército de um homem para realizar a justiça vigilante.</p>
-  </div>
-  </div>
+        <span>David Denman</span>
+      </div>
+      <div class="texto1">
+        <p>O Protetor: Capítulo Final é o terceiro - e último - filme da franquia O Protetor, iniciada em 2014 e inspirada pela série homônima estrelada por Edward Woodward nos anos 80. No terceiro capítulo da saga, desde que desistiu de sua vida como assassino do governo, Robert McCall (Denzel Washington) não consegue descansar o suficiente. Ele quer ajudar as pessoas ao seu redor e tem lutado para reconciliar as coisas horríveis que fez no passado, encontrando um estranho consolo em servir à justiça em nome dos oprimidos. Agora morando no sul da Itália, ele logo descobre que seus novos amigos estão sob o controle dos chefes do crime local. À medida que os eventos se tornam mortais, McCall se torna um protetor ao enfrentar a máfia. Quando alguém é injustiçado, o ex-agente do governo reativa suas habilidades de seu passado brutal e sai como um exército de um homem para realizar a justiça vigilante.</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="contato">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

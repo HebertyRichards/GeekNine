@@ -1,32 +1,26 @@
-                    html {
-                      height: 100%;
-                      width: 100%;
-                      margin: 0;
-                      padding: 0;
-                    }
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-                    body {
-                      background-image: url("imagens/fundo_sobree.jpg");
-                      display: flex;
-                      flex-direction: column;
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      background-attachment: fixed;
-                      background-position: center center;
-                      margin: 0;
-                      padding: 0;
-                    }
+body {
+  background-image: url("imagens/fundo_sobree.jpg");
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+}
 
-                    .img-fluid {
-                      width: 90%;
-                    }
-
-                    .ola {
-                      position: absolute;
-                      top: 15%;
-                      right: 9%;
-                    }
-
+.img-fluid,
+.img-fluid2 {
+  width: 30%;
+}
 
 #menu-container2 {
   display: flex;
@@ -39,13 +33,19 @@
 }
 
 #menu-container {
-  position: absolute;
-  top: 5%;
-  right: 17%;
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  width: 50%;
+  align-self: center;
+  justify-self: center;
+  gap: 20px;
+}
+
+.menu,
+.menu2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  padding: 0 30px;
 }
 
 #menu-container a {
@@ -53,18 +53,38 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin: 15px;
+  margin-left: 15px;
   text-decoration: none;
   color: black;
   box-sizing: border-box;
   text-align: end;
   padding-left: 20px;
+  transition: 0.5s;
 }
 
-#menu-container a:hover {
-color: #0f298f;
-font-weight: bold;
-transition: 0.5s;
+#menu-container a:hover,
+#login:hover,
+#cadastro:hover {
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+#login,
+#cadastro,
+#logout,
+#chat {
+  width: 120px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 5px;
+  border: 1px solid black;
 }
 
 #inicio,
@@ -82,7 +102,6 @@ transition: 0.5s;
 
 #inicio {
   background-image: url("imagens/inicio.png");
-
 }
 
 #sobre {
@@ -105,112 +124,10 @@ transition: 0.5s;
   background-image: url("imagens/eventos.png");
 }
 
-button[title="Cadastro"]:hover,
-button[title="Login"]:hover,
-button[title="Logout"]:hover,
-button[title="Chat Global"]:hover {
-  color: white;
-  background-color: #0f298f;
-  text-shadow: -1px -1px 0px #000000;
-  transition: 0.4s;
+@font-face {
+  font-family: "Mokoto";
+  src: url("fonts/Mokoto.otf") format("opentype");
 }
-
-button[title="Chat Global"] {
-  position: absolute;
-  cursor: pointer;
-  background-color: transparent;
-  padding: 5px;
-  border-radius: 20px;
-  top: 12%;
-  right: 10%;
-}
-
-button[title="Cadastro"],
-button[title="Login"],
-button[title="Logout"] {
-  display: block;
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin: 0 auto;
-  border: 1px solid #000000;
-  width: 110px;
-  height: 20px;
-  border-radius: 20px;
-  justify-content: center;
-}
-
-button[title="Cadastro"] {
-  position: absolute;
-  top: 15%;
-  right: 9%;
-}
-
-button[title="Login"] {
-  position: absolute;
-  top: 10%;
-  right: 9%;
-}
-
-button[title="Logout"] {
-  position: absolute;
-  top: 19%;
-  right: 9%;
-}
-
-                    .messages {
-                      border: 2px solid black;
-                      width: 50%;
-                      margin: 0 auto;
-                      justify-content: center;
-                      background-color: #d4d4d4;
-                    }
-
-                    .message {
-                      border: 1px solid black;
-                    }
-
-                    .messages h1 {
-                      text-align: center;
-                    }
-
-                    .msg2 {
-                      background-color: #d4d4d4;
-                      border: 2px solid black;
-                    }
-
-                    .message {
-                      margin-top: 5px;
-                    }
-
-                    .msg {
-                      width: 50%;
-                      margin: 0 auto;
-                      justify-content: center;
-                      transition: 0.5s;
-                    }
-
-                    .msg form input[type="text"] {
-                      margin-top: 5px;
-                      width: 93%;
-                      height: 30px;
-                    }
-
-                    .msg form button[type="submit"] {
-                      height: 30px;
-                      color: white;
-                      background-color: #404040;
-                    }
-
-                    .msg form button[type="submit"]:hover {
-                      background-color: #0f298f;
-                    }
-
-                    @font-face {
-                      font-family: "Mokoto";
-                      src: url("Mokoto.otf") format("opentype");
-                    }
 
 .redes-sociais {
   display: flex;
@@ -228,7 +145,6 @@ button[title="Logout"] {
   margin: 15px;
   transition: 0.5s;
 }
-
 
 .redes-sociais a:hover {
   text-shadow: -1px -1px 0px #000000;
@@ -275,6 +191,7 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
+  margin-top: 10%;
 }
 
 .logo {
@@ -314,28 +231,31 @@ ul {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: rgb(11, 74, 156);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 
-.sidebar button,
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #ffffff;
   display: block;
-  transition: 0.3s;
+  transition: 0.5s;
   background-color: transparent;
   border: none;
   font-weight: bold;
   cursor: pointer;
 }
 
-.sidebar button:hover {
+.sidebar p {
+  padding: 8px 8px 8px 32px;
+}
+
+.sidebar a:hover {
   color: #2e2e2e;
 }
 
@@ -351,281 +271,354 @@ ul {
   background-color: transparent;
   cursor: pointer;
   color: black;
-  padding: 10px 15px;
+  padding: 5px;
   border: none;
 }
 
-                    .proxevents h1 {
-                      font-family: "Mokoto";
-                      font-size: 70px;
-                      justify-content: center;
-                      text-align: center;
-                      margin: 0 auto;
-                    }
-
-                    .events-prole p {
-                      font-size: 20px;
-                      justify-content: center;
-                      text-align: center;
-                      font-weight: bold;
-                    }
-
-                    .events-att {
-                      margin: 0 auto;
-                      text-align: center;
-                    }
-
-                    .events-att h1 {
-                      font-family: "Mokoto";
-                      font-size: 40px;
-                    }
-
-                    .events-att p {
-                      font-size: 20px;
-                    }
-
-                    .events-att img {
-                      width: 10em;
-                      height: 10em;
-                    }
-
-                    .events-att1 h1 {
-                      font-family: "Mokoto";
-                      font-size: 40px;
-                      text-align: center;
-                    }
-
-                    .bgs {
-                      display: flex;
-                      margin: 0 auto;
-                      justify-content: center;
-                    }
-
-                    @media (max-width: 1366px) {
-                      .img-fluid {
-                        width: 75%;
-                      }
-
-                      .ola {
-                        font-size: 11px;
-                      }
-
-                      button[title="Cadastro"],
-                      button[title="Login"] {
-                        width: 95px;
-                        height: 30px;
-                      }
-
-                      button[title="Logout"] {
-                        position: absolute;
-                        top: 20%;
-                        width: 95px;
-                        height: 30px;
-                        font-size: 11px;
-                      }
-
-                      .proxevents h1 {
-                        font-size: 50px;
-                      }
-
-                      .events-att img {
-                        width: 8em;
-                        height: 8em;
-                      }
-
-                      .bgs {
-                        width: 500px;
-                        height: 300px;
-                      }
-                    }
-
-#inicio,
-#sobre,
-#games,
-#tecnologia,
-#eventos,
-#filmes {
-  font-size: 11px;
-  height: 25px;
+.modo {
+  display: flex;
+  justify-content: space-between;
 }
 
-                    @media (max-width: 1024px) {
-                      header .img-fluid {
-                        width: 70%;
-                      }
+.proxevents h1 {
+  font-family: "Mokoto";
+  font-size: 70px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
 
-                      .ola {
-                        position: absolute;
-                        top: 16%;
-                      }
+.events-prole p {
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
 
-                      button[title="Chat Global"] {
-                        position: relative;
-                        right: 9%;
-                        top: 12%;
-                      }
+.events-att {
+  margin: 0 auto;
+  text-align: center;
+}
 
-                      button[title="Cadastro"],
-                      button[title="Login"],
-                      button[title="Logout"] {
-                        width: 75px;
-                        height: 17px;
-                        font-size: 9px;
-                      }
+.events-att h1 {
+  font-family: "Mokoto";
+  font-size: 40px;
+}
 
-                      #inicio,
-                        #sobre,
-                        #filmes,
-                        #games,
-                        #eventos,
-                        #tecnologia {
-                          font-size: 10px;
-                        }
+.events-att p {
+  font-size: 20px;
+}
 
-                        .redes-sociais a {
-                          margin: 10px;
-                        }
+.events-att img {
+  width: 10em;
+  height: 10em;
+}
 
-                        .contato h1 {
-                          font-size: 16px;
-                        }
+.events-att1 h1 {
+  font-family: "Mokoto";
+  font-size: 40px;
+  text-align: center;
+}
 
-                        .contato p {
-                          font-size: 16px;
-                        }
-                   
-                      .proxevents h1 {
-                        font-size: 40px;
-                      }
+.bgs {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
 
-                      .events-att img {
-                        width: 6em;
-                        height: 6em;
-                      }
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
 
-                      .events-prole p {
-                        font-size: 16px;
-                      }
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-                      .events-att h1 {
-                        font-size: 30px;
-                      }
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
 
-                      .events-att1 h1 {
-                        font-size: 30px;
-                      }
+td {
+  background-color: #f9f9f9;
+}
 
-                      .events-att p {
-                        font-size: 16px;
-                      }
+tfoot td {
+  font-weight: bold;
+}
 
-                      .bgs {
-                        width: 400px;
-                        height: 200px;
-                      }
-                    }
+section h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 0 auto;
+}
 
-                    @media (max-width: 800px) {
-                      #menu-container a {
-                        padding-left: 10px;
-                      }
-                      
-                      header .img-fluid {
-                        display: none;
-                      }
+h2 {
+  text-align: center;
+  margin: 0 auto;
+}
 
-                      .ola {
-                        position: absolute;
-                        top: 15%;
-                      }
+.texto,
+.texto2 {
+  text-align: center;
+  font-size: 26px;
+  width: 70%;
+  margin: 0 auto;
+}
 
-                      button[title="Chat Global"] {
-                        position: relative;
-                        right: 8%;
-                        top: 11%;
-                      }
+.bgs-1,
+.bgs-2 {
+  margin: 0 auto;
+  display: block;
+  width: 900px;
+  height: 600px;
+}
 
-                      button[title="Cadastro"],
-                      button[title="Login"],
-                      button[title="Logout"] {
-                        width: 50px;
-                        height: 16px;
-                        font-size: 8px;
-                      }
+.lista {
+  text-align: center;
+  font-size: 26px;
+  margin: 0 auto;
+}
 
-                       #inicio,
-                        #games,
-                        #tecnologia,
-                        #eventos,
-                        #filmes,
-                        #sobre {
-                          font-size: 8px;
-                        }
+@media (max-width: 1366px) {
 
-                        .novi-container img {
-                          width: 80px;
-                          height: 150px;
-                        }
+  .img-fluid,
+  .img-fluid2 {
+    width: 75%;
+  }
 
-                        .novi {
-                          font-size: 16px;
-                        }
+  #inicio,
+  #sobre,
+  #games,
+  #tecnologia,
+  #eventos,
+  #filmes {
+    font-size: 11px;
+    height: 25px;
+  }
 
-                        .geeksobre h1 {
-                          font-size: 32px;
-                        }
+  #login,
+  #cadastro {
+    font-size: 11px;
+  }
 
-                        .geeksobre p {
-                          font-size: 14px;
-                        }
+  .proxevents h1 {
+    font-size: 50px;
+  }
 
-                        .contato h1,
-                        .contato p,
-                        .contato-1,
-                        .novi-contaianer p,
-                        .redes-sociais button {
-                          font-size: 8px;
-                        }
+  .events-att img {
+    width: 8em;
+    height: 8em;
+  }
 
-                        .contato-1 ul li {
-                          margin-bottom: 7px;
-                        }
+  .bgs {
+    width: 500px;
+    height: 300px;
+  }
 
-                        .contato ul li img {
-                          margin-right: 7px;
-                        }
+  section h1,
+  h2 {
+    font-size: 36px;
+  }
 
+  .texto,
+  .texto2 {
+    font-size: 20px;
+  }
 
-                        .redes-sociais a {
-                          margin: 5px;
-                        }
+  .bgs-1,
+  .bgs-2 {
+    width: 800px;
+    height: 600px;
+  }
 
-                        .redes-sociais {
-                          flex-wrap: wrap;
-                        }
-                      }
+  .lista {
+    font-size: 20px;
+  }
+}
 
-                      .proxevents h1 {
-                        font-size: 30px;
-                      }
+@media (max-width: 1024px) {
+  #menu-container2 {
+    padding-left: 15px;
+  }
 
-                      .events-att img {
-                        width: 5em;
-                        height: 5em;
-                      }
+  #inicio,
+  #sobre,
+  #filmes,
+  #games,
+  #eventos,
+  #tecnologia,
+  #login,
+  #cadastro {
+    font-size: 10px;
+  }
 
-                      .events-prole p,
-                      .events-att p {
-                        font-size: 12px;
-                      }
+  .redes-sociais a {
+    margin: 10px;
+  }
 
-                      .events-att h1,
-                      .events-att1 h1 {
-                        font-size: 20px;
-                      }
+  .contato h1 {
+    font-size: 16px;
+  }
 
-                      .bgs {
-                        width: 300px;
-                        height: 150px;
-                      }
-                    }
+  .contato p {
+    font-size: 16px;
+  }
+
+  .proxevents h1 {
+    font-size: 40px;
+  }
+
+  .events-att img {
+    width: 6em;
+    height: 6em;
+  }
+
+  .events-prole p {
+    font-size: 16px;
+  }
+
+  .events-att h1 {
+    font-size: 30px;
+  }
+
+  .events-att1 h1 {
+    font-size: 30px;
+  }
+
+  .events-att p {
+    font-size: 16px;
+  }
+
+  .bgs {
+    width: 400px;
+    height: 200px;
+  }
+
+  section h1,
+  h2 {
+    font-size: 26px;
+  }
+
+  .texto,
+  .texo2 {
+    font-size: 16px;
+  }
+
+  .bgs-1,
+  .bgs-2 {
+    width: 500px;
+    height: 300px;
+  }
+
+  .lista {
+    font-size: 16px;
+  }
+
+  .contato #h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  #menu-container a {
+    padding-left: 10px;
+  }
+
+  header .img-fluid {
+    display: none;
+  }
+
+  #inicio,
+  #games,
+  #tecnologia,
+  #eventos,
+  #filmes,
+  #sobre,
+  #login,
+  #cadastro {
+    font-size: 8px;
+  }
+
+  .menu,
+  .menu2 {
+    display: none;
+  }
+
+  .contato h1,
+  .contato p,
+  .contato-1,
+  .redes-sociais button {
+    font-size: 8px;
+  }
+
+  .contato-1 ul li {
+    margin-bottom: 7px;
+  }
+
+  .contato ul li img {
+    margin-right: 7px;
+  }
+
+  .redes-sociais a {
+    margin: 5px;
+  }
+
+  .redes-sociais {
+    flex-wrap: wrap;
+  }
+
+  #facebook,
+  #instagram,
+  #twitter {
+    width: 20px;
+    height: 20px;
+  }
+
+  .proxevents h1 {
+    font-size: 30px;
+  }
+
+  .events-att img {
+    width: 5em;
+    height: 5em;
+  }
+
+  .events-prole p,
+  .events-att p {
+    font-size: 12px;
+  }
+
+  .events-att h1,
+  .events-att1 h1 {
+    font-size: 20px;
+  }
+
+  .bgs {
+    width: 250px;
+    height: 170px;
+  }
+
+  .texto,
+  .texto2 {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .bgs-1,
+  .bgs-22 {
+    width: 280px;
+    height: 170px;
+  }
+
+  .lista {
+    font-size: 14px;
+  }
+
+  .contato #h2 {
+    font-size: 14px;
+  }
+}

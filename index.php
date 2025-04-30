@@ -20,18 +20,6 @@ $db->exec($query);
 ?>
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-    
-} else {
-    
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +30,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GeekNine</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -58,6 +46,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -71,45 +74,48 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="novi">
     <h1>NOVIDADES</h1>
   </div>
   <div class="novi-container">
-  <div class="games-events">
-    <p>GAMES</p>
-    <a href="games.php">
-      <img src="imagens/games1.png" alt="games" title="Games"></a>
-  </div>
+    <div class="games-events">
+      <p>GAMES</p>
+      <a href="games.php">
+        <img src="imagens/games1.png" alt="games" title="Games"></a>
+    </div>
     <div class="tec-events">
       <p>TECNOLOGIA</p>
-    <a href="tecnologia.php">
-      <img src="imagens/tecnologia1.png" alt="tecnologia" title="Tecnologia"></a>
+      <a href="tecnologia.php">
+        <img src="imagens/tecnologia1.png" alt="tecnologia" title="Tecnologia"></a>
     </div>
-      <div class="filmes-events">
-        <p>FILMES</p>
-    <a href="filmes.php">
-      <img src="imagens/filmes1.png" alt="músicas" title="Músicas"></a>
-      </div>
+    <div class="filmes-events">
+      <p>FILMES</p>
+      <a href="filmes.php">
+        <img src="imagens/filmes1.png" alt="músicas" title="Músicas"></a>
+    </div>
     <div class="eventos-events">
       <p>EVENTOS</p>
-    <a href="eventos.php">
-      <img src="imagens/eventos1.png" alt="eventos" title="Eventos"></a>
+      <a href="eventos.php">
+        <img src="imagens/eventos1.png" alt="eventos" title="Eventos"></a>
     </div>
   </div>
-  <br><br>
-  <br><br>
-  <br><br>
   <div class="geeksobre">
     <br><br>
     <h2>GEEKNINE</h2>
-    <br><br><br>
-    <p>Com informações atualizadas diariamente,</p>
-    <p>o GeekNine é uma das melhores fontes </p>
-    <p>para conferir seus filmes, games, notícias</p>
-    <p>do mundo da tecnologia e eventos Geek!</p>
-    <br><br><br><br>
+    <p>Com informações atualizadas diariamente, o GeekNine é uma das melhores fontes para conferir seus filmes, games, notícias do mundo da tecnologia e eventos Geek!</p>
   </div>
   <footer>
     <div class="contato">
@@ -127,9 +133,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

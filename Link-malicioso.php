@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Segurança</title>
+  <title>Link malicioso: 6 dicas para evitar links mal-intencionados na web </title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
@@ -70,7 +70,7 @@ session_start();
   <div class="chip">
     <h1 id="h1">Link malicioso: 6 dicas para evitar links mal-intencionados na web </h1>
     <div class="chip-b">
-      <img src="imagens/Link malicioso.jpeg" alt="Link malicioso">
+      <img src="imagens/Link malicioso.jpeg" alt="imagens/Link malicioso.jpeg" width="400px">
     </div>
     <div class="chip-c">
       <p>Um estudo divulgado pela Associação de Dados Pessoais e Consumidor (ADDP) revelou que, apenas em 2023, houve um aumento entre 25% e 35% no número de ataques cibernéticos, muitos deles envolvendo URLs. Com isso, a pergunta que fica no ar é: como se prevenir e evitar essas ameaças por meio de link malicioso?
@@ -117,20 +117,20 @@ session_start();
   </div>
   <div class="news-container">
     <div class="news-item">
-      <img src="imagens/eletronicos.jpeg" alt="Eletronicos">
+      <img src="imagens/eletronicos.jpeg" alt="Imagem de Exemplo 1">
       <h2>Eletrônicos mais populares</h2>
       <p> Site AliExpress com até 92% de desconto</p>
       <a href="eletronicos.php">Leia mais</a>
     </div>
     <div class="news-item">
-      <img src="imagens/woocommerce.jpeg" alt="WooCommerce">
+      <img src="imagens/woocommerce.jpeg" alt="Imagem de Exemplo 2">
       <h2> WooCommerce</h2>
       <p>Descubra o que é o WooCommerce e as vantagens de hospedar a sua loja online com essa plataforma na Hostinger</p>
       <a href="woocommerce.php">Leia mais</a>
     </div>
 
     <div class="news-item">
-      <img src="imagens/moto g24.jpeg" alt="Moto G24">
+      <img src="imagens/moto g24.jpeg" alt="Imagem de Exemplo 2">
       <h2>Moto G24 Power chega ao Brasil custando R$ 999</h2>
       <p>Novo smartphone baratinho da Motorola já pode ser comprado no Brasil. Aparelho traz bateria de 6.000 mAh e carregamento rápido de até 30 W</p>
       <a href="moto g24.php">Leia mais</a>

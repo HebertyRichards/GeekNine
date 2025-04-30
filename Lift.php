@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lift: Roubo nas Alturas</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,42 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/Lift.png" alt="Lift">
-    <div class="title">
-    <h1>Lift: Roubo nas Alturas</h1>
-    <div class = "mdb"> 
-    <p> 2024 </p>
-    <p> 1h, 47m </p>
-      <a href="https://www.imdb.com/title/tt14371878/?ref_=fn_al_tt_1">5.5/10</a> 
+    <div class="div1">
+      <h1 id="h1">Lift: Roubo nas Alturas</h1>
+      <div class="mdb">
+        <p> 2024 </p>
+        <p> 1h, 47m </p>
+        <a href="https://www.imdb.com/title/tt14371878/?ref_=fn_al_tt_1">5.5/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Kevin Hart.png" alt="Kevin HartDakota Johnson">
-      <span>Kevin Hart</span> 
+        <span>Kevin Hart</span>
         <img src="imagens/Gugu Mbatha-Raw.png" alt="Gugu Mbatha-Raw">
-      <span>Gugu Mbatha-Raw</span>
+        <span>Gugu Mbatha-Raw</span>
         <img src="imagens/Vincent D'Onofrio.png" alt="Vincent D'Onofrio">
-      <span>Vincent D'Onofrio</span>
+        <span>Vincent D'Onofrio</span>
         <img src="imagens/Úrsula Corberó.png" alt="Úrsula Corberó">
-      <span>Úrsula Corberó</span>
-  </div>
-  <div class="texto1">
-    <p>Lift: Roubo nas Alturas é um filme norte-americano de ação e comédia policial dirigido por F. Gary Gray (A Negociação, Até as Últimas Consequências) para a Netflix. A produção segue um grupo de criminosos internacionais liderado por Cyrus (Kevin Hart) e contratados por sua ex-namorada, Abby (Gugu Mbatha-Raw), uma agente federal, para que cumpram uma missão ambiciosa: roubar meio bilhão de dólares em barras de ouro que estão sendo transportadas para uma célula terrorista. Para deixar tudo ainda mais insano, a carga está sendo transportada em um Boeing 777 que parte de Londres rumo a Zurique, e eles devem roubá-la em pleno vôo.</p>
-  </div>
-  </div>
+        <span>Úrsula Corberó</span>
+      </div>
+      <div class="texto1">
+        <p>Lift: Roubo nas Alturas é um filme norte-americano de ação e comédia policial dirigido por F. Gary Gray (A Negociação, Até as Últimas Consequências) para a Netflix. A produção segue um grupo de criminosos internacionais liderado por Cyrus (Kevin Hart) e contratados por sua ex-namorada, Abby (Gugu Mbatha-Raw), uma agente federal, para que cumpram uma missão ambiciosa: roubar meio bilhão de dólares em barras de ouro que estão sendo transportadas para uma célula terrorista. Para deixar tudo ainda mais insano, a carga está sendo transportada em um Boeing 777 que parte de Londres rumo a Zurique, e eles devem roubá-la em pleno vôo.</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="contato">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

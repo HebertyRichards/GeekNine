@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Sociedade da Neve</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,34 +54,44 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-    <div class="div1">
     <img src="imagens/Neve.png" alt="A Sociedade da Neve">
-      <div class="title">
-    <h1>A Sociedade da Neve</h1>
-      <div class = "mdb"> 
-      <p> 2023 </p>
-      <p> 2h, 24m </p>
-        <a href="https://www.imdb.com/title/tt16277242/?ref_=fn_al_tt_1">7.8/10</a> 
-        </div>
-  <div class="elenco">
+    <div class="div1">
+      <h1 id="h1">A Sociedade da Neve</h1>
+      <div class="mdb">
+        <p> 2023 </p>
+        <p> 2h, 24m </p>
+        <a href="https://www.imdb.com/title/tt16277242/?ref_=fn_al_tt_1">7.8/10</a>
+      </div>
+      <div class="elenco">
         <img src="imagens/Enzo Vogrincic.png" alt="Enzo Vogrincic">
-      <span>Enzo Vogrincic</span>    
+        <span>Enzo Vogrincic</span>
         <img src="imagens/Agustín Pardella.png" alt="Agustín Pardella">
-      <span>Agustín Pardella</span>
+        <span>Agustín Pardella</span>
         <img src="imagens/Matías Recalt.png" alt="Matías Recalt">
-      <span>Matías Recalt</span>
+        <span>Matías Recalt</span>
         <img src="imagens/Tomas Wolf.png" alt="Tomas Wolf">
-      <span>Tomas Wolf</span>
-  </div>
-  <div class="texto1">
-    <p>Inspirado em uma história real e baseado no livro homônimo de Pablo Vierci, A Sociedade da Neve fala sobre o caso que ocorreu em 1972, quando o voo 571 da Força Aérea Uruguaia, fretado para levar uma equipe de rugby ao Chile, cai em uma geleira no coração dos Andes. Apenas 29 de seus 45 passageiros sobrevivem ao acidente. Presos em um dos ambientes mais inacessíveis e hostis no planeta, eles são obrigados a recorrer a medidas extremas para se manterem vivos.</p>
-  </div>
-  </div>
+        <span>Tomas Wolf</span>
+      </div>
+      <div class="texto1">
+        <p>Inspirado em uma história real e baseado no livro homônimo de Pablo Vierci, A Sociedade da Neve fala sobre o caso que ocorreu em 1972, quando o voo 571 da Força Aérea Uruguaia, fretado para levar uma equipe de rugby ao Chile, cai em uma geleira no coração dos Andes. Apenas 29 de seus 45 passageiros sobrevivem ao acidente. Presos em um dos ambientes mais inacessíveis e hostis no planeta, eles são obrigados a recorrer a medidas extremas para se manterem vivos.</p>
+      </div>
     </div>
-    <footer>
+  </div>
+  <footer>
     <div class="contato">
       <div class="contato-1">
         <ul>
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

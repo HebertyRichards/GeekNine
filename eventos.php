@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +10,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos</title>
   <link href="eventos.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,38 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="proxevents">
     <h1>EVENTOS</h1>
   </div>
   <div class="events-prole">
-   <p>A GeekNine é uma organização que divulga eventos </p>
-     <p>empolgantes em áreas como tecnologia, jogos e filmes geek.</p>
-     <p>Venha fazer parte desta comunidade apaixonada e participe</p>
-     <p>de nossas emocionantes atividades!</p>
-    </div>
-    <br></br>
-    <br></br>
+    <p>A GeekNine é uma organização que divulga eventos </p>
+    <p>empolgantes em áreas como tecnologia, jogos e filmes geek.</p>
+    <p>Venha fazer parte desta comunidade apaixonada e participe</p>
+    <p>de nossas emocionantes atividades!</p>
+  </div>
   <div class="events-att">
     <h1>Próximos Eventos</h1>
     <img src="imagens/block.png" alt="block">
     <p>Sem atualizações no momento</p>
   </div>
-      <br></br>
-      <div class="events-att1">
-        <h1>Eventos Anteriores</h1>
-      </div>
-      <a href="bgs.php"><img class="bgs" src="imagens/bgs-2023.jpg" alt="bgs"></a>
-    <br></br>
-    <br></br>
-    <footer>
+  <div class="events-att1">
+    <h1>Eventos Anteriores</h1>
+  </div>
+  <a href="bgs.php"><img class="bgs" src="imagens/bgs-2023.jpg" alt="Brasil Game Show 2023"></a>
+  <footer>
     <div class="contato">
       <div class="contato-1">
         <ul>
@@ -92,9 +101,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

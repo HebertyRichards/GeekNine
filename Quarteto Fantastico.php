@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quarteto Fantástico</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,42 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/Quarteto.png" alt="Quarteto Fantástico">
-    <div class="title">
-    <h1>Quarteto Fantástico</h1>
-    <div class = "mdb"> 
-    <p> 2005 </p>
-    <p> 1h, 46m </p>
-      <a href="https://www.imdb.com/title/tt0120667/?ref_=fn_al_tt_3">5.7/10</a> 
+    <div class="div1">
+      <h1 id="h1">Quarteto Fantástico</h1>
+      <div class="mdb">
+        <p> 2005 </p>
+        <p> 1h, 46m </p>
+        <a href="https://www.imdb.com/title/tt0120667/?ref_=fn_al_tt_3">5.7/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Ioan Gruffudd.png" alt="Ioan Gruffudd">
-      <span>Ioan Gruffudd</span>
+        <span>Ioan Gruffudd</span>
         <img src="imagens/Jessica Alba.png" alt="Jessica Alba">
-      <span>Jessica Alba</span>
+        <span>Jessica Alba</span>
         <img src="imagens/Chris Evans.png" alt="Chris Evans">
-      <span>Chris Evans</span>
+        <span>Chris Evans</span>
         <img src="imagens/Michael Chiklis.png" alt="Michael Chiklis">
-      <span>Michael Chiklis</span>
-  </div>
-  <div class="texto1">
-    <p>Em Quarteto Fantástico, um desastre atinge uma nave espacial, fazendo com que seus quatro tripulantes sofram modificações em seu organismo de forma a ganharem poderes especiais. Reed Richards (Ioan Gruffudd), o líder do grupo, passa a ter a capacidade de esticar seu corpo feito borracha. Sue Storm (Jessica Alba), sua ex-namorada, ganha poderes que a permitem ficar invisível e criar campos de força. Johnny Storm (Chris Evans), irmão de Sue, pode aumentar o calor do seu corpo, enquanto que Ben Grimm (Michael Chiklis) tem seu corpo transformado em pedra e ganha uma força sobre-humana. Ao retornar à Terra após o acidente logo os novos poderes começam a se manifestar, fazendo com que todos tenham que se adaptar a eles e também à condição de celebridades que os poderes lhes trazem.</p>
-  </div>
-  </div>
+        <span>Michael Chiklis</span>
+      </div>
+      <div class="texto1">
+        <p>Em Quarteto Fantástico, um desastre atinge uma nave espacial, fazendo com que seus quatro tripulantes sofram modificações em seu organismo de forma a ganharem poderes especiais. Reed Richards (Ioan Gruffudd), o líder do grupo, passa a ter a capacidade de esticar seu corpo feito borracha. Sue Storm (Jessica Alba), sua ex-namorada, ganha poderes que a permitem ficar invisível e criar campos de força. Johnny Storm (Chris Evans), irmão de Sue, pode aumentar o calor do seu corpo, enquanto que Ben Grimm (Michael Chiklis) tem seu corpo transformado em pedra e ganha uma força sobre-humana. Ao retornar à Terra após o acidente logo os novos poderes começam a se manifestar, fazendo com que todos tenham que se adaptar a eles e também à condição de celebridades que os poderes lhes trazem.</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="contato">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

@@ -1,0 +1,26 @@
+[
+  {
+    "link": "JBL.php",
+    "imagem": "imagens/JBL-t.jpeg",
+    "alt": "JBL-t",
+    "texto": "JBL Quantum Stream Studio é lançado no Brasil; veja o preço do microfone premium"
+  },
+  {
+    "link": "lançamentosIA.php",
+    "imagem": "imagens/banner-t.jpeg",
+    "alt": "Banner-t",
+    "texto": "Novos lançamentos da linha apostam em IA"
+  },
+  {
+    "link": "Link-malicioso.php",
+    "imagem": "imagens/Link malicioso.jpeg",
+    "alt": "Link malicioso",
+    "texto": "Link malicioso: 6 dicas para evitar links mal-intencionados na web"
+  },
+  {
+    "link": "Saindo do piloto.php",
+    "imagem": "imagens/Saindo do piloto.jpeg",
+    "alt": "Saindo do piloto automático",
+    "texto": "Saindo do piloto automático: rumo a soluções de mobilidade sustentáveis e permanentes"
+  }
+]

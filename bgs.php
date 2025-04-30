@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brasil Game Show 2023</title>
-  <link href="bgs.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="eventos.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,6 +54,17 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <section>
@@ -64,13 +78,7 @@ if (isset($_SESSION['nome'])) {
       os detalhes sobre as atrações, horários e como adquirir ingressos para a BGS 2023.
     </p>
   </section>
-  <br><br>
-  <br><br>
-  <br><br>
-  <img class="bgs" src="imagens/bgs.png" alt="bgs">
-  <br><br>
-  <br><br>
-  <br><br>
+  <img class="bgs-1" src="imagens/bgs.png" alt="bgs">
   <section>
     <h2>O que Fazer na BGS 2023?</h2>
     <br>
@@ -89,13 +97,7 @@ if (isset($_SESSION['nome'])) {
       5). Algumas dessas figuras, junto com influenciadores,participarão de sessões de Meet & Greet, onde terão
       a oportunidade de conhecer os fãs e tirar fotos.</p>
   </section>
-  <br><br>
-  <br><br>
-  <br><br>
-  <img class="bgs2" src="imagens/bgs2.jpg" alt="bgs">
-  <br><br>
-  <br><br>
-  <br><br>
+  <img class="bgs-2" src="imagens/bgs2.jpg" alt="bgs">
   <section>
     <h2>Marcas confirmadas na BGS 2023:</h2>
     <br>
@@ -130,21 +132,17 @@ if (isset($_SESSION['nome'])) {
       <li>Banco do Brasil</li>
     </ul>
   </section>
-  <br><br>
-  <br><br>
-  <br><br>
   <section>
-    <h1>Ingressos</h1>
+    <h2>Ingressos</h2>
     <br>
     <p class="texto2">Os ingressos estão disponíveis somente no site oficial da BGS 2023. Para comprar, basta
       acessar o endereço "https://www.brasilgameshow.com.br/ingressos/" (sem aspas), escolher o ingresso mais
       adequado e preencher seus dados para realizar a compra. Confira as entradas que ainda estão disponíveis e
       seus valores:</p>
   </section>
-  <br><br>
+
   <section>
     <h2>Brasil Game Show 2023 - Ingressos disponíveis</h2>
-    <br>
     <table>
       <thead>
         <tr>
@@ -187,8 +185,6 @@ if (isset($_SESSION['nome'])) {
       </tbody>
     </table>
   </section>
-  <br><br>
-  <br><br>
   <footer>
     <div class="contato">
       <div class="contato-1">
@@ -205,9 +201,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

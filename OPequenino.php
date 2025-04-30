@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O Pequenino</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,42 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/OPequenino.png" alt="Pequenino">
-    <div class="title">
-    <h1>O Pequenino</h1>
-    <div class = "mdb"> 
-    <p> 2006 </p>
-    <p> 1h, 38m </p>
-      <a href="https://www.imdb.com/title/tt0430304/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_o%2520pequenino">4.5/10</a> 
+    <div class="div1">
+      <h1 id="h1">O Pequenino</h1>
+      <div class="mdb">
+        <p> 2006 </p>
+        <p> 1h, 38m </p>
+        <a href="https://www.imdb.com/title/tt0430304/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_o%2520pequenino">4.5/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Marlon Wayans.png" alt="Marlon Wayans">
-      <span>Marlon Wayans</span>    
+        <span>Marlon Wayans</span>
         <img src="imagens/Shawn Wayans.png" alt="Shawn Wayans">
-      <span>Shawn Wayans</span>
+        <span>Shawn Wayans</span>
         <img src="imagens/Kerry Washington.png" alt="Kerry Washington">
-      <span>Kerry Washington</span>
+        <span>Kerry Washington</span>
         <img src="imagens/John Witherspoon.png" alt="John Witherspoon">
-      <span>John Witherspoon</span>
-  </div>
-  <div class="texto1">
-    <p>Calvin Sims (Marlon Wayans) é um perigoso ladrão de jóias que não tem nem um metro de altura. Recém-saído da prisão, elen decide realizar um último grande roubo antes de se aposentar. O alvo escolhido é o famoso diamante Queen, pelo qual Calvin e seu parceiro Percy (Tracy Morgan) receberão US$ 100 mil. O assalto dá errado e Calvin esconde o diamante na bolsa de Vanessa Edwards (Kerry Washington), que o leva para casa sem notar a bagagem extra. Calvin e Percy a seguem e presenciam uma discussão que Vanessa tem com seu marido, Darryl (Shawn Wayans). Ele deseja ser pai o quanto antes, mas Vanessa acha que ter um filho pode atrapalhar sua carreira de vice-presidente de uma agência de propaganda. Aproveitando a deixa, Calvin e Percy elaboram um plano: fazendo-se passar por bebê, Calvin seria deixado na porta da casa dos Edwards. Eles, encantados, o levariam para dentro de casa, onde o ladrão poderia roubar o diamante. O plano dá certo, mas Calvin não contava que sua nova vida de bebê seria bem mais complicada do que imaginava.</p>
-  </div>
-  </div>
+        <span>John Witherspoon</span>
+      </div>
+      <div class="texto1">
+        <p>Calvin Sims (Marlon Wayans) é um perigoso ladrão de jóias que não tem nem um metro de altura. Recém-saído da prisão, elen decide realizar um último grande roubo antes de se aposentar. O alvo escolhido é o famoso diamante Queen, pelo qual Calvin e seu parceiro Percy (Tracy Morgan) receberão US$ 100 mil. O assalto dá errado e Calvin esconde o diamante na bolsa de Vanessa Edwards (Kerry Washington), que o leva para casa sem notar a bagagem extra. Calvin e Percy a seguem e presenciam uma discussão que Vanessa tem com seu marido, Darryl (Shawn Wayans). Ele deseja ser pai o quanto antes, mas Vanessa acha que ter um filho pode atrapalhar sua carreira de vice-presidente de uma agência de propaganda. Aproveitando a deixa, Calvin e Percy elaboram um plano: fazendo-se passar por bebê, Calvin seria deixado na porta da casa dos Edwards. Eles, encantados, o levariam para dentro de casa, onde o ladrão poderia roubar o diamante. O plano dá certo, mas Calvin não contava que sua nova vida de bebê seria bem mais complicada do que imaginava.</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="contato">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

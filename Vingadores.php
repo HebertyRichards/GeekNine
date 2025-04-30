@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +10,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vingadores Ultimato</title>
   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,34 +54,44 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
+      <img src="imagens/Vingadores.png" alt="Vingadores">
     <div class="div1">
-    <img src="imagens/Vingadores.png" alt="Vingadores">
-      <div class="title">
-    <h1>Vingadores Ultimato</h1>
-      <div class = "mdb"> 
-      <p> 2019 </p>
-      <p> 3h, 1m </p>
-        <a href="https://www.imdb.com/title/tt4154796/?ref_=nv_sr_srsg_0_tt_2_nm_0_q_vingadores%2520ultimato">8.4/10</a> 
-        </div>
-  <div class="elenco">
+      <h1 id="h1">Vingadores Ultimato</h1>
+      <div class="mdb">
+        <p> 2019 </p>
+        <p> 3h, 1m </p>
+        <a href="https://www.imdb.com/title/tt4154796/?ref_=nv_sr_srsg_0_tt_2_nm_0_q_vingadores%2520ultimato">8.4/10</a>
+      </div>
+      <div class="elenco">
         <img src="imagens/Robert Downey Jr.png" alt="Robert Downey Jr.">
-      <span>Robert Downey Jr.</span>    
+        <span>Robert Downey Jr.</span>
         <img src="imagens/Chris Evans.png" alt="Chris Evans">
-      <span>Chris Evans</span>
+        <span>Chris Evans</span>
         <img src="imagens/Mark Ruffalo.png" alt="Mark Ruffalo">
-      <span>Mark Ruffalo</span>
+        <span>Mark Ruffalo</span>
         <img src="imagens/Chris Hemsworth.png" alt="Chris Hemsworth">
-      <span>Chris Hemsworth</span>
-  </div>
-  <div class="texto1">
-    <p>Em Vingadores: Ultimato, após Thanos eliminar metade das criaturas vivas em Vingadores: Guerra Infinita, os heróis precisam lidar com a dor da perda de amigos e seus entes queridos. Com Tony Stark (Robert Downey Jr.) vagando perdido no espaço sem água nem comida, o Capitão América/Steve Rogers (Chris Evans) e a Viúva Negra/Natasha Romanov (Scarlett Johansson) precisam liderar a resistência contra o titã louco.</p>
-  </div>
-  </div>
+        <span>Chris Hemsworth</span>
+      </div>
+      <div class="texto1">
+        <p>Em Vingadores: Ultimato, após Thanos eliminar metade das criaturas vivas em Vingadores: Guerra Infinita, os heróis precisam lidar com a dor da perda de amigos e seus entes queridos. Com Tony Stark (Robert Downey Jr.) vagando perdido no espaço sem água nem comida, o Capitão América/Steve Rogers (Chris Evans) e a Viúva Negra/Natasha Romanov (Scarlett Johansson) precisam liderar a resistência contra o titã louco.</p>
+      </div>
     </div>
-    <footer>
+  </div>
+  <footer>
     <div class="contato">
       <div class="contato-1">
         <ul>
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

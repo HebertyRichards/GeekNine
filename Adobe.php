@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +10,7 @@ if (isset($_SESSION['nome'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adobe</title>
   <link href="tecnologia.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,66 +54,63 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
-  <table>
-         <div class = "h1">
-        <h1> Adobe Premiere Pro receberá ferramenta<br> de geração de vídeo com IA </h1>
+  <div class="chip">
+    <h1 id="h1"> Adobe Premiere Pro receberá ferramenta<br> de geração de vídeo com IA </h1>
+    <h3>A Adobe está preparando ferramentas de edição de vídeo com IA generativa para o Premiere Pro,<br> permitindo manipulação de conteúdo com texto</h3>
+    <div class="chip-b">
+      <img src="imagens/adobe-t1.png" alt="Adobe">
     </div>
-           <div class="h3"
-  <h3>A Adobe está preparando ferramentas de edição de vídeo com IA generativa para o Premiere Pro,<br> permitindo manipulação de conteúdo com texto</>
-           </div>
-          <br></br>
-          <br></br>
-     <div class = "chip-b">
-    <img src="imagens/adobe-t1.png" alt="imagens/adobe-t1.png" width="400px">
+    <div class="chip-c">
+      <p>A gigante de software Adobe está se preparando para revolucionar sua plataforma de edição de vídeo Premiere Pro com a introdução de ferramentas de vídeo com inteligência artificial generativa sob sua família Firefly. Esta adição visa permitir que os usuários manipulem conteúdo de vídeo sem esforço por meio de prompts de texto, semelhante ao recurso Preenchimento Generativo do Photoshop. As próximas ferramentas Firefly prometem permitir que os usuários gerem, adicionem ou removam objetos dentro de clipes de vídeo, bem como estendam sua duração de forma contínua. A Adobe não especificou uma data de lançamento concreta para suas novas ferramentas de geração de vídeo, declarando apenas que estão programadas para serem lançadas “este ano”. A gigante de software Adobe está se preparando para revolucionar sua plataforma de edição de vídeo Premiere Pro com a introdução de ferramentas de vídeo com inteligência artificial generativa sob sua família Firefly. Esta adição visa permitir que os usuários manipulem conteúdo de vídeo sem esforço por meio de prompts de texto, semelhante ao recurso Preenchimento Generativo do Photoshop. As próximas ferramentas Firefly prometem permitir que os usuários gerem, adicionem ou removam objetos dentro de clipes de vídeo, bem como estendam sua duração de forma contínua. A Adobe não especificou uma data de lançamento concreta para suas novas ferramentas de geração de vídeo, declarando apenas que estão programadas para serem lançadas “este ano”.
+      <p> A incorporação de integrações de IA de terceiros no Premiere Pro representa uma exploração inicial de colaborações potenciais, de acordo com a Adobe. Esta iniciativa estratégica visa oferecer aos usuários uma maior flexibilidade, permitindo-lhes aproveitar modelos como Pika para estender tomadas ou Sora e Runway AI para gerar imagens complementares. Além disso, a Adobe enfatiza a aplicação de etiquetas de Credenciais de Conteúdo para identificar os modelos de IA específicos utilizados na geração de clipes, garantindo transparência e responsabilidade no processo de edição.</p>
+    </div>
+      <div class="chip-b">
+        <img src="imagens/adobe-t2.jpg" alt="Adobe">
       </div>
-     <div class = "chip-c">
- <p>A gigante de software Adobe está se preparando para revolucionar sua plataforma de edição de vídeo Premiere Pro com a introdução de ferramentas de vídeo com inteligência artificial generativa sob sua família Firefly. Esta adição visa permitir que os usuários manipulem conteúdo de vídeo sem esforço por meio de prompts de texto, semelhante ao recurso Preenchimento Generativo do Photoshop. As próximas ferramentas Firefly prometem permitir que os usuários gerem, adicionem ou removam objetos dentro de clipes de vídeo, bem como estendam sua duração de forma contínua. A Adobe não especificou uma data de lançamento concreta para suas novas ferramentas de geração de vídeo, declarando apenas que estão programadas para serem lançadas “este ano”. A gigante de software Adobe está se preparando para revolucionar sua plataforma de edição de vídeo Premiere Pro com a introdução de ferramentas de vídeo com inteligência artificial generativa sob sua família Firefly. Esta adição visa permitir que os usuários manipulem conteúdo de vídeo sem esforço por meio de prompts de texto, semelhante ao recurso Preenchimento Generativo do Photoshop. As próximas ferramentas Firefly prometem permitir que os usuários gerem, adicionem ou removam objetos dentro de clipes de vídeo, bem como estendam sua duração de forma contínua. A Adobe não especificou uma data de lançamento concreta para suas novas ferramentas de geração de vídeo, declarando apenas que estão programadas para serem lançadas “este ano”.
- <p>  A incorporação de integrações de IA de terceiros no Premiere Pro representa uma exploração inicial de colaborações potenciais, de acordo com a Adobe. Esta iniciativa estratégica visa oferecer aos usuários uma maior flexibilidade, permitindo-lhes aproveitar modelos como Pika para estender tomadas ou Sora e Runway AI para gerar imagens complementares. Além disso, a Adobe enfatiza a aplicação de etiquetas de Credenciais de Conteúdo para identificar os modelos de IA específicos utilizados na geração de clipes, garantindo transparência e responsabilidade no processo de edição.</p>
-        <div class = "chip-b">
-       <img src="imagens/adobe-t2.jpg" alt="imagens/adobe-t2.jpg" width="400px">
-         </div>
-
-<p>Além da promessa de ferramentas de geração de vídeo, a Adobe lançou oficialmente seu assistente de inteligência artificial. O recurso foi anunciado em fevereiro, quando recebeu sua versão beta. Este recurso, disponível a partir de US$ 4,99 por mês, promete facilitar a compreensão e extração de informações essenciais de documentos diversos. Além disso, a empresa expandiu sua acessibilidade ao lançar uma versão beta gratuita para dispositivos móveis, permitindo interações por meio de comandos de voz, e integrando o serviço às extensões do Microsoft Edge e Google </p>
-       <p> - A Adobe oferece seu assistente de IA para entendimento de documentos a partir de US$ 4,99 por mês, tornando-o acessível a uma ampla gama de usuários.</p>
-      <p> -  Junto com a versão para desktop, a Adobe lança uma versão móvel beta gratuita do assistente de IA, permitindo que os usuários interajam por meio de comandos de voz para maior conveniência.</p>
-     <p>  - O serviço expande seu alcance integrando-se ao Microsoft Edge e Google Chrome por meio de extensões, garantindo acesso contínuo em diferentes plataformas.</p>
+      <p>Além da promessa de ferramentas de geração de vídeo, a Adobe lançou oficialmente seu assistente de inteligência artificial. O recurso foi anunciado em fevereiro, quando recebeu sua versão beta. Este recurso, disponível a partir de US$ 4,99 por mês, promete facilitar a compreensão e extração de informações essenciais de documentos diversos. Além disso, a empresa expandiu sua acessibilidade ao lançar uma versão beta gratuita para dispositivos móveis, permitindo interações por meio de comandos de voz, e integrando o serviço às extensões do Microsoft Edge e Google </p>
+      <p> - A Adobe oferece seu assistente de IA para entendimento de documentos a partir de US$ 4,99 por mês, tornando-o acessível a uma ampla gama de usuários.</p>
+      <p> - Junto com a versão para desktop, a Adobe lança uma versão móvel beta gratuita do assistente de IA, permitindo que os usuários interajam por meio de comandos de voz para maior conveniência.</p>
+      <p> - O serviço expande seu alcance integrando-se ao Microsoft Edge e Google Chrome por meio de extensões, garantindo acesso contínuo em diferentes plataformas.</p>
       <p> - Os preços de assinatura são rotulados como “acesso antecipado”, indicando possíveis mudanças no futuro, proporcionando aos usuários flexibilidade e transparência.</p>
       <p> - O assistente de IA, inicialmente lançado em beta em fevereiro, oferece recursos como localização de informações específicas, geração de resumos e fornecimento de citações de PDFs e outros documentos, aprimorando a produtividade do usuário.</p>
-     <p> - Projetado para auxiliar contribuintes, consumidores que navegam em acordos de termos de serviço e estudantes compilando materiais de estudo, o assistente de IA atende a diversas necessidades dos usuários.</p>
-       <br></br>
-       <br></br> 
-       <br></br>
-       <br></br>
-     </div>
-      <div class="container-a">
-        <h2>OUTRAS NOTICÍAS:</h2>
-      </div>
-      <div class="news-container">
+      <p> - Projetado para auxiliar contribuintes, consumidores que navegam em acordos de termos de serviço e estudantes compilando materiais de estudo, o assistente de IA atende a diversas necessidades dos usuários.</p>
+  </div>
+    <div class="container-a">
+      <h2>OUTRAS NOTICÍAS:</h2>
+    </div>
+    <div class="news-container">
       <div class="news-item">
-        <img src="imagens/eletronicos.jpeg" alt="Imagem de Exemplo 1">
+        <img src="imagens/eletronicos.jpeg" alt="Eletronicos">
         <h2>Eletrônicos mais populares</h2>
         <p> Site AliExpress com até 92% de desconto</p>
         <a href="eletronicos.php">Leia mais</a>
       </div>
       <div class="news-item">
-        <img src="imagens/woocommerce.jpeg" alt="Imagem de Exemplo 2">
+        <img src="imagens/woocommerce.jpeg" alt="WooCommerce">
         <h2> WooCommerce</h2>
         <p>Descubra o que é o WooCommerce e as vantagens de hospedar a sua loja online com essa plataforma na Hostinger</p>
         <a href="woocommerce.php">Leia mais</a>
       </div>
-
       <div class="news-item">
-        <img src="imagens/moto g24.jpeg" alt="Imagem de Exemplo 2">
+        <img src="imagens/moto g24.jpeg" alt="Moto G24">
         <h2>Moto G24 Power chega ao Brasil custando R$ 999</h2>
         <p>Novo smartphone baratinho da Motorola já pode ser comprado no Brasil. Aparelho traz bateria de 6.000 mAh e carregamento rápido de até 30 W</p>
         <a href="moto g24.php">Leia mais</a>
       </div>
-      </div>
-    </table>
-  <br></br>
-  <br></br> 
+    </div>
   <footer>
     <div class="contato">
       <div class="contato-1">
@@ -127,10 +127,13 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
   </body>
 
   </html>
+</body>
+
+</html>

@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['nome'])) {
-    $nome_usuario = $_SESSION['nome'];
-    echo "<p class=ola>Olá, $nome_usuario!</p>";
-  echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-  echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
-
-} else {
-
-    echo '<a href="login.php"><button title="Login">Login</button></a>';
-    echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +9,8 @@ if (isset($_SESSION['nome'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorria</title>
-   <link href="games1.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
   <script defer src="script.js"></script>
 </head>
 
@@ -38,6 +26,21 @@ if (isset($_SESSION['nome'])) {
     <a id="filmes" href="filmes.php">Filmes</a>
     <a id="eventos" href="eventos.php">Eventos</a>
   </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
   <div id="menu-container2">
     <div class="modo">
       <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
@@ -51,32 +54,42 @@ if (isset($_SESSION['nome'])) {
       <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
       <a id="filmes2" href="filmes.php">Filmes</a>
       <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
     </div>
   </div>
   <div class="container-a">
-  <div class="div1">
     <img src="imagens/Sorria.png" alt="Sorria">
-    <div class="title">
-    <h1>Sorria</h1>
-    <div class = "mdb"> 
-    <p> 2022 </dp>
-    <p> 1h, 55m </p>
-      <a href="https://www.imdb.com/title/tt15474916/?ref_=fn_al_tt_1">6.5/10</a> 
+    <div class="div1">
+      <h1 id="h1">Sorria</h1>
+      <div class="mdb">
+        <p> 2022 </dp>
+        <p> 1h, 55m </p>
+        <a href="https://www.imdb.com/title/tt15474916/?ref_=fn_al_tt_1">6.5/10</a>
       </div>
-  <div class="elenco">
+      <div class="elenco">
         <img src="imagens/Sosie Bacon.png" alt="Sosie Bacon">
-      <span>Sosie Bacon</span>
+        <span>Sosie Bacon</span>
         <img src="imagens/Kyle Gallner.png" alt="Kyle Gallner">
-      <span>Kyle Gallner</span>
+        <span>Kyle Gallner</span>
         <img src="imagens/Caitlin Stasey.png" alt="Caitlin Stasey">
-      <span>Caitlin Stasey</span>
+        <span>Caitlin Stasey</span>
         <img src="imagens/Jessie T. Usher.png" alt="Jessie T. Usher">
-      <span>Jessie T. Usher</span>
-  </div>
-  <div class="texto1">
-    <p>Em Sorria, tudo na vida da Dra. Rose Cotter (Sosie Bacon) muda, após uma paciente morrer de forma brutal em sua frente, e ela testemunhar o incidente bizarro e traumático no consultório. A partir daí, ela começa a experimentar ocorrências assustadoras que ela não consegue explicar, mas que de alguma forma, se relacionam com a morte que ela presenciou. Para entender o fenômeno que não sai de sua cabeça, a Dra. irá atrás de respostas, mesmo que o mal também já esteja perseguindo-a, e tudo que ela mais quer, é também fugir. Rose irá até as últimas consequências, com o objetivo de desvendar e combater o mal desconhecido que começou a afetar sua vida e de todos ao seu redor. Cada dia mais imersa nessa teia de acontecimentos assustadores, para sobreviver, ela deverá enfrentar a situação perturbadora que se apresenta, e tentar escapar de sua nova e horrível realidade.</p>
-  </div>
-  </div>
+        <span>Jessie T. Usher</span>
+      </div>
+      <div class="texto1">
+        <p>Em Sorria, tudo na vida da Dra. Rose Cotter (Sosie Bacon) muda, após uma paciente morrer de forma brutal em sua frente, e ela testemunhar o incidente bizarro e traumático no consultório. A partir daí, ela começa a experimentar ocorrências assustadoras que ela não consegue explicar, mas que de alguma forma, se relacionam com a morte que ela presenciou. Para entender o fenômeno que não sai de sua cabeça, a Dra. irá atrás de respostas, mesmo que o mal também já esteja perseguindo-a, e tudo que ela mais quer, é também fugir. Rose irá até as últimas consequências, com o objetivo de desvendar e combater o mal desconhecido que começou a afetar sua vida e de todos ao seu redor. Cada dia mais imersa nessa teia de acontecimentos assustadores, para sobreviver, ela deverá enfrentar a situação perturbadora que se apresenta, e tentar escapar de sua nova e horrível realidade.</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="contato">
@@ -94,9 +107,9 @@ if (isset($_SESSION['nome'])) {
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 

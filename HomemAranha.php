@@ -1,84 +1,97 @@
 <?php
 session_start();
+?>
 
-        if (isset($_SESSION['nome'])) {
-            $nome_usuario = $_SESSION['nome'];
-            echo "<p class=ola>Olá, $nome_usuario!</p>";
-          echo '<a href="chat.php"><button title="Chat Global">Chat Global</button>';
-          echo '<a href="logout.php"><button title="Logout">Logout</button></a>';
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-        } else {
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homem Aranha</title>
+  <link href="games1.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="imagens/file.png">
+  <script defer src="script.js"></script>
+</head>
 
-            echo '<a href="login.php"><button title="Login">Login</button></a>';
-            echo '/<a href="cadastro.php"><button title="Cadastro">Cadastre-se</button></a>';
-        }
-        ?>
-
-        <!DOCTYPE html>
-        <html lang="pt-BR">
-
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Homem Aranha</title>
-           <link href="games1.css" rel="stylesheet" type="text/css" />
-          <link rel="shortcut icon" type="image/png" href="imagens/file.png"> 
-          <script defer src="script.js"></script>
-        </head>
-
-        <body>
-          <header>
-            <img src="imagens/GeekTopo2.png" class="img-fluid" alt="GeekNine">
-          </header>
-          <div id="menu-container">
-            <a id="inicio" href="index.php">Início</a>
-            <a id="sobre" href="sobre.php">Sobre</a>
-            <a id="games" href="games.php">Games</a>
-            <a id="tecnologia" href="tecnologia.php">Tecnologia</a>
-            <a id="filmes" href="filmes.php">Filmes</a>
-            <a id="eventos" href="eventos.php">Eventos</a>
-          </div>
-          <div id="menu-container2">
-            <div class="modo">
-              <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
-              <button class="openbtn" onclick="openNav()">☰</button>
-            </div>
-            <div id="mySidebar" class="sidebar">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-              <a id="inicio2" href="index.php">Início</a>
-              <a id="sobre2" href="sobre.php">Sobre</a>
-              <a id="games2" href="games.php">Games</a>
-              <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
-              <a id="filmes2" href="filmes.php">Filmes</a>
-              <a id="eventos2" href="eventos.php">Eventos</a>
-            </div>
-          </div>
-  <div class="container-a">
-    <div class="div1">
-    <img src="imagens/HomemAranha.png" alt="Homem Aranha">
-      <div class="title">
-    <h1>Homem Aranha</h1>
-      <div class = "mdb"> 
-      <p>2002</p>
-      <p>2h, 1m</p>
-        <a href="https://www.imdb.com/title/tt0145487/?ref_=fn_al_tt_1">7.4/10</a> 
-      </div>
-  <div class="elenco">
-        <img src="imagens/Tobey Maguire.png" alt="Tobey Maguire">
-      <span>Tobey Maguire</span>    
-        <img src="imagens/Willem Dafoe.png" alt="Willem Dafoe">
-      <span>Willem Dafoe</span>
-        <img src="imagens/Kirsten Dunst.png" alt="Kirsten Dunst">
-      <span>Kirsten Dunst</span>
-        <img src="imagens/James Franco.png" alt="James Franco">
-      <span>James Franco</span>  
-      </div>
-  <div class="texto1">
-    <p> Depois de ser picado por uma aranha geneticamente modificada em uma demonstração científica, o jovem nerd Peter Parker ganha superpoderes. Inicialmente, ele pretende usá-los para para ganhar dinheiro, adotando o nome de Homem-Aranha e se apresentando em lutas de exibição. Porém, ao presenciar o assassinando de seu tio Ben e sentir-se culpado, Peter decide não mais usar seus poderes para proveito próprio e sim para enfrentar o mal, tendo como seu primeiro grande desafio o psicótico Duende Verde.</p>
+<body>
+  <header>
+    <img src="imagens/GeekTopo2.png" class="img-fluid" alt="GeekNine">
+  </header>
+  <div id="menu-container">
+    <a id="inicio" href="index.php">Início</a>
+    <a id="sobre" href="sobre.php">Sobre</a>
+    <a id="games" href="games.php">Games</a>
+    <a id="tecnologia" href="tecnologia.php">Tecnologia</a>
+    <a id="filmes" href="filmes.php">Filmes</a>
+    <a id="eventos" href="eventos.php">Eventos</a>
   </div>
-  </div>
+  <?php
+  if (isset($_SESSION['nome'])) {
+    $nome_usuario = $_SESSION['nome'];
+    echo "<div class='menu2'>";
+    echo "<p class='ola'>Olá, $nome_usuario!</p>";
+    echo '<a id="chat" href="chat.php">Chat Global</a>';
+    echo '<a id="logout" href="logout.php">Logout</a>';
+    echo "</div>";
+  } else {
+    echo "<div class='menu'>";
+    echo '<a id="login" href="login.php">Login</a>';
+    echo '<a id="cadastro" href="cadastro.php">Cadastre-se</a>';
+    echo "</div>";
+  }
+  ?>
+  <div id="menu-container2">
+    <div class="modo">
+      <img src="imagens/GeekTopo2.png" class="img-fluid2" alt="GeekNine">
+      <button class="openbtn" onclick="openNav()">☰</button>
     </div>
-    <footer>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a id="inicio2" href="index.php">Início</a>
+      <a id="sobre2" href="sobre.php">Sobre</a>
+      <a id="games2" href="games.php">Games</a>
+      <a id="tecnologia2" href="tecnologia.php">Tecnologia</a>
+      <a id="filmes2" href="filmes.php">Filmes</a>
+      <a id="eventos2" href="eventos.php">Eventos</a>
+      <?php
+      if (isset($_SESSION['nome'])) {
+        $nome_usuario = $_SESSION['nome'];
+        echo "<p class='ola2'>Olá, $nome_usuario!</p>";
+        echo '<a id="chat2" href="chat.php">Chat Global</a>';
+        echo '<a id="logout2" href="logout.php">Logout</a>';
+      } else {
+        echo '<a id="login2" href="login.php">Login</a>';
+        echo '<a id="cadastro2" href="cadastro.php">Cadastre-se</a>';
+      }
+      ?>
+    </div>
+  </div>
+  <div class="container-a">
+    <img src="imagens/HomemAranha.png" alt="Homem Aranha">
+    <div class="div1">
+      <h1 id="h1">Homem Aranha</h1>
+      <div class="mdb">
+        <p>2002</p>
+        <p>2h, 1m</p>
+        <a href="https://www.imdb.com/title/tt0145487/?ref_=fn_al_tt_1">7.4/10</a>
+      </div>
+      <div class="elenco">
+        <img src="imagens/Tobey Maguire.png" alt="Tobey Maguire">
+        <span>Tobey Maguire</span>
+        <img src="imagens/Willem Dafoe.png" alt="Willem Dafoe">
+        <span>Willem Dafoe</span>
+        <img src="imagens/Kirsten Dunst.png" alt="Kirsten Dunst">
+        <span>Kirsten Dunst</span>
+        <img src="imagens/James Franco.png" alt="James Franco">
+        <span>James Franco</span>
+      </div>
+      <div class="texto1">
+        <p> Depois de ser picado por uma aranha geneticamente modificada em uma demonstração científica, o jovem nerd Peter Parker ganha superpoderes. Inicialmente, ele pretende usá-los para para ganhar dinheiro, adotando o nome de Homem-Aranha e se apresentando em lutas de exibição. Porém, ao presenciar o assassinando de seu tio Ben e sentir-se culpado, Peter decide não mais usar seus poderes para proveito próprio e sim para enfrentar o mal, tendo como seu primeiro grande desafio o psicótico Duende Verde.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
     <div class="contato">
       <div class="contato-1">
         <ul>
@@ -94,9 +107,9 @@ session_start();
         <a id="twitter" href="https://twitter.com/GeekNine9" target="_blank"></a>
       </div>
     </div>
-  <div class="logo">
-  <p>GeekNine © 2024 Todos os Direitos Reservados</p>
-  </div>
+    <div class="logo">
+      <p>GeekNine © 2024 Todos os Direitos Reservados</p>
+    </div>
   </footer>
 </body>
 
