@@ -40,3 +40,7 @@ Este projeto consiste no desenvolvimento de um site de notícias voltado ao púb
 - **SQLite**
 
 ---
+
+## ✏️ Infos
+
+Deploy: https://hebertyrichards.github.io/Geek-Solutions/
